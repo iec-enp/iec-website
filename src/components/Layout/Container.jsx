@@ -24,7 +24,7 @@ export default function Container(props) {
           content={meta.type}
         />
       </Head>
-      <div className='min-h-screen flex flex-col items-center max-w-7xl mx-auto px-5'>
+      <div className='min-h-screen flex flex-col items-center max-w-[1500px] mx-auto px-4'>
         <Header />
         <main className=' w-full'>{children}</main>
         <div className='m-auto' />
