@@ -1,7 +1,7 @@
 import Container from '@/components/Layout/Container'
 import Head from 'next/head'
 
-export default function Home() {
+export default function Articles() {
   return (
     <>
       <Head>
@@ -16,7 +16,7 @@ export default function Home() {
         />
       </Head>
       <Container>
-        <h1>Hello Next.js</h1>
+        <h1>Articles page</h1>
       </Container>
     </>
   )

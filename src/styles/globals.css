@@ -15,4 +15,18 @@ a {
 
 * {
   box-sizing: border-box;
+  transition: color, background-color 0.2s ease-in-out;
+}
+
+.burger svg {
+  transform: translate(-50%, -50%) scale(1);
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.burger svg[data-hide='true'] {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
 }
