@@ -3,7 +3,7 @@ const ThemeToggleBtn = ({ mounted, setTheme, resolvedTheme }) => {
     <button
       aria-label='Toggle Dark Mode'
       type='button'
-      className='group w-9 h-9 border-[2px] border-iec-orange-2-500 rounded-full flex items-center justify-center  transition-all'
+      className='group w-9 h-9 border-[2px] bg-iec-orange-2-500 border-iec-orange-2-500 rounded-full flex items-center justify-center  transition-all'
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>
       {mounted && (
         <svg
@@ -11,7 +11,7 @@ const ThemeToggleBtn = ({ mounted, setTheme, resolvedTheme }) => {
           viewBox='0 0 24 24'
           fill='none'
           stroke='currentColor'
-          className='w-5 h-5 text-iec-orange-2-500 group-hover:rotate-45 transition-all'>
+          className='w-5 h-5 text-white  group-hover:rotate-45 transition-all'>
           {resolvedTheme === 'dark' ? (
             <path
               strokeLinecap='round'

@@ -3,7 +3,7 @@ const { default: Link } = require('next/link')
 const NavLink = ({ href, text, active }) => {
   return (
     <Link href={href}>
-      <a className={`${active ? 'text-iec-orange-2-500' : ''} group`}>
+      <a className={`${active ? 'text-iec-orange-2-500' : ''} text-lg group`}>
         {text}
         <div
           className={`${

@@ -5,7 +5,6 @@ import Head from 'next/head'
 export default function Container(props) {
   const { children, ...customMeta } = props
   const meta = {
-    title: 'IEC - Industrial Engineers Club',
     description: `IEC is an academic club of the National Polytechnic School, which aims to strengthen the culture of Industrial Engineering in companies, to encourage the talents, creativity and personal development of its members. It allows students to build a solid professional project by helping them achieve their goals through the organization of various events.`,
     type: 'website',
     ...customMeta,
@@ -14,7 +13,6 @@ export default function Container(props) {
   return (
     <>
       <Head>
-        <title>{meta.title}</title>
         <meta
           content={meta.description}
           name='description'

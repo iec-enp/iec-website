@@ -22,7 +22,7 @@ export default function MobileMenu() {
   return (
     <>
       <button
-        className='visible md:hidden bg-transparent w-10 h-10 relative burger'
+        className='visible lg:hidden bg-transparent w-10 h-10 relative burger'
         aria-label='Toggle menu'
         type='button'
         onClick={toggleMenu}>
