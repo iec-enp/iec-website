@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export default function MobileMenu() {
+export default function MobileMenu({ toggler }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   function toggleMenu() {
@@ -22,21 +22,30 @@ export default function MobileMenu() {
   return (
     <>
       <button
-        className='visible lg:hidden bg-transparent w-10 h-10 relative burger'
+        className='visible md:hidden bg-transparent w-10 h-10 relative burger '
         aria-label='Toggle menu'
         type='button'
         onClick={toggleMenu}>
-        <MenuIcon data-hide={isMenuOpen} />
-        <CrossIcon data-hide={!isMenuOpen} />
+        <MenuIcon
+          data-hide={isMenuOpen}
+          toggler={toggler}
+        />
+        <CrossIcon
+          data-hide={!isMenuOpen}
+          toggler={toggler}
+        />
       </button>
     </>
   )
 }
 
 function MenuIcon(props) {
+  const { toggler } = props
   return (
     <svg
-      className='h-5 w-5 absolute text-gray-900 dark:text-gray-100'
+      className={`h-5 w-5 absolute ${
+        toggler ? 'dark:text-iec-blue-2-500' : 'dark:text-white'
+      }`}
       width='28'
       height='28'
       viewBox='0 0 18 18'

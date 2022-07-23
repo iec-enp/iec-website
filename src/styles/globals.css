@@ -4,7 +4,7 @@
 
 html,
 body {
-  font-family: "Mulish";
+  font-family: 'Mulish', sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -35,26 +35,32 @@ a {
 html {
   font-size: 20px;
 }
- body{
-  background-color:  #122130;
- }
+body {
+  background-color: #122130;
+}
 
-
- @media (max-width: 1024px) {
+@media (max-width: 1024px) {
   html {
     font-size: 18px;
   }
 }
 
-
 @media (max-width: 768px) {
-html {
-  font-size: 16px;
-}
+  html {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 450px) {
-html {
-  font-size: 12px;
+  html {
+    font-size: 12px;
+  }
 }
+
+.text-shadow-light {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.text-shadow-dark {
+  text-shadow: 0 4px 4px rgba(255, 255, 255, 0.25);
 }
