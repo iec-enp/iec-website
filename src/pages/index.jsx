@@ -110,31 +110,23 @@ export default function Home() {
             <div className='w-full sm:w-1/2 mx-auto my-auto'>
               <div className='grid grid-cols-1  sm:grid-cols-2 gap-x-20 gap-y-7 w-max mx-auto sm:mx-0 my-auto'>
                 <div className='flex flex-col  ml-auto gap-3'>
-                  <h1 className='text-[2.5rem] font-bold text-iec-blue-2-500'>
-                    74
-                  </h1>
+                  <h1 className='text-[2.5rem] font-bold'>74</h1>
                   <h1 className='text-3xl text-iec-gray-800'>Members</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
                 <div className='flex flex-col  gap-3'>
-                  <h1 className='text-[2.5rem] font-bold text-iec-blue-2-500'>
-                    +334
-                  </h1>
+                  <h1 className='text-[2.5rem] font-bold'>+334</h1>
                   <h1 className='text-3xl text-iec-gray-800 '>Alumnis</h1>
                   <h1 className='w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
 
                 <div className='flex flex-col  ml-auto  gap-3'>
-                  <h1 className='text-[2.5rem] font-bold text-iec-blue-2-500'>
-                    2020
-                  </h1>
+                  <h1 className='text-[2.5rem] font-bold'>2020</h1>
                   <h1 className='text-3xl text-iec-gray-800 '>Creation</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
                 <div className='flex flex-col  gap-3'>
-                  <h1 className='text-[2.5rem] font-bold text-iec-blue-2-500'>
-                    12
-                  </h1>
+                  <h1 className='text-[2.5rem] font-bold'>12</h1>
                   <h1 className='text-3xl text-iec-gray-800'>Events</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
