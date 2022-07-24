@@ -31,7 +31,6 @@ export default function Container(props) {
       <div className='min-h-screen flex flex-col items-center max-w-[1500px] mx-auto px-4 gap-6'>
         <Header />
         <main className='w-full'>{children}</main>
-        <div className='m-auto' />
         <Footer />
       </div>
     </>
