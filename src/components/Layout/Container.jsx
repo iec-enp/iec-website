@@ -28,7 +28,7 @@ export default function Container(props) {
           href='/favicon.ico'
         />
       </Head>
-      <div className='min-h-screen flex flex-col items-center max-w-[1500px] mx-auto px-4 gap-6'>
+      <div className='min-h-screen flex flex-col items-center max-w-[1500px] mx-auto container gap-6'>
         <Header />
         <main className='w-full'>{children}</main>
         <Footer />

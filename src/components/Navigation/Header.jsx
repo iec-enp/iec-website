@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <nav
     style={Toggler ? {boxShadow: '0 1rem 3rem rgb(0 0 0 / 18%)'} : {}}
-      className={`flex items-center  z-10 w-4/5 md:mt-4 rounded-2xl px-4 py-3 justify-between fixed top-0 ${
+      className={`flex items-center  z-50 w-4/5 mt-4 rounded-2xl px-4 py-3 justify-between fixed top-0 ${
         Toggler ? 'bg-white  dark:text-iec-blue-2-500' : ' bg-transparent'
       }`}>
       <Link href='/'>

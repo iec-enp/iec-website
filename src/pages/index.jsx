@@ -1,5 +1,6 @@
 import Container from '@/components/Layout/Container'
 import Alumni from '@/components/Utility/alumni'
+import ArtricleCard from '@/components/Utility/article-card'
 import DashedCurve from '@/components/Utility/dashedCurve'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
@@ -82,8 +83,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=' md:hidden w-full mx-auto text-center '>
-              <button className='bg-iec-orange-2-500  text-[1rem] mx-auto  px-7 py-2 rounded-full mt-8'>
+            <div className=' md:hidden w-full mx-auto text-center mt-12'>
+              <button className='bg-iec-orange-2-500  text-3xl mx-auto  px-10 py-3 rounded-full '>
                 Contacter
               </button>
             </div>
@@ -91,7 +92,7 @@ export default function Home() {
         </section>
         <section className='w-full relative map'>
           <div className='my-16 z-100 relative flex flex-col '>
-            <h1 className='text-4xl mx-auto font-bold mt-24'>
+            <h1 className='text-5xl mx-auto font-bold mt-24'>
               Our <span className='text-iec-orange-2-500'>Story</span>
             </h1>
             <h2 className='mt-16 text-xl text-center w-[60%] mx-auto opacity-70'>
@@ -103,8 +104,72 @@ export default function Home() {
             </h2>
           </div>
         </section>
-        <section className='w-full relative'>
-          <div className='text-4xl text-center mt-10 font-bold'>
+        <section>
+          <h1 className='text-center text-5xl mx-auto font-bold md:mt-24 '>
+            Our <span className='text-iec-orange-2-500'>Speciality</span>
+          </h1>
+
+          <div className='flex md:flex-row flex-col items-center  mx-auto justify-center mt-24 md:justify-around'>
+            <div className='w-[45%] md:w-[25%] image-spec h-max mx-auto md:mx-0'>
+              <Image
+                className='rounded-tl-[50px]'
+                src='/images/data-science.jpg'
+                alt='image1'
+                width={300}
+                height={250}
+                layout='responsive'
+              />
+            </div>
+            <div className='flex flex-col md:w-1/2 w-full mt-16 md:mt-0 text-center md:text-left'>
+              <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
+                Data Science & Intelligence Artificielle
+              </h1>
+              <p className='text-iec-gray-800 text-2xl py-6'>
+                {' '}
+                Le &quot;Industrial Engineers Club&quot; est un club du Génie
+                Industriel de l&apos;Ecole Nationale Polytechnique. Il a pour
+                but de compléter la formation
+              </p>
+              <button className='flex items-center mx-auto md:mx-0 gap-2 text-iec-orange-2-500 bg-white w-max px-3 py-2 rounded-lg'>
+                <span>
+                  <BsFillCaretRightFill />
+                </span>
+                Read more
+              </button>
+            </div>
+          </div>
+          <div className='flex md:flex-row flex-col-reverse items-center mx-auto justify-center mt-32 md:justify-around '>
+            <div className='flex flex-col md:w-1/2  w-full mt-16 md:mt-0 text-center md:text-left'>
+              <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
+                Le Génie Industriel
+              </h1>
+              <p className='text-iec-gray-800 text-2xl py-6'>
+                {' '}
+                Le &quot;Industrial Engineers Club&quot; est un club du Génie
+                Industriel de l&apos;Ecole Nationale Polytechnique. Il a pour
+                but de compléter la formation
+              </p>
+              <button className='flex items-center mx-auto md:mx-0 gap-2 text-iec-orange-2-500 bg-white w-max px-3 py-2 rounded-lg'>
+                <span>
+                  <BsFillCaretRightFill />
+                </span>
+                Read more
+              </button>
+            </div>
+            <div className='w-[45%] md:w-[25%] image-spec h-max mx-auto md:mx-0'>
+              <Image
+                className='rounded-tl-[50px]'
+                src='/images/GI.jpg'
+                alt='image1'
+                width={300}
+                height={250}
+                layout='responsive'
+              />
+            </div>
+          </div>
+        </section>
+        <section className='w-full relative  '>
+          <div className='text-5xl text-center mt-28 font-bold'>
             IEC <span className='text-iec-orange-2-500'>en chiffres</span>
           </div>
           <div className='flex gap-[15rem] mt-16'>
@@ -138,68 +203,30 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
-          <h1 className='text-center text-4xl mx-auto font-bold mt-24 '>
-            Our <span className='text-iec-orange-2-500'>Speciality</span>
-          </h1>
-
-          <div className='flex md:flex-row flex-col mx-auto justify-center mt-24 md:justify-around'>
-            <div className='w-[45%] md:w-[25%] image-spec h-max mx-auto md:mx-0'>
-              <Image
-                className='rounded-tl-[50px]'
-                src='/images/data-science.jpg'
-                alt='image1'
-                width={300}
-                height={250}
-                layout='responsive'
-              />
-            </div>
-            <div className='flex flex-col md:w-1/2 w-full mt-16 md:mt-0 text-center md:text-left'>
-              <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
-                Data Science & Intelligence Artificielle
-              </h1>
-              <p className='text-iec-gray-800 text-2xl py-4'>
-                {' '}
-                Le &quot;Industrial Engineers Club&quot; est un club du Génie
-                Industriel de l&apos;Ecole Nationale Polytechnique. Il a pour
-                but de compléter la formation
-              </p>
-              <button className='flex items-center mx-auto md:mx-0 gap-2 text-iec-orange-2-500 bg-white w-max px-3 py-2 rounded-lg'>
-                <span>
-                  <BsFillCaretRightFill />
-                </span>
-                Read more
-              </button>
-            </div>
+        <section className='bg-iec-orange-2-500 bg-opacity-10 mt-14 w-full'>
+          <div className='flex flex-col gap-5 text-center'>
+            <h1 className='text-5xl  mt-28 font-bold'>
+              Our <span className='text-iec-orange-2-500'>Articles</span>
+            </h1>
+            <p className='text-iec-gray-800 w-1/2 text-center mx-auto'>
+              If you are going to use a passage of Lorem Ipsum, you need to be
+              sure there isn&apos;t anything embarrassing hidden in the middle
+              of text
+            </p>
           </div>
-          <div className='flex md:flex-row flex-col-reverse mx-auto justify-center mt-32 md:justify-around '>
-            <div className='flex flex-col md:w-1/2 w-full mt-16 md:mt-0 text-center md:text-left'>
-              <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
-                Le Génie Industriel
-              </h1>
-              <p className='text-iec-gray-800 text-2xl py-4'>
-                {' '}
-                Le &quot;Industrial Engineers Club&quot; est un club du Génie
-                Industriel de l&apos;Ecole Nationale Polytechnique. Il a pour
-                but de compléter la formation
-              </p>
-              <button className='flex items-center mx-auto md:mx-0 gap-2 text-iec-orange-2-500 bg-white w-max px-3 py-2 rounded-lg'>
-                <span>
-                  <BsFillCaretRightFill />
-                </span>
-                Read more
-              </button>
-            </div>
-            <div className='w-[45%] md:w-[25%] image-spec h-max mx-auto md:mx-0'>
-              <Image
-                className='rounded-tl-[50px]'
-                src='/images/GI.jpg'
-                alt='image1'
-                width={300}
-                height={250}
-                layout='responsive'
-              />
-            </div>
+          <div className='w-full grid md:grid-cols-3  grid-cols-1 sm:grid-cols-2 px-32 sm:px-10 gap-8  mt-12 pb-14'>
+            <ArtricleCard
+              image='/images/covid2.jpg'
+              title="L'impact Du Covid"
+            />
+            <ArtricleCard
+              image='/images/supply.jpg'
+              title='Supply Chain'
+            />
+            <ArtricleCard
+              image='/images/industrie4.jpg'
+              title='Industrie 4.0'
+            />
           </div>
         </section>
       </Container>
