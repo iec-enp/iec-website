@@ -2,8 +2,8 @@ function DashedCurve({theme, ...props}) {
     
     return(<>
    <svg
-    width={964}
-    height={463}
+    width="10px"
+    height="10px"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
