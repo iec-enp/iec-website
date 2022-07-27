@@ -1,11 +1,13 @@
 import Container from '@/components/Layout/Container'
+import About from '@/components/Utility/about'
 import Alumni from '@/components/Utility/alumni'
 import ArtricleCard from '@/components/Utility/article-card'
+import Counter from '@/components/Utility/counter'
 import DashedCurve from '@/components/Utility/dashedCurve'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import { BsFillCaretRightFill } from 'react-icons/bs'
+import { BsArrowRight, BsFillCaretRightFill } from 'react-icons/bs'
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -90,20 +92,55 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className='w-full relative map'>
-          <div className='my-16 z-100 relative flex flex-col '>
-            <h1 className='text-5xl mx-auto font-bold mt-24'>
+
+        <section className='w-full'>
+          <div className='flex md:flex-row flex-col w-full mt-28 mb-14 mx-auto px-8 gap-7'>
+            <div className='w-[45%]  h-max mx-auto  relative border-iec-orange-2-500 image-about '>
+              <Image
+                src='/images/ddddd.jpg'
+                alt='image2'
+                width={250}
+                height={210}
+                layout='responsive'
+              />
+            </div>
+            <div className='w-1/2 mx-auto text-center md:text-left'>
+              <h1 className='md:text-left text-5xl  font-bold text-center mt-5 md:mt-0'>
+                About <span className='text-iec-orange-2-500'>Us</span>
+              </h1>
+              <p className='py-3'>
+                Plus qu&apos;un club Le &quot;Industrial Engineers Club&quot;
+                est un club du Génie Industriel{' '}
+              </p>
+              <div className='w-[7rem] rounded-full mx-auto md:mx-0 bg-iec-orange-2-500 h-1'></div>
+
+              <div className='flex flex-col mt-8 gap-4'>
+                <About />
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* <section className='w-full relative'>
+          <div className='absolute w-full h-full flex content-center align-middle'>
+            <Map
+              theme={theme}
+              className='w-3/4 mx-auto '
+            />
+          </div>
+          <div className='my-16 z-100  flex flex-col place-items-center content-center'>
+            <h1 className='text-5xl mx-auto font-bold mt-20'>
               Our <span className='text-iec-orange-2-500'>Story</span>
             </h1>
-            <h2 className='mt-16 text-xl text-center w-[60%] mx-auto opacity-70'>
+            <h2 className='my-20 text-xl text-center w-[60%] mx-auto opacity-70'>
               Plus qu&apos;un club Le &quot;Industrial Engineers Club&quot; est
               un club du Génie Industriel de l&apos;Ecole Nationale
               Polytechnique. Il a pour but de compléter la formation de ces
               derniers à travers des formations et la vulgarisation de notions
               importantes.
             </h2>
+          
           </div>
-        </section>
+        </section> */}
         <section>
           <h1 className='text-center text-5xl mx-auto font-bold md:mt-24 '>
             Our <span className='text-iec-orange-2-500'>Speciality</span>
@@ -179,23 +216,31 @@ export default function Home() {
             <div className='w-full sm:w-1/2 mx-auto my-auto'>
               <div className='grid grid-cols-1  sm:grid-cols-2 text-center md:text-left gap-x-20 gap-y-7 w-max mx-auto sm:mx-0 my-auto'>
                 <div className='flex flex-col  ml-auto gap-3'>
-                  <h1 className='text-[2.5rem] font-bold'>74</h1>
+                  <h1 className='text-[2.5rem] font-bold'>
+                    <Counter end={74} />
+                  </h1>
                   <h1 className='text-3xl text-iec-gray-800'>Members</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
                 <div className='flex flex-col  gap-3'>
-                  <h1 className='text-[2.5rem] font-bold'>+334</h1>
+                  <h1 className='text-[2.5rem] font-bold'>
+                    +<Counter end={334} />
+                  </h1>
                   <h1 className='text-3xl text-iec-gray-800 '>Alumnis</h1>
                   <h1 className='w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
 
                 <div className='flex flex-col  ml-auto  gap-3'>
-                  <h1 className='text-[2.5rem] font-bold'>2020</h1>
+                  <h1 className='text-[2.5rem] font-bold'>
+                    <Counter end={2020} />
+                  </h1>
                   <h1 className='text-3xl text-iec-gray-800 '>Creation</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
                 <div className='flex flex-col  gap-3'>
-                  <h1 className='text-[2.5rem] font-bold'>12</h1>
+                  <h1 className='text-[2.5rem] font-bold'>
+                    <Counter end={12} />
+                  </h1>
                   <h1 className='text-3xl text-iec-gray-800'>Events</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
@@ -227,6 +272,14 @@ export default function Home() {
               image='/images/industrie4.jpg'
               title='Industrie 4.0'
             />
+          </div>
+          <div className='w-full flex justify-center '>
+            <button className='bg-iec-orange-2-500 text-white  font-bold  py-2 px-4 rounded-xl flex items-center gap-3 hover:text-iec-orange-2-500 hover:bg-white'>
+              Voir tout Les Articles{' '}
+              <span>
+                <BsArrowRight />
+              </span>
+            </button>
           </div>
         </section>
       </Container>
