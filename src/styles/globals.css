@@ -83,6 +83,13 @@ a {
   animation: pulse 2s infinite;
 }
 
+.dropdown__items {
+ visibility: hidden;
+ opacity: 0;
+  height: 0px;
+  transition: max-height 0.6s ease;
+ }
+
 
 
 @keyframes pulse {
