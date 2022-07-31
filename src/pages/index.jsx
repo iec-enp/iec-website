@@ -4,6 +4,7 @@ import Alumni from '@/components/Utility/alumni'
 import ArtricleCard from '@/components/Utility/article-card'
 import Counter from '@/components/Utility/counter'
 import DashedCurve from '@/components/Utility/dashedCurve'
+import Testimonial from '@/components/Utility/testimonial'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
@@ -274,13 +275,24 @@ export default function Home() {
             />
           </div>
           <div className='w-full flex justify-center '>
-            <button className='bg-iec-orange-2-500 text-white  font-bold  py-2 px-4 rounded-xl flex items-center gap-3 hover:text-iec-orange-2-500 hover:bg-white'>
+            <button className='bg-iec-orange-2-500 mb-8 text-white  font-bold  py-2 px-4 rounded-xl flex items-center gap-3 hover:text-iec-orange-2-500 hover:bg-white'>
               Voir tout Les Articles{' '}
               <span>
                 <BsArrowRight />
               </span>
             </button>
           </div>
+        </section>
+
+        <section>
+          <div className='text-5xl text-center mt-28 mb-7 font-bold'>
+            What people <span className='text-iec-orange-2-500'>say</span>
+          </div>
+          <p className='text-iec-gray-800 w-1/2 text-center mx-auto mb-4'>
+            If you are going to use a passage of Lorem Ipsum, you need to be
+            sure there isn&apos;t anything embarrassing hidden
+          </p>
+          <Testimonial />
         </section>
       </Container>
     </>

@@ -8,11 +8,13 @@ import ThemeToggleBtn from '../Utility/ThemeToggleBtn'
 import MobileMenu from './MobileMenu'
 import NavLink from './NavLink'
 
+
 const Header = () => {
   const [mounted, setMounted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
   const router = useRouter()
   const [Toggler, setToggler] = useState(false)
+
   // After mounting, we have access to the theme
   useEffect(() => setMounted(true), [])
 
@@ -32,6 +34,7 @@ const Header = () => {
   })
 
   return (
+    
     <nav
     style={Toggler ? {boxShadow: '0 1rem 3rem rgb(0 0 0 / 18%)'} : {}}
       className={`flex items-center  z-50 w-4/5 mt-4 rounded-2xl px-4 py-3 justify-between fixed top-0 ${
@@ -82,6 +85,7 @@ const Header = () => {
           resolvedTheme={resolvedTheme}
         />
       </div>
+      
     </nav>
   )
 }
