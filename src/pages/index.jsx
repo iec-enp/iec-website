@@ -4,11 +4,14 @@ import Alumni from '@/components/Utility/alumni'
 import ArtricleCard from '@/components/Utility/article-card'
 import Counter from '@/components/Utility/counter'
 import DashedCurve from '@/components/Utility/dashedCurve'
+import Events from '@/components/Utility/hh'
+import Sponsors from '@/components/Utility/Sponsors'
 import Testimonial from '@/components/Utility/testimonial'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { BsArrowRight, BsFillCaretRightFill } from 'react-icons/bs'
+
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -25,13 +28,13 @@ export default function Home() {
   return (
     <>
       <Container>
-        <section className='w-full relative px-10'>
+        <section className='w-full relative px-10'  >
           <div className='absolute top-[2vw] left-[26%] w-[50vw]'>
             <DashedCurve theme={theme} />
           </div>
           <div className='mt-32 z-100 relative md:flex md:flex-row flex-col justify-center'>
             <div className='md:w-3/5 w-full mx-auto text-center md:text-start'>
-              <h1 className='md:text-8xl text-4xl font-bold leading-[7rem] items-center justify-center'>
+              <h1  className='md:text-8xl text-4xl font-bold leading-[7rem] items-center justify-center'>
                 More Than <span className='text-iec-orange-2-500 '>a </span>
                 <span className='text-iec-orange-2-500'> Club</span>
               </h1>
@@ -294,6 +297,27 @@ export default function Home() {
           </p>
           <Testimonial />
         </section>
+
+        <section className='bg-iec-orange-2-500 bg-opacity-10 mt-14 w-full'>
+        <div className='flex flex-col gap-5 text-center'>
+            <h1 className='text-5xl  mt-28 font-bold flex-wrap'>
+              Sponsoring <span className='text-iec-orange-2-500'>We Have Got From</span>
+            </h1>
+            <p className='text-iec-gray-800 w-1/2 text-center mx-auto'>
+              If you are going to use a passage of Lorem Ipsum, you need to be
+              sure there isn&apos;t anything embarrassing hidden in the middle
+              of text
+            </p>
+          </div>
+          <Sponsors />
+        </section>
+
+        {/* <section>
+          <div className='p-24'>
+          <Events />
+
+          </div>
+        </section> */}
       </Container>
     </>
   )
