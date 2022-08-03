@@ -311,12 +311,6 @@ export default function Home() {
           <Sponsors />
         </section>
 
-        {/* <section>
-          <div className='p-24'>
-          <Events />
-
-          </div>
-        </section> */}
       </Container>
     </>
   )
