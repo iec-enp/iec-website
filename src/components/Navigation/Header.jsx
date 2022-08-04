@@ -8,7 +8,6 @@ import ThemeToggleBtn from '../Utility/ThemeToggleBtn'
 import MobileMenu from './MobileMenu'
 import NavLink from './NavLink'
 
-
 const Header = () => {
   const [mounted, setMounted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
@@ -34,9 +33,8 @@ const Header = () => {
   })
 
   return (
-    
     <nav
-    style={Toggler ? {boxShadow: '0 1rem 3rem rgb(0 0 0 / 18%)'} : {}}
+      style={Toggler ? { boxShadow: '0 1rem 3rem rgb(0 0 0 / 18%)' } : {}}
       className={`flex items-center  z-50 w-4/5 mt-4 rounded-2xl px-4 py-3 justify-between fixed top-0 ${
         Toggler ? 'bg-white  dark:text-iec-blue-2-500' : ' bg-transparent'
       }`}>
@@ -78,14 +76,13 @@ const Header = () => {
         />
       </div>
       <div className='items-center gap-4 flex'>
-        <MobileMenu toggler={Toggler} />
+        <MobileMenu toggler={Toggler.toString()} />
         <ThemeToggleBtn
           mounted={mounted}
           setTheme={setTheme}
           resolvedTheme={resolvedTheme}
         />
       </div>
-      
     </nav>
   )
 }

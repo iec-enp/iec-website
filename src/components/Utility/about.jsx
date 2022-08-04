@@ -28,8 +28,7 @@ function About() {
     },
   ])
 
-
-  function Item({ content, title}) {
+  function Item({ content, title }) {
     const [isOpen, setIsOpen] = useState(false)
 
     const toggleOpen = () => setIsOpen(!isOpen)
@@ -46,7 +45,7 @@ function About() {
           <BsCaretRightFill className={`transition-all duration-300 `} />
         </motion.div>
         <AnimatePresence>
-          { isOpen && <Content content={content} />}
+          {isOpen && <Content content={content} />}
         </AnimatePresence>
       </motion.li>
     )
@@ -72,86 +71,15 @@ function About() {
           className='flex flex-col gap-3'
           layout
           initial={{ borderRadius: 25 }}>
-          {items.map(item => (
+          {items.map((item, i) => (
             <Item
-              key={item}
+              key={i}
               title={item.title}
               content={item.content}
-              
             />
           ))}
         </motion.ul>
       </AnimateSharedLayout>
-
-      {/* <div >
-        <button
-          onClick={() =>
-            setToggler(e => {
-              return {
-                ...e,
-                toggler1: !e.toggler1,
-                toggler2: false,
-                toggler3: false,
-              }
-            })
-          }
-          className='w-full  flex py-5 px-6 items-center justify-between font-bold bg-iec-orange-2-500 bg-opacity-[7%] dark:bg-white text-iec-orange-2-500'>
-          Our History
-          <BsCaretRightFill className={`transition-all duration-300 ${toggler.toggler1 ? "rotate-90" : ""}`} />
-        </button>
-        <p> className={`flex dropdown px-7 transition-[display] duration-700 py-4 ${toggler.toggler1 ? 'block ' : 'hidden'}`}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-          neque reiciendis molestiae ullam voluptatum, velit, accusantium nemo
-          perferendis ab minima maiores quos et doloribus necessitatibus!
-          Sapiente esse obcaecati aliquid ab.
-        </p>
-      </div>
-      <div>
-        <button
-         onClick={() =>
-            setToggler(e => {
-              return {
-                ...e,
-                toggler1: false,
-                toggler2: !e.toggler2,
-                toggler3: false,
-              }
-            })
-          }
-          className='w-full flex py-5 px-6 items-center justify-between font-bold dark:bg-white bg-iec-orange-2-500 bg-opacity-[7%] text-iec-orange-2-500'>
-          Our Mission
-          <BsCaretRightFill className={`transition-all duration-300  ${toggler.toggler2 ? "rotate-90" : ""}`} />
-        </button>
-        <p className={`flex px-7 py-4 ${toggler.toggler2 ? 'inline' : 'hidden'}`}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-          neque reiciendis molestiae ullam voluptatum, velit, accusantium nemo
-          perferendis ab minima maiores quos et doloribus necessitatibus!
-          Sapiente esse obcaecati aliquid ab.
-        </p>
-      </div>
-      <div>
-        <button
-         onClick={() =>
-            setToggler(e => {
-              return {
-                ...e,
-                toggler1: false,
-                toggler2: false,
-                toggler3: !e.toggler3,
-              }
-            })
-          }
-          className='w-full before:block dropdown flex py-5 px-6 items-center justify-between font-bold dark:bg-white bg-iec-orange-2-500 bg-opacity-[7%] text-iec-orange-2-500'>
-          Our Vision
-          <BsCaretRightFill className={`transition-all duration-300  ${toggler.toggler3 ? "rotate-90" : ""}`}/>
-        </button>
-        <p className={` w-full dropdown__items  px-7 py-3 transition-[height] ease-linear ${toggler.toggler3 ? 'inline opacity-100 max-h-10' : 'hidden'}`}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-          neque reiciendis molestiae ullam voluptatum, velit, accusantium nemo
-          perferendis ab minima maiores quos et doloribus necessitatibus!
-          Sapiente esse obcaecati aliquid ab.
-        </p>
-      </div> */}
     </>
   )
 }
