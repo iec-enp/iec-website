@@ -32,7 +32,7 @@ export default function Articles({ posts }) {
         <h1 className='text-6xl font-extrabold uppercase'>
           Nos <span className='text-iec-orange-2-500'>Articles</span>
         </h1>
-        <div className='flex items-center gap-4 w-1/2 md:w-1/3'>
+        <div className='flex items-center gap-4 w-1/2 md:w-1/3 mt-3'>
           <input
             type='text'
             placeholder='Rechercher...'
@@ -42,7 +42,7 @@ export default function Articles({ posts }) {
           />
         </div>
         {!search && (
-          <div className='group grid grid-cols-2 bg-white text-iec-blue-2-500 w-4/5 md:w-3/5 py-2 px-4 rounded-lg gap-6 shadow-lg'>
+          <div className='mt-3 group grid grid-cols-2 bg-white text-iec-blue-2-500 w-4/5 md:w-3/5 py-2 px-4 rounded-lg gap-6 shadow-lg'>
             <div className='w-full relative'>
               <Image
                 src={posts[0].backdrop_path}
@@ -98,7 +98,7 @@ export default function Articles({ posts }) {
         {!loaded && (
           <button
             onClick={loadMore}
-            className='flex items-center gap-4 dark:border-white border-2 py-2 px-4 border-iec-blue-2-500 hover:bg-iec-blue-2-500 hover:text-white dark:hover:bg-white dark:hover:text-iec-blue-2-500'>
+            className='mt-3 flex items-center gap-4 dark:border-white border-2 py-2 px-4 border-iec-blue-2-500 hover:bg-iec-blue-2-500 hover:text-white dark:hover:bg-white dark:hover:text-iec-blue-2-500'>
             {loading && (
               <div
                 style={{
