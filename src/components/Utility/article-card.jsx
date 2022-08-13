@@ -5,7 +5,7 @@ import { BsLink45Deg } from 'react-icons/bs'
 function ArtricleCard({ title, image }) {
   return (
     <>
-      <div className='shadow-2xl rounded-2xl group card hover:-translate-y-4 dark:bg-white '>
+      <div className='shadow-2xl rounded-2xl group card hover:-translate-y-4 bg-white '>
         <div className='relative'>
           <div className='absolute link flex rounded-t-2xl z-10 h-full w-full justify-center items-center group-hover:bg-black group-hover:bg-opacity-50 text-iec-orange-2-500 text-2xl '>
             <BsLink45Deg className='group-hover:bg-white hidden group-hover:flex rounded-full pulse link  w-14 h-14 p-3' />

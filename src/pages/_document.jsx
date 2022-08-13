@@ -26,7 +26,7 @@ export default function Document() {
           href='/favicon/site.webmanifest'
         />
       </Head>
-      <body className='bg-iec-blue-4-200 dark:text-white text-iec-blue-2-500 dark:bg-iec-blue-1-500 '>
+      <body className='bg-iec-blue-4-200 dark:text-white text-iec-blue-2-500 dark:bg-iec-blue-1-500'>
         <Main />
         <NextScript />
       </body>

@@ -1,17 +1,18 @@
 import Container from '@/components/Layout/Container'
 import About from '@/components/Utility/about'
+import AboutImage from '@/components/Utility/AboutImage'
 import Alumni from '@/components/Utility/alumni'
 import ArtricleCard from '@/components/Utility/article-card'
 import Counter from '@/components/Utility/counter'
 import DashedCurve from '@/components/Utility/dashedCurve'
+import Events from '@/components/Utility/events'
 import Sponsors from '@/components/Utility/Sponsors'
 import Testimonial from '@/components/Utility/testimonial'
+import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { BsArrowRight, BsFillCaretRightFill } from 'react-icons/bs'
-
-
 export default function Home() {
   const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
@@ -27,16 +28,23 @@ export default function Home() {
   return (
     <>
       <Container>
-        <section className='w-full relative px-10'  >
+        <section className='w-full relative px-10'>
           <div className='absolute top-[2vw] left-[26%] w-[50vw]'>
             <DashedCurve theme={theme} />
           </div>
-          <div className='mt-32 z-100 relative md:flex md:flex-row flex-col justify-center'>
+          <div className='md:mt-32 mt-40 z-100 relative md:flex md:flex-row flex-col justify-center'>
             <div className='md:w-3/5 w-full mx-auto text-center md:text-start'>
-              <h1  className='md:text-8xl text-4xl font-bold leading-[7rem] items-center justify-center'>
+              <motion.h1
+                initial={{ translateY: -255, scale: 0 }}
+                animate={{ translateY: 0, scale: 1 }}
+                transition={{
+                  duration: 0.8,
+                  ease: 'easeIn',
+                }}
+                className='md:text-8xl text-6xl  font-bold leading-[7rem] items-center justify-center'>
                 More Than <span className='text-iec-orange-2-500 '>a </span>
                 <span className='text-iec-orange-2-500'> Club</span>
-              </h1>
+              </motion.h1>
               <h2 className='text-3xl my-10 text-gray-700 dark:text-white'>
                 Industrial Engineers Club
               </h2>
@@ -45,7 +53,22 @@ export default function Home() {
               </button>
             </div>
             <div className='md:w-2/5 w-[80%] mx-auto md:mt-0 mt-10'>
-              <div className='grid grid-cols-2 gap-x-5 relative '>
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  default: {
+                    duration: 0.3,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  },
+                  scale: {
+                    type: 'spring',
+                    damping: 5,
+                    stiffness: 100,
+                    restDelta: 0.001,
+                  },
+                }}
+                className='grid grid-cols-2 gap-x-5 relative '>
                 <div className='pb-5'>
                   <Image
                     className='rounded-tl-[50px]'
@@ -86,7 +109,7 @@ export default function Home() {
                     layout='responsive'
                   />
                 </div>
-              </div>
+              </motion.div>
             </div>
             <div className=' md:hidden w-full mx-auto text-center mt-12'>
               <button className='bg-iec-orange-2-500  text-3xl mx-auto  px-10 py-3 rounded-full '>
@@ -96,16 +119,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='w-full'>
+        <section className='w-full mb-32'>
           <div className='flex md:flex-row flex-col w-full mt-28 mb-14 mx-auto px-8 gap-7'>
-            <div className='w-[45%]  h-max mx-auto  relative border-iec-orange-2-500 image-about '>
-              <Image
-                src='/images/ddddd.jpg'
-                alt='image2'
-                width={250}
-                height={210}
-                layout='responsive'
-              />
+            
+            <div className='md:w-[45%]  w-[80%] h-max mx-auto flex justify-center items-center relative  image-about '>
+              <AboutImage />
             </div>
             <div className='w-1/2 mx-auto text-center md:text-left'>
               <h1 className='md:text-left text-5xl  font-bold text-center mt-5 md:mt-0'>
@@ -117,7 +135,7 @@ export default function Home() {
               </p>
               <div className='w-[7rem] rounded-full mx-auto md:mx-0 bg-iec-orange-2-500 h-1'></div>
 
-              <div className='flex flex-col mt-8 gap-4'>
+              <div className='flex flex-col mt-8 gap-4 '>
                 <About />
               </div>
             </div>
@@ -145,7 +163,7 @@ export default function Home() {
           </div>
         </section> */}
         <section>
-          <h1 className='text-center text-5xl mx-auto font-bold md:mt-24 '>
+          <h1 className='text-center text-5xl mx-auto font-bold '>
             Our <span className='text-iec-orange-2-500'>Speciality</span>
           </h1>
 
@@ -216,7 +234,7 @@ export default function Home() {
             <div className='w-1/2 hidden lg:inline'>
               <Alumni />
             </div>
-            <div className='w-full sm:w-1/2 mx-auto my-auto'>
+            <div className='w-full flex justify-center lg:w-1/2 mx-auto my-auto'>
               <div className='grid grid-cols-1  sm:grid-cols-2 text-center md:text-left gap-x-20 gap-y-7 w-max mx-auto sm:mx-0 my-auto'>
                 <div className='flex flex-col  ml-auto gap-3'>
                   <h1 className='text-[2.5rem] font-bold'>
@@ -298,9 +316,10 @@ export default function Home() {
         </section>
 
         <section className='bg-iec-orange-2-500 bg-opacity-10 mt-14 w-full'>
-        <div className='flex flex-col gap-5 text-center'>
+          <div className='flex flex-col gap-5 text-center'>
             <h1 className='text-5xl  mt-28 font-bold flex-wrap'>
-              Sponsoring <span className='text-iec-orange-2-500'>We Have Got From</span>
+              Sponsoring{' '}
+              <span className='text-iec-orange-2-500'>We Have Got From</span>
             </h1>
             <p className='text-iec-gray-800 w-1/2 text-center mx-auto'>
               If you are going to use a passage of Lorem Ipsum, you need to be
@@ -311,6 +330,9 @@ export default function Home() {
           <Sponsors />
         </section>
 
+        <section className='w-full'>
+          <Events />
+        </section>
       </Container>
     </>
   )
