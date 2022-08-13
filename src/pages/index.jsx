@@ -45,12 +45,26 @@ export default function Home() {
                 More Than <span className='text-iec-orange-2-500 '>a </span>
                 <span className='text-iec-orange-2-500'> Club</span>
               </motion.h1>
-              <h2 className='text-3xl my-10 text-gray-700 dark:text-white'>
+              <motion.h2
+                initial={{ translateX: -255, scale: 0 }}
+                animate={{ translateX: 0, scale: 1 }}
+                transition={{
+                  duration: 0.8,
+                  ease: 'easeIn',
+                }}
+                className='text-3xl my-10 text-gray-700 dark:text-white'>
                 Industrial Engineers Club
-              </h2>
-              <button className='bg-iec-orange-2-500 hidden md:inline text-[1rem] mx-auto px-7 py-2 rounded-full mt-4'>
+              </motion.h2>
+              <motion.button
+                initial={{ translateY: -255, scale: 0 }}
+                animate={{ translateY: 0, scale: 1 }}
+                transition={{
+                  duration: 0.8,
+                  ease: 'easeIn',
+                }}
+                className='bg-iec-orange-2-500 hidden md:inline text-[1rem] mx-auto px-7 py-2 rounded-full mt-4'>
                 Contacter
-              </button>
+              </motion.button>
             </div>
             <div className='md:w-2/5 w-[80%] mx-auto md:mt-0 mt-10'>
               <motion.div
@@ -121,7 +135,6 @@ export default function Home() {
 
         <section className='w-full mb-32'>
           <div className='flex md:flex-row flex-col w-full mt-28 mb-14 mx-auto px-8 gap-7'>
-            
             <div className='md:w-[45%]  w-[80%] h-max mx-auto flex justify-center items-center relative  image-about '>
               <AboutImage />
             </div>
