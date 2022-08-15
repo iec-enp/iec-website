@@ -8,19 +8,10 @@ export default function BlogLayout({ children, frontMatter }) {
     <Container
       title={`${frontMatter.title} – Industrial Engineers Club`}
       description={frontMatter.description}
-      image={`https://iec-website.vercel.app/${frontMatter.backdrop}`}
+      image={`https://iec-website.vercel.app/backdrops/${frontMatter.backdrop}`}
       date={new Date(frontMatter.date).toISOString()}
       type='article'>
       <article className='mt-44 md:mt-36 flex flex-col justify-center items-start max-w-4xl px-12 w-full mx-auto gap-4'>
-        {/* <div className='group w-full relative h-[896px]'>
-          <Image
-            src={frontMatter.backdrop_path}
-            alt={frontMatter.title}
-            layout='fill'
-            objectFit='cover'
-            className='rounded-lg object-center group-hover:object-top transition-all duration-1000 ease-in-out'
-          />
-        </div> */}
         <h1 className='font-bold text-3xl md:text-5xl mb-4 text-center text-black dark:text-white'>
           {frontMatter.title}
         </h1>

@@ -20,6 +20,10 @@ export default function Container(props) {
           name='description'
         />
         <meta
+          property='og:image'
+          content={meta.image}
+        />
+        <meta
           property='og:type'
           content={meta.type}
         />

@@ -1,14 +1,17 @@
 import ArticleCard from '@/components/Card/ArticleCard'
 import Container from '@/components/Layout/Container'
 import { getBlogPosts } from '@/utils/get-blog-post'
+import { readFile } from '@/utils/read-file'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
-export default function Articles({ posts }) {
+export default function Articles({ posts, cats }) {
   const [loaded, setLoaded] = useState(false)
   const [loading, setLoading] = useState(false)
   const [search, setSearch] = useState('')
+  const [category, setCategory] = useState('')
+  const [filteredPosts, setFilteredPosts] = useState(posts)
 
   const loadMore = () => {
     setLoading(true)
@@ -20,15 +23,34 @@ export default function Articles({ posts }) {
 
   const handleSearch = e => {
     setSearch(e.target.value)
+    setFilteredPosts(
+      posts.filter(post => {
+        return (
+          post.title.toLowerCase().includes(search.toLowerCase()) ||
+          post.description.toLowerCase().includes(search.toLowerCase()) ||
+          post.category.toLowerCase().includes(search.toLowerCase())
+        )
+      })
+    )
   }
 
-  const filteredPosts = posts.filter(post => {
-    return (
-      post.title.toLowerCase().includes(search.toLowerCase()) ||
-      post.description.toLowerCase().includes(search.toLowerCase()) ||
-      post.category.toLowerCase().includes(search.toLowerCase())
-    )
-  })
+  const handleClick = cat => {
+    if (cat === 'Tous') {
+      setSearch('')
+      setFilteredPosts([])
+      setCategory('')
+      setLoaded(true)
+    } else {
+      setSearch(cat)
+      setCategory(cat)
+      setFilteredPosts(
+        posts.filter(post => {
+          return post.category === cat
+        })
+      )
+      setLoaded(true)
+    }
+  }
 
   return (
     <Container title='Articles - IEC - Industrial Engineers Club'>
@@ -45,7 +67,19 @@ export default function Articles({ posts }) {
             onChange={handleSearch}
           />
         </div>
-        {!search && (
+        <div className='flex flex-wrap w-4/5 md:w-3/5 gap-4'>
+          {cats.map((cat, i) => (
+            <button
+              className={`hover:bg-iec-orange-2-500 transition-all bg-white rounded-xl shadow-lg px-2 py-1 text-iec-blue-2-500 outline-none ${
+                cat === category ? 'bg-iec-orange-2-500' : ''
+              }`}
+              key={i}
+              onClick={() => handleClick(cat)}>
+              {cat}
+            </button>
+          ))}
+        </div>
+        {!search && category === '' && (
           <div className='mt-3 group grid grid-cols-2 bg-white text-iec-blue-2-500 w-4/5 md:w-3/5 py-2 px-4 rounded-lg gap-6 shadow-lg'>
             <div className='w-full relative'>
               <Image
@@ -77,6 +111,7 @@ export default function Articles({ posts }) {
 
         <div className='grid grid-cols-1 md:grid-cols-2 text-iec-blue-2-500 w-4/5 md:w-3/5 gap-12 md:gap-8 mt-8'>
           {!search &&
+            category === '' &&
             (loaded
               ? posts.slice(1).map((post, idx) => (
                   <ArticleCard
@@ -90,13 +125,20 @@ export default function Articles({ posts }) {
                     {...post}
                   />
                 )))}
-          {search &&
-            filteredPosts.length > 0 &&
-            filteredPosts.map((post, idx) => (
-              <ArticleCard
-                key={idx}
-                {...post}
-              />
+          {(search || category) &&
+            (filteredPosts.length > 0 ? (
+              filteredPosts.map((post, idx) => (
+                <ArticleCard
+                  key={idx}
+                  {...post}
+                />
+              ))
+            ) : (
+              <div className='col-span-2'>
+                <p className='text-center text-2xl font-extrabold'>
+                  Aucun article ne correspond à votre recherche
+                </p>
+              </div>
             ))}
         </div>
         {!loaded && (
@@ -120,9 +162,11 @@ export default function Articles({ posts }) {
 
 export const getStaticProps = async () => {
   const posts = getBlogPosts()
+  const cats = readFile('/data/categories/categories.json')
   return {
     props: {
       posts,
+      cats,
     },
   }
 }
