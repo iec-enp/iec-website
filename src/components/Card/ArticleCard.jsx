@@ -9,6 +9,7 @@ const ArticleCard = ({
   slug,
   date,
   readingTime,
+  category,
 }) => {
   return (
     <motion.div
@@ -41,11 +42,14 @@ const ArticleCard = ({
       </div>
       <h1 className='font-bold text-lg px-4'>{title}</h1>
       <p className='text-sm line-clamp-3 px-4'>{description}</p>
-      <Link href={`/article/${slug}`}>
-        <a className='text-iec-orange-2-500 text-center mt-auto font-bold text-lg'>
-          Plus
-        </a>
-      </Link>
+      <div className='mt-auto flex justify-between px-4'>
+        <p className='opacity-80 font-light'>{category}</p>
+        <Link href={`/articles/${slug}`}>
+          <a className='text-iec-orange-2-500 text-center  font-bold text-lg'>
+            Plus
+          </a>
+        </Link>
+      </div>
     </motion.div>
   )
 }

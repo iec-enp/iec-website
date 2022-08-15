@@ -330,6 +330,11 @@
     "minimatch" "^3.1.2"
     "strip-json-comments" "^3.1.1"
 
+"@fontsource/dancing-script@^4.5.9":
+  "integrity" "sha512-+1oLDSk3shUPXnVYj9EZfj23d/hDMtyctBPz0fWjvuWuh0YupJ/3QG9Xf8cd4xkTiJMVTCzBwBH4pxLvpSn9lQ=="
+  "resolved" "https://registry.npmjs.org/@fontsource/dancing-script/-/dancing-script-4.5.9.tgz"
+  "version" "4.5.9"
+
 "@fontsource/mulish@^4.5.11":
   "integrity" "sha512-7oywPzRLjxT0j746/AWo5HQrmJmt9Sn2IUiSuOq2lkfpVQY9nUBqbNGjVH9QSdx5E9LkxX3g7Y0R9zl+s2SGgg=="
   "resolved" "https://registry.npmjs.org/@fontsource/mulish/-/mulish-4.5.11.tgz"
@@ -1236,6 +1241,11 @@
   "integrity" "sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg=="
   "resolved" "https://registry.npmjs.org/dargs/-/dargs-7.0.0.tgz"
   "version" "7.0.0"
+
+"date-fns@^2.29.1":
+  "integrity" "sha512-dlLD5rKaKxpFdnjrs+5azHDFOPEu4ANy/LTh04A1DTzMM7qoajmKCBc8pkKRFT41CNzw+4gQh79X5C+Jq27HAw=="
+  "resolved" "https://registry.npmjs.org/date-fns/-/date-fns-2.29.1.tgz"
+  "version" "2.29.1"
 
 "debug@^2.6.9":
   "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="

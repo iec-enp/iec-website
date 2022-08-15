@@ -13,8 +13,8 @@ const ExternalLink = ({ href, children }) => (
 
 const Footer = () => {
   return (
-    <footer className='text-opacity-80  flex flex-col justify-start items-start mx-auto max-w-6xl w-full mb-2'>
-      <hr className='w-full border-1 border-iec-blue-3-100 dark:border-iec-gray-900 mb-8' />
+    <footer className='px-12 text-opacity-80  flex flex-col justify-start items-start mx-auto max-w-6xl w-full mb-2'>
+      <hr className='w-full border-1 border-iec-blue-3-200 dark:border-iec-gray-900 mb-8' />
       <div className='w-full flex flex-col gap-8 pb-8 sm:flex-row sm:justify-between'>
         <div className='flex flex-col space-y-4'>
           <Link href='/'>
@@ -82,7 +82,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr className='w-full border-1 border-iec-blue-3-100 dark:border-iec-gray-900 mb-8' />
+      <hr className='w-full border-1 border-iec-blue-3-200 dark:border-iec-gray-900 mb-8' />
       <p className='text-center w-full'>
         &copy; 2020 Copyright:{' '}
         <span className='text-iec-orange-2-500'>

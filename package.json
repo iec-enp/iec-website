@@ -11,9 +11,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@fontsource/dancing-script": "^4.5.9",
     "@fontsource/mulish": "^4.5.11",
     "@fontsource/poppins": "^4.5.9",
     "@tailwindcss/typography": "^0.5.4",
+    "date-fns": "^2.29.1",
     "framer-motion": "^6.5.1",
     "gray-matter": "^4.0.3",
     "next": "12.2.2",

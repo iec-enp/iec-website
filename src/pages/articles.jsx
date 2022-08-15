@@ -23,7 +23,11 @@ export default function Articles({ posts }) {
   }
 
   const filteredPosts = posts.filter(post => {
-    return post.title.toLowerCase().includes(search.toLowerCase())
+    return (
+      post.title.toLowerCase().includes(search.toLowerCase()) ||
+      post.description.toLowerCase().includes(search.toLowerCase()) ||
+      post.category.toLowerCase().includes(search.toLowerCase())
+    )
   })
 
   return (
@@ -62,8 +66,8 @@ export default function Articles({ posts }) {
               <h1 className='font-bold text-lg'>{posts[0].title}</h1>
               <p className='text-sm line-clamp-4'>{posts[0].description}</p>
               <div className='flex justify-between items-center'>
-                <p className='opacity-80 font-light'>By IEC</p>
-                <Link href={`/article/${posts[0].slug}`}>
+                <p className='opacity-80 font-light'>{posts[0].category}</p>
+                <Link href={`/articles/${posts[0].slug}`}>
                   <a className='text-iec-orange-2-500'>Suite...</a>
                 </Link>
               </div>

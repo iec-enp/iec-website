@@ -1,7 +1,8 @@
 import '@/styles/globals.css'
-import { ThemeProvider } from 'next-themes'
+import '@fontsource/dancing-script'
 import '@fontsource/mulish'
-import "@fontsource/poppins";
+import '@fontsource/poppins'
+import { ThemeProvider } from 'next-themes'
 
 function MyApp({ Component, pageProps }) {
   return (

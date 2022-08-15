@@ -12,7 +12,7 @@ export const getBlogPosts = () => {
     const slug = filename.replace('.mdx', '')
     const fileContents = fs.readFileSync(filePath, 'utf8')
     const {
-      data: { title, description, date, backdrop_path },
+      data: { title, description, date, backdrop_path, category },
       content,
     } = matter(fileContents)
     result.push({
@@ -23,9 +23,26 @@ export const getBlogPosts = () => {
       backdrop_path,
       content,
       readingTime: readingTime(content).text,
+      category,
+      content,
     })
   })
   return result.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+}
+
+export const getBlogPost = slug => {
+  const fileContents = fs.readFileSync(
+    path.join(process.cwd(), './data/blog', `${slug}.mdx`),
+    'utf8'
+  )
+  const { data, content } = matter(fileContents)
+  return {
+    data: {
+      ...data,
+      readingTime: readingTime(content).text,
+    },
+    content,
+  }
 }
 
 export const getRecentBlogPosts = async count => {
