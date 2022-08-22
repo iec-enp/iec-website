@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import 'animate.css'
 import '@fontsource/dancing-script'
 import '@fontsource/mulish'
 import '@fontsource/poppins'

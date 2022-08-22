@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Carousel from 'react-elastic-carousel'
 import { MdOutlineFormatQuote } from 'react-icons/md'
+import { useTheme } from 'next-themes'
+import { useEffect } from 'react'
 
 function Testimonial() {
 
@@ -9,6 +11,8 @@ function Testimonial() {
        
       ]
 
+
+    
   function Card({ FullName, Position, Text, photo }) {
     return (
       <>
@@ -32,7 +36,7 @@ function Testimonial() {
               </div>
               <MdOutlineFormatQuote className='text-7xl text-iec-orange-2-500' />
             </div>
-            <p className='pb-2'>{Text}</p>
+            <p className='pb-2 '>{Text}</p>
           </div>
         </div>
       </>

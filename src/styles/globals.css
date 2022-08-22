@@ -203,6 +203,9 @@ a {
 .rec-pagination .rec-dot:hover {
   box-shadow: inset 0 0 1px 3px #ffcd387f;
 }
+.rec-pagination .rec-dot {
+  box-shadow:   0 0 1px 1px #8790a5
+}
 
 html {
   font-size: 16px;
@@ -594,9 +597,19 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.color-ted-dark {
+  background: -webkit-linear-gradient(rgb(255, 255, 255), #e62b1e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .color-bg {
   background: -webkit-linear-gradient(#0b3434, #b2d06b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.color-bg-dark {
+  background: -webkit-linear-gradient(#f6fafa, #b2d06b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -608,4 +621,26 @@ body {
 
 .ss {
   box-shadow: -2px -2px 5px #ffcd38, 3px 3px 5px rgb(0 0 0 / 10%);
+}
+
+.collapse {
+  overflow: hidden;
+  transition: 0.4s max-height;
+}
+
+.collapse > div {
+  overflow: auto;
+}
+
+.img-icon::before{
+  position: absolute;
+  content: "";
+  background-color: #ffcd38;
+  opacity: .3;
+  width: 5rem;
+  height: 5rem;
+  left: 20%;
+  bottom: 10%;
+  border-radius: 50%;
+  z-index: 1;
 }

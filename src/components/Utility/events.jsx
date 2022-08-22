@@ -5,14 +5,14 @@ import Slider from './slider'
 import { GrNext, GrPrevious } from 'react-icons/gr'
 import Image from 'next/image'
 
-function Events() {
+function Events({theme}) {
   const Slides = [
     {
       title: 'IEC Case Competition',
       content:
         'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Laboriosam omnis corrupti, tenetur ratione vero unde velitsuscipit itaque distinctio alias repudiandae sunt? Ex minima nisi veniam possimus sed nihil deleniti?',
       logo: '/images/events/logo-icc.png',
-      color: 'color-icc',
+      color: ["color-icc" , "color-icc" ],
     },
     {
      
@@ -20,15 +20,15 @@ function Events() {
       content:
         'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Laboriosam omnis corrupti, tenetur ratione vero unde velitsuscipit itaque distinctio alias repudiandae sunt? Ex minima nisi veniam possimus sed nihil deleniti?',
       logo: '/images/events/bg_logo.png',
-      color: 'color-bg',
+      color: ['color-bg-dark','color-bg'],
     },
     {
      
-      title: 'TedX  ENP',
+      title: 'TedX Talks <br/> ENP',
       content:
         'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Laboriosam omnis corrupti, tenetur ratione vero unde velitsuscipit itaque distinctio alias repudiandae sunt? Ex minima nisi veniam possimus sed nihil deleniti?',
       logo: '/images/events/logo-tedx.png',
-      color: 'color-ted',
+      color: ['color-ted-dark', 'color-ted'],
     },
   ]
 
@@ -57,7 +57,7 @@ function Events() {
       
       <div className='flex absolute right-12 gap-3 items-center mx-auto'>
           <button
-            className='text-xl p-4 rounded-full ss bg-white h-max'
+            className='text-xl p-4 rounded-full ss sha bg-white h-max'
             onClick={PrevSlide}>
             <GrPrevious />
           </button>
@@ -84,6 +84,7 @@ function Events() {
           <div className=' w-full'>
             <div className='overflow-hidden '>
               <Slider2
+              theme={theme}
                 Slides={Slides}
                 current={current}
               />

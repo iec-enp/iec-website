@@ -3,61 +3,79 @@ import { useState } from 'react'
 
 import { BsCaretRightFill } from 'react-icons/bs'
 
-function About() {
+function FAQ() {
   const [items, setItems] = useState([
     {
       id: 1,
-      title: 'Our History',
+      title: 'History Lorem ipsum dolor sit amet consectetur adipisicing ?',
       content:
         'History Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis neque reiciendis molestiae ullam voluptatum, velit, accusantium nemo perferendis ab minima maiores quos et doloribus necessitatibus! Sapiente esse obcaecati aliquid ab',
     },
     {
       id: 2,
-      title: 'Our Vision',
+      title: 'History Lorem ipsum dolor sit amet consectetur adipisicing ?',
       content:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis neque reiciendis molestiae ullam voluptatum, velit, accusantium nemo perferendis ab minima maiores quos et doloribus necessitatibus! Sapiente esse obcaecati aliquid ab',
     },
     {
       id: 3,
-      title: 'Our Mission',
+      title: 'History Lorem ipsum dolor sit amet consectetur adipisicing ?',
       content:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis neque reiciendis molestiae ullam voluptatum, velit, accusantium nemo perferendis ab minima maiores quos et doloribus necessitatibus! Sapiente esse obcaecati aliquid ab',
     },
   ])
 
+  function Collapse ({isOpen, content}) {
+ 
+      const childHeightRaw = content.clientHeight;
+      const childHeight = `${childHeightRaw / 16}rem`;
+
+    return(
+    
+        <div className="collapse" style={{
+            maxHeight: isOpen ? childHeight : 0,
+            transition : "0.4s max-height" ,
+            overflow :"hidden"
+          }}>
+            <div ><Content content={content} /></div>
+            
+          
+        </div>
+      
+    )
+  }
+
   function Item({ content, title, index, funct, trigger }) {
     return (
-      <motion.li
+      <li
+        className='w-[100%]'
+        style={{ animationDelay: '0.1s', animationDuration: '1.5s' }}
         layout
         onClick={funct}
         initial={{ borderRadius: 10 }}>
-        <motion.div
+        <div
           layout
-          className='w-full  flex py-5 px-6 items-center justify-between font-bold rounded-lg bg-iec-orange-2-500 bg-opacity-[15%] dark:bg-white text-iec-orange-2-500'>
+          className='flex py-5 px-6 items-center justify-between font-bold bg-white rounded-lg  text-iec-blue-2-500'>
           {title}
-          <BsCaretRightFill
-            className={`transition-all ${
-              trigger[index].status ? 'rotate-90' : ''
-            } duration-500 `}
-          />
-        </motion.div>
-        <AnimatePresence>
-          {trigger[index].status && <Content content={content} />}
-        </AnimatePresence>
-      </motion.li>
+          <div className='w-5 h-5 text-white flex justify-center items-center rounded-full bg-iec-orange-2-500'>+</div>
+        </div>
+        <Collapse isOpen={trigger[index].status} content={content}>
+        <section className="sample-content">
+            <h1>content</h1>
+            <p>content</p>
+          </section>
+        </Collapse>
+      </li>
     )
   }
 
   function Content({ content }) {
     return (
-      <motion.div
+      <div
         className='w-full px-6 text-center py-3'
-        layout
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
+       >
         {content}
-      </motion.div>
+      </div>
     )
   }
 
@@ -80,9 +98,9 @@ function About() {
 
   return (
     <>
-      <AnimateSharedLayout>
-        <motion.ul
-          className='flex  flex-col  gap-3'
+     
+        <ul
+          className='flex w-3/5  justify-center my-12 flex-col  gap-3'
           layout
           initial={{ borderRadius: 25 }}>
           {items.map((item, i) => (
@@ -95,10 +113,9 @@ function About() {
               trigger={trigger}
             />
           ))}
-        </motion.ul>
-      </AnimateSharedLayout>
+        </ul>
     </>
   )
 }
 
-export default About
+export default FAQ
