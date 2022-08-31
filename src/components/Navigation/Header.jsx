@@ -5,7 +5,6 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import Cta from '../Utility/Cta'
 import ThemeToggleBtn from '../Utility/ThemeToggleBtn'
-import MobileMenu from './MobileMenu'
 import NavLink from './NavLink'
 
 const Header = () => {
@@ -52,7 +51,7 @@ const Header = () => {
         </a>
       </Link>
 
-      <div className='hidden lg:flex gap-24 text-opacity-80 text-xl font-normal'>
+      <div className='flex gap-24 text-opacity-80 text-sm  md:text-xl font-normal'>
         <NavLink
           href='/'
           text='Home'
@@ -76,7 +75,7 @@ const Header = () => {
         />
       </div>
       <div className='items-center gap-4 flex'>
-        <MobileMenu toggler={Toggler.toString()} />
+        {/* <MobileMenu toggler={Toggler.toString()} /> */}
         <ThemeToggleBtn
           mounted={mounted}
           setTheme={setTheme}
