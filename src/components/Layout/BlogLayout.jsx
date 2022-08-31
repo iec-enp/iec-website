@@ -1,9 +1,7 @@
 import Container from '@/components/Layout/Container'
 import { format, parseISO } from 'date-fns'
-import { useTheme } from 'next-themes'
 
 export default function BlogLayout({ children, frontMatter }) {
-  const { resolvedTheme } = useTheme()
   return (
     <Container
       title={`${frontMatter.title} – Industrial Engineers Club`}
