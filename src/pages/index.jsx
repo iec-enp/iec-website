@@ -79,7 +79,7 @@ export default function Home() {
                       <div className='pb-5'>
                         <Image
                           className='rounded-tl-[50px]'
-                          src='/images/stock.jpg'
+                          src='/images/stock.webp'
                           alt='image1'
                           width={300}
                           height={250}
@@ -89,7 +89,7 @@ export default function Home() {
                       <div className=' w-[75%] self-end'>
                         <Image
                           className='rounded-tr-[50px]'
-                          src='/images/idea.jpg'
+                          src='/images/idea.webp'
                           alt='image2'
                           width={200}
                           height={200}
@@ -100,7 +100,7 @@ export default function Home() {
                       <div className=' w-[75%] self-start  ml-auto'>
                         <Image
                           className='rounded-bl-[50px] '
-                          src='/images/data.jpg'
+                          src='/images/data.webp'
                           alt='image3'
                           width={200}
                           height={200}
@@ -110,7 +110,7 @@ export default function Home() {
                       <div className=' pt-5'>
                         <Image
                           className='rounded-br-[50px] '
-                          src='/images/container.jpg'
+                          src='/images/container.webp'
                           alt='image4'
                           width={300}
                           height={250}
@@ -130,19 +130,15 @@ export default function Home() {
           </div>
         </section>
 
-
         <section className='w-full flex flex-col justify-center'>
-            <div className='text-5xl text-center my-auto font-bold mt-10'>
-              Our
-              <span className='text-iec-orange-2-500'> Values</span>
-            </div>
-            <div className='flex justify-center mt-20'>
-            <Value/>
-
-            </div>
-      </section>
-
-
+          <div className='text-5xl text-center my-auto font-bold mt-10'>
+            Nos
+            <span className='text-iec-orange-2-500'> Valeurs</span>
+          </div>
+          <div className='flex justify-center mt-20'>
+            <Value theme={theme} />
+          </div>
+        </section>
 
         <section className='w-full mb-32'>
           <div className='flex md:flex-row flex-col w-full mt-28 mb-14 mx-auto px-8 gap-7'>
@@ -165,7 +161,7 @@ export default function Home() {
 
             <div className='w-1/2 mx-auto text-center md:text-left'>
               <h1 className='md:text-left text-5xl  font-bold text-center mt-5 md:mt-0'>
-                About <span className='text-iec-orange-2-500'>Us</span>
+                À Propos de <span className='text-iec-orange-2-500'>Nous</span>
               </h1>
               <p className='py-3'>
                 Plus qu&apos;un club Le &quot;Industrial Engineers Club&quot;
@@ -202,7 +198,7 @@ export default function Home() {
         </section> */}
         <section>
           <h1 className='animate__animated animate__bounce text-center text-5xl mx-auto font-bold '>
-            Our <span className='text-iec-orange-2-500'>Speciality</span>
+            Nos <span className='text-iec-orange-2-500'>Spécialitées</span>
           </h1>
 
           <div className='flex md:flex-row flex-col items-center  mx-auto justify-center mt-24 md:justify-around'>
@@ -214,7 +210,7 @@ export default function Home() {
                   <div className='image-spec animate__animated animate__fadeInLeft'>
                     <Image
                       className=' rounded-tl-[50px]'
-                      src='/images/data-science.jpg'
+                      src='/images/data-science.webp'
                       alt='image1'
                       width={300}
                       height={250}
@@ -233,11 +229,15 @@ export default function Home() {
                     <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
                       Data Science & Intelligence Artificielle
                     </h1>
-                    <p className='text-iec-gray-800 text-2xl py-6'>
+                    <p className='text-iec-gray-800 dark:text-white text-xl py-6'>
                       {' '}
-                      Le &quot;Industrial Engineers Club&quot; est un club du
-                      Génie Industriel de l&apos;Ecole Nationale Polytechnique.
-                      Il a pour but de compléter la formation
+                      La DSIA est une spécialité de l&apos;ENP qui a été ouverte en
+                      2020. Elle englobe deux domaines de pointe : la science
+                      des données,et l&apos;intelligence artificielle ayant pour but
+                      la création de valeur à partir de l&apos;exploration et
+                      l&apos;analyse de données brutes grâce à des techniques telles
+                      que la programmation informatique, les mathématiques ou
+                      les statistiques
                     </p>
                     <button className='flex hover:text-white hover:bg-iec-orange-2-500 items-center mx-auto md:mx-0 gap-2 text-iec-orange-2-500 bg-white w-max px-3 py-2 rounded-lg'>
                       <span>
@@ -260,11 +260,14 @@ export default function Home() {
                     <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
                       Le Génie Industriel
                     </h1>
-                    <p className='text-iec-gray-800 text-2xl py-6'>
+                    <p className='text-iec-gray-800 dark:text-white text-xl py-6'>
                       {' '}
-                      Le &quot;Industrial Engineers Club&quot; est un club du
-                      Génie Industriel de l&apos;Ecole Nationale Polytechnique.
-                      Il a pour but de compléter la formation
+                      Se situant à l&apos;interface entre les sciences de
+                      l&apos;ingénieur, les sciences économiques et les sciences
+                      humaines. Ce qui permet à l&apos;ingénieur en MI
+                      d&apos;être polyvalent, doté d&apos;un flux
+                      d&apos;information nécessaire dans le management des
+                      entreprises
                     </p>
                     <button className='flex items-center hover:text-white hover:bg-iec-orange-2-500 mx-auto md:mx-0 gap-2 text-iec-orange-2-500 bg-white w-max px-3 py-2 rounded-lg'>
                       <span>
@@ -284,7 +287,7 @@ export default function Home() {
                   <div className='image-spec animate__animated animate__fadeInRight'>
                     <Image
                       className='rounded-tl-[50px]'
-                      src='/images/GI.jpg'
+                      src='/images/GI.webp'
                       alt='image1'
                       width={300}
                       height={250}
@@ -298,7 +301,7 @@ export default function Home() {
         </section>
         <section className='w-full relative  '>
           <div className='text-5xl text-center mt-28 font-bold'>
-            IEC <span className='text-iec-orange-2-500'>en chiffres</span>
+            IEC <span className='text-iec-orange-2-500'>En Chiffres</span>
           </div>
           <div className='flex gap-[13rem] mt-16'>
             <div className='w-1/2 hidden lg:inline'>
@@ -308,14 +311,14 @@ export default function Home() {
               <div className='grid grid-cols-1  sm:grid-cols-2 text-center md:text-left gap-x-20 gap-y-7 w-max mx-auto sm:mx-0 my-auto'>
                 <div className='flex w-full flex-col  ml-auto gap-3'>
                   <h1 className='text-[2.5rem] font-bold'>
-                    <Counter end={74} />
+                    <Counter end={83} />
                   </h1>
                   <h1 className='text-3xl  text-iec-gray-800'>Members</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
                 <div className='flex  w-full flex-col  gap-3'>
                   <h1 className='text-[2.5rem] font-bold'>
-                    +<Counter end={334} />
+                    +<Counter end={420} />
                   </h1>
                   <h1 className='text-3xl text-iec-gray-800 '>Alumnis</h1>
                   <h1 className='w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
@@ -342,8 +345,9 @@ export default function Home() {
         <section className='bg-iec-orange-2-500 bg-opacity-10 mt-14 w-full'>
           <div className='flex flex-col gap-5 text-center'>
             <h1 className='text-5xl  mt-28 font-bold'>
-              Our <span className='text-iec-orange-2-500'>Articles</span>
+              Nos <span className='text-iec-orange-2-500'>Articles</span>
             </h1>
+
             <p className='text-iec-gray-800 w-1/2 text-center mx-auto'>
               If you are going to use a passage of Lorem Ipsum, you need to be
               sure there isn&apos;t anything embarrassing hidden in the middle
@@ -376,7 +380,7 @@ export default function Home() {
 
         <section>
           <div className='text-5xl text-center mt-28 mb-7 font-bold'>
-            What people <span className='text-iec-orange-2-500'>say</span>
+            Ce Que Les Gens <span className='text-iec-orange-2-500'>Disent </span>
           </div>
           <p className='text-iec-gray-800 dark:text-white w-1/2 text-center mx-auto mb-4'>
             If you are going to use a passage of Lorem Ipsum, you need to be
@@ -388,8 +392,8 @@ export default function Home() {
         <section className='bg-iec-orange-2-500 bg-opacity-10 mt-14 w-full'>
           <div className='flex flex-col gap-5 text-center mb-5'>
             <h1 className='text-5xl  mt-28 font-bold flex-wrap'>
-              Sponsoring{' '}
-              <span className='text-iec-orange-2-500'>We Have Got From</span>
+              Ceux Qui Nous Ont Déja{' '}
+              <span className='text-iec-orange-2-500'>fait Confiance</span>
             </h1>
             <p className='text-iec-gray-800 w-1/2 text-center mx-auto dark:text-white'>
               If you are going to use a passage of Lorem Ipsum, you need to be
@@ -415,10 +419,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-    
-
-        
       </Container>
     </>
   )

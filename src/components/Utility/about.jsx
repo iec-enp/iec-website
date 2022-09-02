@@ -15,13 +15,13 @@ function About() {
       id: 2,
       title: 'Our Vision',
       content:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis neque reiciendis molestiae ullam voluptatum, velit, accusantium nemo perferendis ab minima maiores quos et doloribus necessitatibus! Sapiente esse obcaecati aliquid ab',
+        "Devenir un label en terme d’organisation et une référence dans la communauté estudiantine "
     },
     {
       id: 3,
       title: 'Our Mission',
       content:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis neque reiciendis molestiae ullam voluptatum, velit, accusantium nemo perferendis ab minima maiores quos et doloribus necessitatibus! Sapiente esse obcaecati aliquid ab',
+        "Promouvoir le Génie Industriel en Algérie, renforcer la formation et le réseau professionnel, et développer  la communauté internationale des étudiants et anciens diplômés du  GI"
     },
   ])
 

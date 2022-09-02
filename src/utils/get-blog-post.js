@@ -24,7 +24,6 @@ export const getBlogPosts = () => {
       content,
       readingTime: readingTime(content).text,
       category,
-      content,
     })
   })
   return result.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))

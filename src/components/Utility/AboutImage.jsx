@@ -52,7 +52,7 @@ function AboutImage() {
                     index == currentImage ? 'sls active' : 'sls'
                   }`}>
                   <Image
-                    src={`/images/pictures/img${index}.jpg`}
+                    src={`/images/pictures/img${index}.webp`}
                     alt={`img${index}`}
                     width={500}
                     height={350}

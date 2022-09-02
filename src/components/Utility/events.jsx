@@ -10,7 +10,7 @@ function Events({theme}) {
     {
       title: 'IEC Case Competition',
       content:
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Laboriosam omnis corrupti, tenetur ratione vero unde velitsuscipit itaque distinctio alias repudiandae sunt? Ex minima nisi veniam possimus sed nihil deleniti?',
+        "ICC est une compétition d’étude de cas organisée par le club IEC dans laquelle les participants doivent tenter de trouver une solution à une problématique d'actualité proposée par une entreprise",
       logo: '/images/events/logo-icc.png',
       color: ["color-icc" , "color-icc" ],
     },
@@ -18,7 +18,7 @@ function Events({theme}) {
      
       title: 'Business <br/> Game',
       content:
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Laboriosam omnis corrupti, tenetur ratione vero unde velitsuscipit itaque distinctio alias repudiandae sunt? Ex minima nisi veniam possimus sed nihil deleniti?',
+        "Business game est un jeu de simulation de gestion d’entreprise, faisant face à une concurrence sur un marché virtuel. Chaque entreprise est représentée et gérée par une équipe",
       logo: '/images/events/bg_logo.png',
       color: ['color-bg-dark','color-bg'],
     },
@@ -26,9 +26,25 @@ function Events({theme}) {
      
       title: 'TedX Talks <br/> ENP',
       content:
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Laboriosam omnis corrupti, tenetur ratione vero unde velitsuscipit itaque distinctio alias repudiandae sunt? Ex minima nisi veniam possimus sed nihil deleniti?',
+        "TEDxENP est un événement Tedx organisé par un groupe d’étudiants de l’Ecole Nationale Polytechnique. Les Etudiants et professionnels les se retrouvent afin d’échanger sur l’avenir et l’évolution du monde dans ses différentes composantes en évoquant les différents vecteurs du changement et leurs impacts sur la société",
       logo: '/images/events/logo-tedx.png',
       color: ['color-ted-dark', 'color-ted'],
+    },
+    {
+     
+      title: 'Algeria Data <br/> CUP',
+      content:
+        "Algeria Data Cup: est un hackathon de data science où les participants sont invités à résoudre un problème de Business réel, en développant un modèle d’apprentissage automatique le plus performant possible",
+      logo: '/images/events/ADC_logo.png',
+      color: ['color-adc-dark', 'color-adc'],
+    },
+    {
+     
+      title: 'Jour Génie<br/> Industriel',
+      content:
+        "Le Jour GI est un événement qui se déroule chacun année, pour but de promouvoir la spécialité du Génie Industriel sous ses deux options aux étudiants lauréats du concours national d'accès au grande écoles d’ingénieurs",
+      logo: '/images/events/jourj_logo.png',
+      color: ['color-ji-dark', 'color-ji'],
     },
   ]
 
@@ -48,7 +64,7 @@ function Events({theme}) {
     <>
       
         <h1 className='mt-24 text-center text-5xl mx-auto font-bold  '>
-          Our <span className='text-iec-orange-2-500'>Events</span>
+          Nos <span className='text-iec-orange-2-500'>Evènements</span>
         </h1>
         {/* <h1 className='mt-24 stroke-text text-center text-5xl mx-auto font-bold  '>
           Our <span className=''>Events</span>

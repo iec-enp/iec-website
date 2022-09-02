@@ -72,20 +72,7 @@ const EventSection = ({
             <p className='text-xl font-bold text-shadow-light'>{participant}</p>
             <p className='font-medium'>Participants</p>
           </div>
-          <div className='flex flex-col shadow-lg px-2 pb-4 rounded-lg hover:shadow-xl transition-all flex-1'>
-            <div
-              className='border-t-2  w-1/2 pt-2'
-              style={{
-                borderColor: `${iconColor}`,
-              }}>
-              <ChalkboardTeacher
-                size={24}
-                color={iconColor}
-              />
-            </div>
-            <p className='text-xl font-bold text-shadow-light'>{workshop}</p>
-            <p className='font-medium'>Workshop</p>
-          </div>
+          
           <div className='flex flex-col shadow-lg px-2 pb-4 rounded-lg hover:shadow-xl transition-all flex-1'>
             <div
               className='border-t-2  w-1/2 pt-2'
@@ -103,7 +90,7 @@ const EventSection = ({
         </div>
       </div>
       <div className='relative md:h-[300px] flex flex-col justify-center'>
-        <div className='hidden md:block absolute rounded-full p-1 bg-gray-100 border-2 -top-10 left-1/2'>
+        <div className='hidden w-[70px] h-[70px]  md:flex justify-center items-center absolute rounded-full p-1 bg-gray-100 border-2 -top-10 left-1/2'>
           <Image
             src={logo}
             alt='logo'
@@ -111,7 +98,7 @@ const EventSection = ({
             height={50}
           />
         </div>
-        <div className='hidden md:block absolute rounded-full p-1 bg-gray-100 border-2 top-1/2 -left-12 z-10'>
+        <div className='hidden w-[90px] h-[90px]  md:flex justify-center items-center absolute rounded-full p-1 bg-gray-100 border-2 top-1/2 -left-12 z-10'>
           <Image
             src={logo}
             alt='logo'
@@ -119,7 +106,7 @@ const EventSection = ({
             height={70}
           />
         </div>
-        <div className='hidden md:block absolute rounded-full p-1 bg-gray-100 border-2 -bottom-4 right-12 z-10'>
+        <div className='hidden w-[50px] h-[50px]  md:flex justify-center items-center absolute rounded-full p-1 bg-gray-100 border-2 -bottom-4 right-12 z-10'>
           <Image
             src={logo}
             alt='logo'
@@ -128,6 +115,7 @@ const EventSection = ({
           />
         </div>
         <Image
+          alt='bg-photo'
           src={pics}
           width={800}
           height={400}

@@ -51,7 +51,7 @@ const Header = () => {
         </a>
       </Link>
 
-      <div className='flex gap-24 text-opacity-80 text-sm  md:text-xl font-normal'>
+      <div className='md:flex gap-24 hidden  text-opacity-80 text-sm  md:text-xl font-normal'>
         <NavLink
           href='/'
           text='Home'

@@ -7,15 +7,15 @@ function FAQ() {
   const [items, setItems] = useState([
     {
       id: 1,
-      title: 'History Lorem ipsum dolor sit amet consectetur adipisicing ?',
+      title: 'Pourquoi IEC est uniquement ouvert aux étudiants du Génie Industriel ?',
       content:
-        'History Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis neque reiciendis molestiae ullam voluptatum, velit, accusantium nemo perferendis ab minima maiores quos et doloribus necessitatibus! Sapiente esse obcaecati aliquid ab',
+        "La majorité des activités organisées par le club sont ouvertes au grand public, l'organisation des activités est faite par les membres du club, étudiants de la spécialité",
     },
     {
       id: 2,
-      title: 'History Lorem ipsum dolor sit amet consectetur adipisicing ?',
+      title: "Quelle est la différence entre IEC et les autres clubs de l'école ?",
       content:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis neque reiciendis molestiae ullam voluptatum, velit, accusantium nemo perferendis ab minima maiores quos et doloribus necessitatibus! Sapiente esse obcaecati aliquid ab',
+        "La différence entre IEC et les autres clubs de l'école réside en premier lieu, dans le fait que IEC est un club qui regroupe uniquement les étudiants du Génie Industriel de l'école avec ses deux sous spécialités. En deuxième lieu, les projets et différents événements organisés par le club répondent aux besoins de la formation de la spécialité",
     },
     {
       id: 3,

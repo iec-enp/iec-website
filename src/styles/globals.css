@@ -592,6 +592,31 @@ body {
   line-height: 1;
 }
 
+.color-ji {
+  background: -webkit-linear-gradient(#e99602 ,#2b4a58);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.color-ji-dark {
+  background: -webkit-linear-gradient( #a2d0c1,#e99602);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+.color-adc {
+  background: -webkit-linear-gradient(rgb(87, 154, 255), #1c52f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.color-adc-dark {
+  background: -webkit-linear-gradient(rgb(255, 255, 255), #1c52f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 .color-ted {
   background: -webkit-linear-gradient(rgb(0, 0, 0), #e62b1e);
   -webkit-background-clip: text;
