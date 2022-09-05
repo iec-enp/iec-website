@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <footer className='px-12 text-opacity-80  flex flex-col justify-start items-start mx-auto max-w-6xl w-full mb-2'>
       <hr className='w-full border-1 border-iec-blue-3-200 dark:border-iec-gray-900 mb-8' />
-      <div className='w-full flex flex-col gap-8 pb-8 sm:flex-row sm:justify-between'>
+      <div className='w-full flex flex-row gap-8 justify-between pb-8 '>
         <div className='flex flex-col space-y-4'>
           <Link href='/'>
             <a className='hover:text-opacity-100 hover:underline transition'>
@@ -33,23 +33,7 @@ const Footer = () => {
             </a>
           </Link>
         </div>
-        <div className='flex flex-col space-y-4'>
-          <Link href='/'>
-            <a className='hover:text-opacity-100 hover:underline transition'>
-              Home
-            </a>
-          </Link>
-          <Link href='/articles'>
-            <a className='hover:text-opacity-100 hover:underline transition'>
-              Articles
-            </a>
-          </Link>
-          <Link href='/events'>
-            <a className='hover:text-opacity-100 hover:underline transition'>
-              Events
-            </a>
-          </Link>
-        </div>
+     
         <div className='flex flex-col space-y-4'>
           <ExternalLink href='https://www.instagram.com/iec.enp/'>
             Instagram

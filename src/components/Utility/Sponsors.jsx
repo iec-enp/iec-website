@@ -3,12 +3,12 @@ import Image from 'next/image'
 function Sponsors() {
   return (
     <>
-      {/* <div className='body-slider mt-6 py-8'>
+      <div className='body-slider mt-6 py-8'>
         <div className='sliderrr'>
           <div className='slide-track gap-3'>
-            <div className='slidex flex h-full my-auto px-6 py-6'>
+            <div className='slidex flex h-full my-auto p-4 md:p-0'>
               <Image
-                src='/images/logo/datacamp.png'
+                src='/images/logo/datacamp.webp'
                 height='100'
                 width='250'
                 alt=''
@@ -17,69 +17,9 @@ function Sponsors() {
               />
             </div>
             
-            <div className='slidex flex h-full my-auto px-6 py-7'>
+            <div className='slidex flex h-full my-auto p-4 md:p-0'>
               <Image
-                src='/images/logo/ooredoo.png'
-                height='60'
-                width='200'
-                alt=''
-                layout='intrinsic'
-
-              />
-            </div>
-            <div className='slidex flex h-full my-auto px-6 py-4'>
-              <Image
-                src='/images/logo/palmary.png'
-                height='100'
-                width='250'
-                alt=''
-                layout='intrinsic'
-
-              />
-            </div>
-            <div className='slidex flex h-full my-auto px-6 py-5'>
-              <Image
-                src='/images/logo/pwc.png'
-                height='100'
-                width='250'
-                alt=''
-                layout='intrinsic'
-
-              />
-            </div>
-            <div className='slidex flex h-full my-auto px-6 py-4'>
-              <Image
-                src='/images/logo/saa.png'
-                height='100'
-                width='250'
-                alt=''
-                layout='intrinsic'
-
-              />
-            </div>
-            <div className='slidex flex h-full my-auto px-12 py-4'>
-              <Image
-                src='/images/logo/ey.png'
-                height='100'
-                width='250'
-                alt=''
-                layout='intrinsic'
-
-              />
-            </div>
-            <div className='slidex flex h-full my-auto px-6 py-4'>
-              <Image
-                src='/images/logo/tulip.png'
-                height='100'
-                width='250'
-                alt=''
-                layout='intrinsic'
-
-              />
-            </div>
-            <div className='slidex flex h-full my-auto px-6 py-6'>
-              <Image
-                src='/images/logo/datacamp.png'
+                src='/images/logo/ooredoo.webp'
                 height='100'
                 width='250'
                 alt=''
@@ -88,19 +28,9 @@ function Sponsors() {
               />
             </div>
             
-            <div className='slidex flex h-full my-auto px-6 py-7'>
+            <div className='slidex flex h-full my-auto p-4 md:p-0'>
               <Image
-                src='/images/logo/ooredoo.png'
-                height='60'
-                width='200'
-                alt=''
-                layout='intrinsic'
-
-              />
-            </div>
-            <div className='slidex flex h-full my-auto px-6 py-4'>
-              <Image
-                src='/images/logo/palmary.png'
+                src='/images/logo/pwc.webp'
                 height='100'
                 width='250'
                 alt=''
@@ -108,9 +38,9 @@ function Sponsors() {
 
               />
             </div>
-            <div className='slidex flex h-full my-auto px-6 py-5'>
+            <div className='slidex flex h-full my-auto md:p-3 p-6'>
               <Image
-                src='/images/logo/pwc.png'
+                src='/images/logo/saa.webp'
                 height='100'
                 width='250'
                 alt=''
@@ -118,9 +48,9 @@ function Sponsors() {
 
               />
             </div>
-            <div className='slidex flex h-full my-auto px-6 py-4'>
+            <div className='slidex flex h-full my-auto md:p-3 p-6'>
               <Image
-                src='/images/logo/saa.png'
+                src='/images/logo/ey.webp'
                 height='100'
                 width='250'
                 alt=''
@@ -128,9 +58,9 @@ function Sponsors() {
 
               />
             </div>
-            <div className='slidex flex h-full my-auto px-12 py-4'>
+            <div className='slidex flex h-full my-auto md:p-2 p-5'>
               <Image
-                src='/images/logo/ey.png'
+                src='/images/logo/tulip.webp'
                 height='100'
                 width='250'
                 alt=''
@@ -138,9 +68,61 @@ function Sponsors() {
 
               />
             </div>
-            <div className='slidex flex h-full my-auto px-6 py-4'>
+            <div className='slidex flex h-full my-auto p-4 md:p-0'>
               <Image
-                src='/images/logo/tulip.png'
+                src='/images/logo/datacamp.webp'
+                height='100'
+                width='250'
+                alt=''
+                layout='intrinsic'
+
+              />
+            </div>
+            
+            <div className='slidex flex h-full my-auto p-4 md:p-0'>
+              <Image
+                src='/images/logo/ooredoo.webp'
+                height='100'
+                width='250'
+                alt=''
+                layout='intrinsic'
+
+              />
+            </div>
+           
+            <div className='slidex flex h-full my-auto p-4 md:p-0'>
+              <Image
+                src='/images/logo/pwc.webp'
+                height='100'
+                width='250'
+                alt=''
+                layout='intrinsic'
+
+              />
+            </div>
+            <div className='slidex flex h-full my-auto md:p-3 p-6'>
+              <Image
+                src='/images/logo/saa.webp'
+                height='100'
+                width='250'
+                alt=''
+                layout='intrinsic'
+
+              />
+            </div>
+            <div className='slidex flex h-full my-auto p-3'>
+              <Image
+                src='/images/logo/ey.webp'
+                height='100'
+                width='250'
+                alt=''
+                layout='intrinsic'
+
+              />
+            </div>
+            <div className='slidex flex h-full my-auto p-4 md:p-0'>
+              <Image
+                src='/images/logo/tulip.webp'
                 height='100'
                 width='250'
                 alt=''
@@ -150,9 +132,9 @@ function Sponsors() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
-      <div className=' grid md:grid-cols-3 gap-y-10  grid-cols-2 pb-10 md:gap-y-3'>
+      {/* <div className=' grid md:grid-cols-3 gap-y-10  grid-cols-2 pb-10 md:gap-y-3'>
         <div className='text-gray-900 flex content-center justify-center'>
           <Image
             src='/images/logo/datacamp.svg'
@@ -214,7 +196,7 @@ function Sponsors() {
           />
         </div>
         
-      </div>
+      </div> */}
     </>
   )
 }

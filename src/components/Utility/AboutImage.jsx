@@ -40,7 +40,7 @@ function AboutImage() {
           </button>
         </div>
         <div
-          className='whitespace-nowrap '
+          className='whitespace-nowrap'
           style={{ transform: `translateX(${-currentImage * 100}%)` }}>
           {slides.map((value, index) => {
             return (
@@ -54,7 +54,7 @@ function AboutImage() {
                   <Image
                     src={`/images/pictures/img${index}.webp`}
                     alt={`img${index}`}
-                    width={500}
+                    width={510}
                     height={350}
                     layout='intrinsic'
                   />

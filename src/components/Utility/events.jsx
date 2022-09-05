@@ -8,18 +8,18 @@ import Image from 'next/image'
 function Events({theme}) {
   const Slides = [
     {
-      title: 'IEC Case Competition',
+      title: 'IEC Case <br/>Competition',
       content:
         "ICC est une compétition d’étude de cas organisée par le club IEC dans laquelle les participants doivent tenter de trouver une solution à une problématique d'actualité proposée par une entreprise",
-      logo: '/images/events/logo-icc.png',
-      color: ["color-icc" , "color-icc" ],
+      logo: '/images/events/logo-icc.webp',
+      color: ["color-icc-dark" , "color-icc" ],
     },
     {
      
       title: 'Business <br/> Game',
       content:
         "Business game est un jeu de simulation de gestion d’entreprise, faisant face à une concurrence sur un marché virtuel. Chaque entreprise est représentée et gérée par une équipe",
-      logo: '/images/events/bg_logo.png',
+      logo: '/images/events/bg_logo.webp',
       color: ['color-bg-dark','color-bg'],
     },
     {
@@ -27,7 +27,7 @@ function Events({theme}) {
       title: 'TedX Talks <br/> ENP',
       content:
         "TEDxENP est un événement Tedx organisé par un groupe d’étudiants de l’Ecole Nationale Polytechnique. Les Etudiants et professionnels les se retrouvent afin d’échanger sur l’avenir et l’évolution du monde dans ses différentes composantes en évoquant les différents vecteurs du changement et leurs impacts sur la société",
-      logo: '/images/events/logo-tedx.png',
+      logo: '/images/events/logo-tedx.webp',
       color: ['color-ted-dark', 'color-ted'],
     },
     {
@@ -35,7 +35,7 @@ function Events({theme}) {
       title: 'Algeria Data <br/> CUP',
       content:
         "Algeria Data Cup: est un hackathon de data science où les participants sont invités à résoudre un problème de Business réel, en développant un modèle d’apprentissage automatique le plus performant possible",
-      logo: '/images/events/ADC_logo.png',
+      logo: '/images/events/ADC_logo.webp',
       color: ['color-adc-dark', 'color-adc'],
     },
     {
@@ -43,7 +43,7 @@ function Events({theme}) {
       title: 'Jour Génie<br/> Industriel',
       content:
         "Le Jour GI est un événement qui se déroule chacun année, pour but de promouvoir la spécialité du Génie Industriel sous ses deux options aux étudiants lauréats du concours national d'accès au grande écoles d’ingénieurs",
-      logo: '/images/events/jourj_logo.png',
+      logo: '/images/events/jourj_logo.webp',
       color: ['color-ji-dark', 'color-ji'],
     },
   ]
@@ -63,7 +63,7 @@ function Events({theme}) {
   return (
     <>
       
-        <h1 className='mt-24 text-center text-5xl mx-auto font-bold  '>
+        <h1 className='text-center text-5xl mx-auto font-bold  '>
           Nos <span className='text-iec-orange-2-500'>Evènements</span>
         </h1>
         {/* <h1 className='mt-24 stroke-text text-center text-5xl mx-auto font-bold  '>
@@ -71,7 +71,7 @@ function Events({theme}) {
         </h1> */}
         
       
-      <div className='flex absolute right-12 gap-3 items-center mx-auto'>
+      <div className='flex absolute right-12 gap-3 items-center mx-auto '>
           <button
             className='text-xl p-4 rounded-full ss sha bg-white h-max'
             onClick={PrevSlide}>
@@ -84,7 +84,7 @@ function Events({theme}) {
           </button>
         </div>
 
-      <div className='w-full flex md:flex-row md:items-center flex-col mt-9'>
+      <div className='w-full flex md:flex-row md:items-center flex-col mt-9 '>
         
         <div className='md:w-5/12 w-full flex justify-center'>
             <div className='lg:w-[300px] lg:h-[300px] sm:w-[250px] sm:h-[250px] w-[200px] h-[200px]  flex rounded-full  border-iec-orange-2-500 border-2 bg-white'>

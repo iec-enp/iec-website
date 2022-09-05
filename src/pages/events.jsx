@@ -21,7 +21,7 @@ export default function Events() {
           description='At IEC, we organize various and high-quality TECH events, through which we aim to best fit our community needs and to provide a skillful and complete acquirement'
           date='11-12-13 Octobre 2022'
           place='Paris'
-          pics='/images/pictures/bg.webp'
+          pics='/images/pictures/img2.webp'
           edition='2'
           workshop='20'
           participant='50'
@@ -35,7 +35,7 @@ export default function Events() {
           description='At IEC, we organize various and high-quality TECH events, through which we aim to best fit our community needs and to provide a skillful and complete acquirement'
           date='11-12-13 Octobre 2022'
           place='Paris'
-          pics='/images/pictures/tedx.webp'
+          pics='/images/pictures/img0.webp'
           edition='1'
           workshop='2'
           participant='400'
@@ -46,12 +46,12 @@ export default function Events() {
         />
         <hr className='w-3/4 border-1 border-iec-blue-3-200 dark:border-iec-gray-900 mb-8' />
         <EventSection
-          logo='/brand/logos/IEC_BLACK.webp'
+          logo='/images/events/logo-icc.webp'
           name='IEC Case Compétition '
           description='At IEC, we organize various and high-quality TECH events, through which we aim to best fit our community needs and to provide a skillful and complete acquirement'
           date='11-12-13 Octobre 2022'
           place='Paris'
-          pics='/images/pictures/case.webp'
+          pics='/images/pictures/img4.webp'
           edition='2'
           workshop='17'
           participant='100'

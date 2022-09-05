@@ -8,7 +8,6 @@ import DashedCurve from '@/components/Utility/dashedCurve'
 import Events from '@/components/Utility/events'
 import FAQ from '@/components/Utility/FAQ'
 import Sponsors from '@/components/Utility/Sponsors'
-import Testimonial from '@/components/Utility/testimonial'
 import Value from '@/components/Utility/value'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
@@ -140,7 +139,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='w-full mb-32'>
+        <section className='w-full mb-32 md:h-[25rem] lg:h-[400px] sm:h-[60rem] h-[60rem]'>
           <div className='flex md:flex-row flex-col w-full mt-28 mb-14 mx-auto px-8 gap-7'>
             <TrackVisibility
               once
@@ -160,7 +159,7 @@ export default function Home() {
             </TrackVisibility>
 
             <div className='w-1/2 mx-auto text-center md:text-left'>
-              <h1 className='md:text-left text-5xl  font-bold text-center mt-5 md:mt-0'>
+              <h1 className='md:text-left text-5xl  font-bold text-center mt-5 md:mt-0 leading-[32px]'>
                 À Propos de <span className='text-iec-orange-2-500'>Nous</span>
               </h1>
               <p className='py-3'>
@@ -222,7 +221,7 @@ export default function Home() {
             </TrackVisibility>
             <TrackVisibility
               once
-              className='flex flex-col md:w-1/2 w-full mt-16 md:mt-0 text-center md:text-left'>
+              className='flex flex-col md:w-1/2 w-full px-12  md:px-0 mt-20 md:mt-0 text-center md:text-left'>
               {({ isVisible }) =>
                 isVisible && (
                   <div className='animate__animated animate__fadeInRight '>
@@ -231,13 +230,13 @@ export default function Home() {
                     </h1>
                     <p className='text-iec-gray-800 dark:text-white text-xl py-6'>
                       {' '}
-                      La DSIA est une spécialité de l&apos;ENP qui a été ouverte en
-                      2020. Elle englobe deux domaines de pointe : la science
-                      des données,et l&apos;intelligence artificielle ayant pour but
-                      la création de valeur à partir de l&apos;exploration et
-                      l&apos;analyse de données brutes grâce à des techniques telles
-                      que la programmation informatique, les mathématiques ou
-                      les statistiques
+                      La DSIA est une spécialité de l&apos;ENP qui a été ouverte
+                      en 2020. Elle englobe deux domaines de pointe : la science
+                      des données,et l&apos;intelligence artificielle ayant pour
+                      but la création de valeur à partir de l&apos;exploration
+                      et l&apos;analyse de données brutes grâce à des techniques
+                      telles que la programmation informatique, les
+                      mathématiques ou les statistiques
                     </p>
                     <button className='flex hover:text-white hover:bg-iec-orange-2-500 items-center mx-auto md:mx-0 gap-2 text-iec-orange-2-500 bg-white w-max px-3 py-2 rounded-lg'>
                       <span>
@@ -253,7 +252,7 @@ export default function Home() {
           <div className='flex md:flex-row flex-col-reverse items-center mx-auto justify-center mt-32 md:justify-around '>
             <TrackVisibility
               once
-              className='flex flex-col md:w-1/2  w-full mt-16 md:mt-0 text-center md:text-left'>
+              className='flex flex-col md:w-1/2  w-full px-12  md:px-0 mt-20 text-center md:text-left'>
               {({ isVisible }) =>
                 isVisible && (
                   <div className='animate__animated animate__fadeInLeft'>
@@ -311,14 +310,25 @@ export default function Home() {
               <div className='grid grid-cols-1  sm:grid-cols-2 text-center md:text-left gap-x-20 gap-y-7 w-max mx-auto sm:mx-0 my-auto'>
                 <div className='flex w-full flex-col  ml-auto gap-3'>
                   <h1 className='text-[2.5rem] font-bold'>
-                    <Counter end={83} />
+                    <Counter
+                      id='counter1'
+                      end={83}
+                      speed={20}
+                      step={1}
+                    />
                   </h1>
                   <h1 className='text-3xl  text-iec-gray-800'>Members</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
                 <div className='flex  w-full flex-col  gap-3'>
                   <h1 className='text-[2.5rem] font-bold'>
-                    +<Counter end={420} />
+                    +
+                    <Counter
+                      id='counter2'
+                      end={420}
+                      speed={10}
+                      step={5}
+                    />
                   </h1>
                   <h1 className='text-3xl text-iec-gray-800 '>Alumnis</h1>
                   <h1 className='w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
@@ -326,14 +336,24 @@ export default function Home() {
 
                 <div className='flex w-full flex-col  ml-auto  gap-3'>
                   <h1 className='text-[2.5rem] font-bold'>
-                    <Counter end={2020} />
+                    <Counter
+                      id='counter3'
+                      end={2020}
+                      speed={10}
+                      step={20}
+                    />
                   </h1>
                   <h1 className='text-3xl text-iec-gray-800 '>Creation</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
                 <div className='flex w-full flex-col  gap-3'>
                   <h1 className='text-[2.5rem] font-bold'>
-                    <Counter end={12} />
+                    <Counter
+                      id='counter4'
+                      end={12}
+                      speed={100}
+                      step={1}
+                    />
                   </h1>
                   <h1 className='text-3xl text-iec-gray-800'>Events</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
@@ -369,7 +389,7 @@ export default function Home() {
             />
           </div>
           <div className='w-full flex justify-center '>
-            <button className=' bg-white mb-8  font-bold  py-2 px-4 rounded-xl flex items-center gap-3 hover:text-white hover:bg-iec-orange-2-500 text-iec-orange-2-500 '>
+            <button className=' bg-white mb-12  font-bold  py-2 px-4 rounded-xl flex items-center gap-3 hover:text-white hover:bg-iec-orange-2-500 text-iec-orange-2-500 '>
               Voir tout Les Articles
               <span>
                 <BsArrowRight />
@@ -378,7 +398,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
+        {/* <section>
           <div className='text-5xl text-center mt-28 mb-7 font-bold'>
             Ce Que Les Gens <span className='text-iec-orange-2-500'>Disent </span>
           </div>
@@ -387,34 +407,38 @@ export default function Home() {
             sure there isn&apos;t anything embarrassing hidden
           </p>
           <Testimonial />
-        </section>
+        </section> */}
 
-        <section className='bg-iec-orange-2-500 bg-opacity-10 mt-14 w-full'>
-          <div className='flex flex-col gap-5 text-center mb-5'>
-            <h1 className='text-5xl  mt-28 font-bold flex-wrap'>
-              Ceux Qui Nous Ont Déja{' '}
-              <span className='text-iec-orange-2-500'>fait Confiance</span>
-            </h1>
-            <p className='text-iec-gray-800 w-1/2 text-center mx-auto dark:text-white'>
-              If you are going to use a passage of Lorem Ipsum, you need to be
-              sure there isn&apos;t anything embarrassing hidden in the middle
-              of text
-            </p>
+        <section className='w-full '>
+          <div className='w-full flex flex-col my-16'>
+            <div className='flex flex-col gap-5 text-center mb-5'>
+              <h1 className='text-5xl   font-bold flex-wrap'>
+                Ceux Qui Nous Ont Déja{' '}
+                <span className='text-iec-orange-2-500'>fait Confiance</span>
+              </h1>
+              <p className='text-iec-gray-800 w-1/2 text-center mx-auto dark:text-white'>
+                If you are going to use a passage of Lorem Ipsum, you need to be
+                sure there isn&apos;t anything embarrassing hidden in the middle
+                of text
+              </p>
+            </div>
+            <Sponsors />
           </div>
-          <Sponsors />
         </section>
 
-        <section className='w-full'>
-          <Events theme={theme} />
+        <section className='w-full  bg-iec-orange-2-500 bg-opacity-10 flex'>
+          <div className='w-full my-12'>
+            <Events theme={theme} />
+          </div>
         </section>
 
-        <section className='bg-iec-orange-2-500 bg-opacity-10 mt-14 w-full'>
+        <section className=' mt-14 w-full md:h-[600px] h-[420px]'>
           <div className='flex flex-col justify-center w-full items-center '>
-            <div className='text-5xl text-center my-auto font-bold mt-24'>
+            <div className='text-5xl text-center  font-bold mt-24'>
               Frequently Asked
               <span className='text-iec-orange-2-500'> Questions</span>
             </div>
-            <div className='w-full flex justify-center mb-12'>
+            <div className='w-full flex justify-center mb-10'>
               <FAQ />
             </div>
           </div>

@@ -19,7 +19,7 @@ function Value({theme}) {
       image: '/images/trophy.svg',
       imageWhite: '/images/trophy_white.svg',
       title: 'Engagement',
-      text: 'If you are going to use a passage of Lorem Ipsum, you need to besure there',
+      text: "Pas qu'une simple implication d'appartennance mais un attachement émotionnel et une identification organisationnelle",
     },
     {
       image: '/images/people.svg',
@@ -53,7 +53,7 @@ function Value({theme}) {
 
   return (
     <>
-      <div className='flex w-2/3 gap-8'>
+      <div className='md:flex grid grid-cols-2   w-2/3 md:gap-8 gap-14'>
         {values.map((value, index) => (
           <div key={index}>
             <Item value={value} />

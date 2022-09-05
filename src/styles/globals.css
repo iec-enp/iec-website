@@ -176,7 +176,7 @@ a {
 .sliderrr .slide-track {
   animation: 60s scroll linear 0s infinite normal none running;
   display: flex;
-  width: calc(210px * 14);
+  width: calc(210px * 12);
 }
 
 @keyframes scroll {
@@ -184,7 +184,7 @@ a {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-210px * 7));
+    transform: translateX(calc(-210px * 6));
   }
 }
 .sliderrr .slidex {
@@ -557,7 +557,7 @@ body {
   transition: 2s;
   opacity: 1;
   transform: anim;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 @keyframes anim {
@@ -643,6 +643,11 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.color-icc-dark {
+  background: -webkit-linear-gradient(#d93aee, rgb(65, 39, 209));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .ss {
   box-shadow: -2px -2px 5px #ffcd38, 3px 3px 5px rgb(0 0 0 / 10%);
@@ -668,4 +673,11 @@ body {
   bottom: 10%;
   border-radius: 50%;
   z-index: 1;
+}
+
+.sponsors{
+  background-image: url("/images/sponsor.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
