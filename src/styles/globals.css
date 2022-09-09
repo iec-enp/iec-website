@@ -143,11 +143,11 @@ a {
 .sliderrr {
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 100px;
+  height: auto;
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 70rem;
+  
 }
 
 .sliderrr::before,
@@ -158,7 +158,7 @@ a {
     rgba(255, 255, 255, 0) 100%
   );
   content: '';
-  height: 100px;
+  height: 100%;
   position: absolute;
   width: 200px;
   z-index: 2;
@@ -174,9 +174,9 @@ a {
   top: 0;
 }
 .sliderrr .slide-track {
-  animation: 60s scroll linear 0s infinite normal none running;
+  animation: 40s scroll  linear infinite;
   display: flex;
-  width: calc(210px * 12);
+  width: calc(11rem * 18);
 }
 
 @keyframes scroll {
@@ -184,12 +184,11 @@ a {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-210px * 6));
+    transform: translateX(calc(-11rem * 6));
   }
 }
 .sliderrr .slidex {
-  height: 100px;
-  width: 210px;
+  width: 11rem;
 }
 
 .rec-pagination .rec-dot_active {
@@ -650,7 +649,7 @@ body {
 }
 
 .ss {
-  box-shadow: -2px -2px 5px #ffcd38, 3px 3px 5px rgb(0 0 0 / 10%);
+  box-shadow: -2px -2px 5px #8a8a8a, 3px 3px 5px rgb(0 0 0 / 10%);
 }
 
 .collapse {

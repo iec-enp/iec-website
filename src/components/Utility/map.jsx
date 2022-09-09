@@ -11,7 +11,7 @@ function Map ({theme, ...props}) {
         {...props}
       >
         <defs>
-          <style>{`.cls-1{fill:${theme == 'light' ? "#12213015": "#ffffff10"}}`}</style>
+          <style>{`.cls-1{fill:${theme == 'light' ? "#12213009": "#ffffff09"}}`}</style>
         </defs>
         <circle
           className="cls-1"

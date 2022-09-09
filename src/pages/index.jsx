@@ -7,6 +7,8 @@ import Counter from '@/components/Utility/counter'
 import DashedCurve from '@/components/Utility/dashedCurve'
 import Events from '@/components/Utility/events'
 import FAQ from '@/components/Utility/FAQ'
+import Map from '@/components/Utility/map'
+import Rond from '@/components/Utility/rond'
 import Sponsors from '@/components/Utility/Sponsors'
 import Value from '@/components/Utility/value'
 import { useTheme } from 'next-themes'
@@ -29,7 +31,7 @@ export default function Home() {
 
   return (
     <>
-      <Container>
+      <Container title='Acceuil - IEC - Industrial Engineers Club'>
         <section className='w-full relative px-10 mb-20'>
           <div className='absolute top-[2vw] left-[26%] w-[50vw]'>
             <DashedCurve theme={theme} />
@@ -129,17 +131,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='w-full flex flex-col justify-center'>
-          <div className='text-5xl text-center my-auto font-bold mt-10'>
-            Nos
-            <span className='text-iec-orange-2-500'> Valeurs</span>
-          </div>
-          <div className='flex justify-center mt-20'>
-            <Value theme={theme} />
-          </div>
-        </section>
-
-        <section className='w-full mb-32 md:h-[25rem] lg:h-[400px] sm:h-[60rem] h-[60rem]'>
+        <section className='w-full mb-24 md:h-[25rem] lg:h-[400px] sm:h-[60rem] h-[60rem]'>
           <div className='flex md:flex-row flex-col w-full mt-28 mb-14 mx-auto px-8 gap-7'>
             <TrackVisibility
               once
@@ -174,6 +166,22 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className='w-full flex flex-col mx-auto pb-20'>
+          <div className='absolute w-full h-full md:flex md:items-center lg:items-start justify-center hidden'>
+            <div className='w-[80%] h-[80%]'>
+              <Map theme={theme} />
+            </div>
+          </div>
+          <div className='text-5xl text-center my-auto font-bold mt-10'>
+            Nos
+            <span className='text-iec-orange-2-500'> Valeurs</span>
+          </div>
+          <div className='flex justify-center mt-24'>
+            <Value theme={theme} />
+          </div>
+        </section>
+
         {/* <section className='w-full relative'>
           <div className='absolute w-full h-full flex content-center align-middle'>
             <Map
@@ -196,7 +204,7 @@ export default function Home() {
           </div>
         </section> */}
         <section>
-          <h1 className='animate__animated animate__bounce text-center text-5xl mx-auto font-bold '>
+          <h1 className='md:animate__animated md:animate__bounce text-center lg:mt-10 text-5xl mx-auto font-bold '>
             Nos <span className='text-iec-orange-2-500'>Spécialitées</span>
           </h1>
 
@@ -206,7 +214,7 @@ export default function Home() {
               className='w-[45%] md:w-[25%] h-max mx-auto md:mx-0'>
               {({ isVisible }) =>
                 isVisible && (
-                  <div className='image-spec animate__animated animate__fadeInLeft'>
+                  <div className='image-spec md:animate__animated md:animate__fadeInLeft'>
                     <Image
                       className=' rounded-tl-[50px]'
                       src='/images/data-science.webp'
@@ -215,6 +223,9 @@ export default function Home() {
                       height={250}
                       layout='responsive'
                     />
+                    <div className='absolute'>
+                      <Rond theme={theme}/>
+                    </div>
                   </div>
                 )
               }
@@ -224,7 +235,7 @@ export default function Home() {
               className='flex flex-col md:w-1/2 w-full px-12  md:px-0 mt-20 md:mt-0 text-center md:text-left'>
               {({ isVisible }) =>
                 isVisible && (
-                  <div className='animate__animated animate__fadeInRight '>
+                  <div className='md:animate__animated md:animate__fadeInRight '>
                     <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
                       Data Science & Intelligence Artificielle
                     </h1>
@@ -242,20 +253,20 @@ export default function Home() {
                       <span>
                         <BsFillCaretRightFill />
                       </span>
-                      Read more
+                      Télécherger Brochure
                     </button>
                   </div>
                 )
               }
             </TrackVisibility>
           </div>
-          <div className='flex md:flex-row flex-col-reverse items-center mx-auto justify-center mt-32 md:justify-around '>
+          <div className='flex md:flex-row flex-col-reverse items-center mx-auto justify-center mt-28 md:justify-around '>
             <TrackVisibility
               once
               className='flex flex-col md:w-1/2  w-full px-12  md:px-0 mt-20 text-center md:text-left'>
               {({ isVisible }) =>
                 isVisible && (
-                  <div className='animate__animated animate__fadeInLeft'>
+                  <div className='md:animate__animated md:animate__fadeInLeft'>
                     <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
                       Le Génie Industriel
                     </h1>
@@ -272,8 +283,9 @@ export default function Home() {
                       <span>
                         <BsFillCaretRightFill />
                       </span>
-                      Read more
+                      Télécherger Brochure
                     </button>
+                    
                   </div>
                 )
               }
@@ -283,7 +295,7 @@ export default function Home() {
               className='w-[45%] md:w-[25%]  h-max mx-auto md:mx-0'>
               {({ isVisible }) =>
                 isVisible && (
-                  <div className='image-spec animate__animated animate__fadeInRight'>
+                  <div className='image-spec z-100 md:animate__animated md:animate__fadeInRight'>
                     <Image
                       className='rounded-tl-[50px]'
                       src='/images/GI.webp'
@@ -292,6 +304,9 @@ export default function Home() {
                       height={250}
                       layout='responsive'
                     />
+                    <div className='absolute'>
+                      <Rond theme={theme}/>
+                    </div>
                   </div>
                 )
               }

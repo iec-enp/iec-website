@@ -4,10 +4,16 @@ function Value({theme}) {
   
   const values = [
     {
+      image: '/images/trophy.svg',
+      imageWhite: '/images/trophy_white.svg',
+      title: 'Engagement',
+      text: "Se dévouer à un partage mutuelle et propice en y mettant du sien pour la cause IEC et le développement de la communauté GI",
+    },
+    {
       image: '/images/thumb.svg',
       imageWhite: '/images/thumb_white.svg',
       title: 'Intégrité',
-      text: 'Nous faisons ce qui est juste et honnête avec sérieux et responsabilité',
+      text: 'Nous faisons ce qui est juste et honnête avec sérieux, responsabilité et professionnalisme',
     },
     {
       image: '/images/innovation.svg',
@@ -15,12 +21,7 @@ function Value({theme}) {
       title: 'Innovation',
       text: "Nous nous n'arrêtons jamais d'apprendre et d’améliorer notre façon de faire avec une vision durable",
     },
-    {
-      image: '/images/trophy.svg',
-      imageWhite: '/images/trophy_white.svg',
-      title: 'Engagement',
-      text: "Pas qu'une simple implication d'appartennance mais un attachement émotionnel et une identification organisationnelle",
-    },
+  
     {
       image: '/images/people.svg',
       imageWhite: '/images/people_white.svg',
@@ -42,8 +43,8 @@ function Value({theme}) {
               layout='responsive'
             />
           </div>
-          <h1 className='text-lg my-4 mx-auto font-bold'>{value.title}</h1>
-          <p className='mx-auto text-iec-gray-700 text-xs text-center'>
+          <h1 className='text-xl my-4 mx-auto font-bold'>{value.title}</h1>
+          <p className='mx-auto text-iec-gray-700 text-sm text-center'>
             {value.text}
           </p>
         </div>
@@ -53,7 +54,7 @@ function Value({theme}) {
 
   return (
     <>
-      <div className='md:flex grid grid-cols-2   w-2/3 md:gap-8 gap-14'>
+      <div className='md:flex grid grid-cols-2   w-4/5 md:gap-15 gap-14'>
         {values.map((value, index) => (
           <div key={index}>
             <Item value={value} />
