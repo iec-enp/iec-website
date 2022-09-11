@@ -1,5 +1,11 @@
 import Link from 'next/link'
-import { EnvelopeSimple, MapPin } from 'phosphor-react'
+import {
+  EnvelopeSimple,
+  FacebookLogo,
+  InstagramLogo,
+  LinkedinLogo,
+  MapPin,
+} from 'phosphor-react'
 
 const ExternalLink = ({ href, children }) => (
   <a
@@ -33,17 +39,26 @@ const Footer = () => {
             </a>
           </Link>
         </div>
-     
+
         <div className='flex flex-col space-y-4'>
-          <ExternalLink href='https://www.instagram.com/iec.enp/'>
-            Instagram
-          </ExternalLink>
-          <ExternalLink href='https://www.facebook.com/IEC.ENPhttps://github.com/leerob'>
-            Facebook
-          </ExternalLink>
-          <ExternalLink href='https://www.linkedin.com/company/industrial-engineers-club-iec/mycompany/'>
-            Linkedin
-          </ExternalLink>
+          <div className='flex items-center gap-2'>
+            <InstagramLogo />
+            <ExternalLink href='https://www.instagram.com/iec.enp/'>
+              Instagram
+            </ExternalLink>
+          </div>
+          <div className='flex items-center gap-2'>
+            <FacebookLogo />
+            <ExternalLink href='https://www.facebook.com/IEC.ENPhttps://github.com/leerob'>
+              Facebook
+            </ExternalLink>
+          </div>
+          <div className='flex items-center gap-2'>
+            <LinkedinLogo />
+            <ExternalLink href='https://www.linkedin.com/company/industrial-engineers-club-iec/mycompany/'>
+              Linkedin
+            </ExternalLink>
+          </div>
         </div>
         <div className='flex flex-col space-y-4'>
           <div className='flex items-center gap-4'>

@@ -2,11 +2,16 @@ import Button from '@/components/Form/Buttons'
 import Input from '@/components/Form/Input'
 import Container from '@/components/Layout/Container'
 import { EnvelopeSimple, Gear, User } from 'phosphor-react'
+import { useState } from 'react'
 
 export default function Contact() {
+  const [loading, setLoading] = useState(false)
   const onsubmit = e => {
     e.preventDefault()
-    alert('Merci pour votre message !')
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
   }
   return (
     <>
@@ -49,7 +54,7 @@ export default function Contact() {
               placeholder='Votre message ...'
               required
             />
-            <Button />
+            <Button loading={loading} />
           </form>
         </div>
       </Container>

@@ -60,20 +60,26 @@ const EventSection = ({
           </div>
         </div>
         <div className='flex items-center gap-4 w-full md:w-3/4 justify-between'>
-          <div className='flex flex-col shadow-lg px-2 pb-4 rounded-lg hover:shadow-xl transition-all flex-1'>
-            <div
-              className='border-t-2  w-1/2 pt-2'
-              style={{
-                borderColor: `${iconColor}`,
-              }}>
-              <UsersThree
-                size={24}
-                color={iconColor}
-              />
+          {participant && (
+            <div className='flex flex-col shadow-lg px-2 pb-4 rounded-lg hover:shadow-xl transition-all flex-1'>
+              <div
+                className='border-t-2  w-1/2 pt-2'
+                style={{
+                  borderColor: `${iconColor}`,
+                }}>
+                <UsersThree
+                  size={24}
+                  color={iconColor}
+                />
+              </div>
+              <>
+                <p className='text-xl font-bold text-shadow-light'>
+                  {participant}
+                </p>
+                <p className='font-medium'>Participants</p>
+              </>
             </div>
-            <p className='text-xl font-bold text-shadow-light'>{participant}</p>
-            <p className='font-medium'>Participants</p>
-          </div>
+          )}
 
           <div className='flex flex-col shadow-lg px-2 pb-4 rounded-lg hover:shadow-xl transition-all flex-1'>
             <div
