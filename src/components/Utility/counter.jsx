@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 
 function Counter({ end, id, speed, step }) {
-  function onScroll() {
+  const onScroll = useCallback(() => {
     var element = document.getElementById(id)
     var elemRect = element.getBoundingClientRect()
     var offset = Math.ceil(elemRect.top + window.pageYOffset)
@@ -9,9 +9,9 @@ function Counter({ end, id, speed, step }) {
       countUp()
       window.removeEventListener('scroll', onScroll)
     }
-  }
+  }, [countUp, id])
 
-  function countUp() {
+  const countUp = useCallback(() => {
     let from = 0
     let to = end
     let pas = step
@@ -30,13 +30,13 @@ function Counter({ end, id, speed, step }) {
         clearInterval(counter)
       }
     }, interval)
-  }
+  }, [end, id, onScroll, speed, step])
 
   useEffect(() => {
     window.addEventListener('scroll', onScroll)
 
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  }, [onScroll])
 
   return (
     <>

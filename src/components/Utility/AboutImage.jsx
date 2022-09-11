@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
-import { BsPlayFill, BsPauseFill } from 'react-icons/bs'
+import { BsPauseFill, BsPlayFill } from 'react-icons/bs'
 
 function AboutImage() {
   const slides = [0, 1, 2, 3, 4, 5]
@@ -28,13 +28,20 @@ function AboutImage() {
       clearInterval(IntervalId)
       clearTimeout(timer.current)
     }
-  }, [])
+  }, [IntervalId])
 
   return (
     <>
       <div className='overflow-hidden w-full  relative justify-center items-center flex group anim'>
-        <div className={`absolute flex z-[100] h-full w-full justify-center items-center bg-black ${IntervalId == 0 ? 'bg-opacity-30':'bg-opacity-0'}  text-iec-orange-2-500 text-2xl `}>
-          <button onClick={ImageAnimation} className={`bg-white rounded-full p-3 ${IntervalId ? "hidden group-hover:block" : ""}`}>
+        <div
+          className={`absolute flex z-[100] h-full w-full justify-center items-center bg-black ${
+            IntervalId == 0 ? 'bg-opacity-30' : 'bg-opacity-0'
+          }  text-iec-orange-2-500 text-2xl `}>
+          <button
+            onClick={ImageAnimation}
+            className={`bg-white rounded-full p-3 ${
+              IntervalId ? 'hidden group-hover:block' : ''
+            }`}>
             <BsPlayFill className={`${IntervalId ? 'hidden' : ' '}`} />
             <BsPauseFill className={`${IntervalId ? '' : 'hidden '}`} />
           </button>
