@@ -6,7 +6,7 @@ export default function Events() {
     <Container title='Evenements - IEC - Industrial Engineers Club'>
       <div className='flex flex-col items-center gap-16 mt-36'>
         <div className='flex flex-col items-center gap-8'>
-          <h1 className='text-5xl font-extrabold  dark:text-shadow-dark'>
+          <h1 className='text-5xl font-black  dark:text-shadow-dark'>
             NOS <span className='text-iec-orange-2-500'>EVENEMENTS</span>
           </h1>
           <p className='text-center w-4/5 md:w-1/2 font-medium'>
@@ -18,7 +18,7 @@ export default function Events() {
         </div>
         <EventSection
           name='Business Game'
-          description='At IEC, we organize various and high-quality TECH events, through which we aim to best fit our community needs and to provide a skillful and complete acquirement'
+          description="Business game est un jeu de simulation de gestion d'entreprise, faisant face à une concurrence sur un marché virtuel. Chaque entreprise est représentée et gérée par une équipe"
           date='11-12-13 Octobre 2022'
           place='Paris'
           pics='/images/pictures/img2.webp'
@@ -32,12 +32,11 @@ export default function Events() {
         <hr className='w-3/4 border-1 border-iec-blue-3-200 dark:border-iec-gray-900 mb-8' />
         <EventSection
           name='TEDxENP'
-          description='At IEC, we organize various and high-quality TECH events, through which we aim to best fit our community needs and to provide a skillful and complete acquirement'
+          description="TEDxENP est un événement Tedx organisé par un groupe d'étudiants de l'Ecole Nationale Polytechnique. Les Etudiants et professionnels les se retrouvent afin d'échanger sur l'avenir et l'évolution du monde dans ses différentes composantes en évoquant les différents vecteurs du changement et leurs impacts sur la société"
           date='11-12-13 Octobre 2022'
           place='Paris'
           pics='/images/pictures/img0.webp'
           edition='1'
-          workshop='2'
           participant='400'
           left={false}
           logo='/brand/logos/tedx-logo.svg'
@@ -48,15 +47,41 @@ export default function Events() {
         <EventSection
           logo='/images/events/logo-icc.webp'
           name='IEC Case Compétition '
-          description='At IEC, we organize various and high-quality TECH events, through which we aim to best fit our community needs and to provide a skillful and complete acquirement'
+          description="ICC est une compétition d'étude de cas organisée par le club IEC dans laquelle les participants doivent tenter de trouver une solution à une problématique d'actualité proposée par une entreprise"
           date='11-12-13 Octobre 2022'
           place='Paris'
           pics='/images/pictures/img4.webp'
           edition='2'
-          workshop='17'
           participant='100'
           color='text-[#421B38]'
           iconColor='#421B38'
+        />
+        <hr className='w-3/4 border-1 border-iec-blue-3-200 dark:border-iec-gray-900 mb-8' />
+        <EventSection
+          logo='/images/events/ADC_logo.svg'
+          name='Algeria Data CUP'
+          description="Algeria Data Cup: est un hackathon de data science où les participants sont invités à résoudre un problème de Business réel, en développant un modèle d'apprentissage automatique le plus performant possible"
+          date='11-12-13 Octobre 2022'
+          place='Paris'
+          pics='/images/pictures/img4.webp'
+          edition='1'
+          left={false}
+          participant='100'
+          color='text-[#4A8AFC]'
+          iconColor='#4A8AFC'
+        />
+        <hr className='w-3/4 border-1 border-iec-blue-3-200 dark:border-iec-gray-900 mb-8' />
+        <EventSection
+          logo='/images/events/jourj_logo.webp'
+          name='Jour Génie Industriel'
+          description="Le Jour GI est un événement qui se déroule chacun année, pour but de promouvoir la spécialité du Génie Industriel sous ses deux options aux étudiants lauréats du concours national d'accès au grande écoles d'ingénieurs"
+          date='11-12-13 Octobre 2022'
+          place='Paris'
+          pics='/images/pictures/img4.webp'
+          edition='2'
+          participant='/'
+          color='text-[#D88F0A]'
+          iconColor='#D88F0A'
         />
       </div>
     </Container>

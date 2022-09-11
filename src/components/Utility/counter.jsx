@@ -1,12 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
-function Counter({ end, id, speed ,step}) {
- 
+function Counter({ end, id, speed, step }) {
   function onScroll() {
     var element = document.getElementById(id)
-     var elemRect = element.getBoundingClientRect()
-     var offset = Math.ceil(elemRect.top + window.pageYOffset)
-     console.log("offset is :",window.pageYOffset)
+    var elemRect = element.getBoundingClientRect()
+    var offset = Math.ceil(elemRect.top + window.pageYOffset)
     if (window.innerHeight + window.pageYOffset > offset) {
       countUp()
       window.removeEventListener('scroll', onScroll)
@@ -21,11 +19,11 @@ function Counter({ end, id, speed ,step}) {
 
     if (from == to) {
       document.getElementById(id).textContent = from
-      return;
+      return
     }
 
     const counter = setInterval(() => {
-      from += pas;
+      from += pas
       document.getElementById(id).textContent = from
       if (from >= to) {
         window.removeEventListener('scroll', onScroll)

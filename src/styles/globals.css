@@ -14,7 +14,6 @@ body {
 .prose h1 {
   font-family: 'Dancing Script', 'Mulish', sans-serif;
   font-weight: 300;
-  color: #ffcd38;
 }
 
 a {
@@ -147,7 +146,6 @@ a {
   margin: auto;
   overflow: hidden;
   position: relative;
-  
 }
 
 .sliderrr::before,
@@ -174,7 +172,7 @@ a {
   top: 0;
 }
 .sliderrr .slide-track {
-  animation: 40s scroll  linear infinite;
+  animation: 40s scroll linear infinite;
   display: flex;
   width: calc(11rem * 18);
 }
@@ -203,7 +201,7 @@ a {
   box-shadow: inset 0 0 1px 3px #ffcd387f;
 }
 .rec-pagination .rec-dot {
-  box-shadow:   0 0 1px 1px #8790a5
+  box-shadow: 0 0 1px 1px #8790a5;
 }
 
 html {
@@ -323,6 +321,7 @@ body {
   transform: translate3d(0, 0, 0);
   -webkit-text-fill-color: transparent !important;
   -webkit-background-clip: text !important;
+  background-clip: text !important;
   font-size: 40vw;
   font-weight: 800;
   color: #000;
@@ -592,59 +591,73 @@ body {
 }
 
 .color-ji {
-  background: -webkit-linear-gradient(#e99602 ,#2b4a58);
+  background: -webkit-linear-gradient(#e99602, #2b4a58);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .color-ji-dark {
-  background: -webkit-linear-gradient( #a2d0c1,#e99602);
+  background: -webkit-linear-gradient(#a2d0c1, #e99602);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-
 
 .color-adc {
   background: -webkit-linear-gradient(rgb(87, 154, 255), #1c52f2);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .color-adc-dark {
   background: -webkit-linear-gradient(rgb(255, 255, 255), #1c52f2);
   -webkit-background-clip: text;
+  background-clip: text;
+
   -webkit-text-fill-color: transparent;
 }
-
 
 .color-ted {
   background: -webkit-linear-gradient(rgb(0, 0, 0), #e62b1e);
   -webkit-background-clip: text;
+  background-clip: text;
+
   -webkit-text-fill-color: transparent;
 }
 .color-ted-dark {
   background: -webkit-linear-gradient(rgb(255, 255, 255), #e62b1e);
   -webkit-background-clip: text;
+  background-clip: text;
+
   -webkit-text-fill-color: transparent;
 }
 
 .color-bg {
   background: -webkit-linear-gradient(#0b3434, #b2d06b);
   -webkit-background-clip: text;
+  background-clip: text;
+
   -webkit-text-fill-color: transparent;
 }
 .color-bg-dark {
   background: -webkit-linear-gradient(#f6fafa, #b2d06b);
   -webkit-background-clip: text;
+  background-clip: text;
+
   -webkit-text-fill-color: transparent;
 }
 .color-icc {
   background: -webkit-linear-gradient(#9600a9, rgb(14, 1, 85));
   -webkit-background-clip: text;
+  background-clip: text;
+
   -webkit-text-fill-color: transparent;
 }
 .color-icc-dark {
   background: -webkit-linear-gradient(#d93aee, rgb(65, 39, 209));
   -webkit-background-clip: text;
+  background-clip: text;
+
   -webkit-text-fill-color: transparent;
 }
 
@@ -661,11 +674,11 @@ body {
   overflow: auto;
 }
 
-.img-icon::before{
+.img-icon::before {
   position: absolute;
-  content: "";
+  content: '';
   background-color: #ffcd38;
-  opacity: .3;
+  opacity: 0.3;
   width: 5rem;
   height: 5rem;
   left: 20%;
@@ -674,8 +687,8 @@ body {
   z-index: 1;
 }
 
-.sponsors{
-  background-image: url("/images/sponsor.webp");
+.sponsors {
+  background-image: url('/images/sponsor.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

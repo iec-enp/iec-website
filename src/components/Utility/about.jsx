@@ -15,13 +15,13 @@ function About() {
       id: 2,
       title: 'Our Vision',
       content:
-        "Devenir un label en terme d’organisation et une référence dans la communauté estudiantine "
+        'Devenir un label en terme d’organisation et une référence dans la communauté estudiantine ',
     },
     {
       id: 3,
       title: 'Our Mission',
       content:
-        "Promouvoir le Génie Industriel en Algérie, renforcer la formation et le réseau professionnel, et développer  la communauté internationale des étudiants et anciens diplômés du  GI"
+        'Promouvoir le Génie Industriel en Algérie, renforcer la formation et le réseau professionnel, et développer  la communauté internationale des étudiants et anciens diplômés du  GI',
     },
   ])
 
@@ -75,7 +75,6 @@ function About() {
       }
     }
     setTrigger(tab)
-    console.log(trigger)
   }
 
   return (

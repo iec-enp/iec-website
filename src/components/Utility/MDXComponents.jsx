@@ -4,7 +4,7 @@ import Link from 'next/link'
 const h1 = props => {
   return (
     <h1
-      className='text-3xl tracking-tight mb-4 text-iec-orange-2-500 '
+      className='text-3xl tracking-tight mb-4 text-iec-blue-2-500 dark:text-iec-orange-2-500 '
       {...props}
     />
   )

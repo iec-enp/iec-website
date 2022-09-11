@@ -18,7 +18,7 @@ export default function Articles({ posts, cats }) {
     setTimeout(() => {
       setLoaded(true)
       setLoading(false)
-    }, 1000)
+    }, 500)
   }
 
   const handleSearch = e => {
@@ -55,8 +55,8 @@ export default function Articles({ posts, cats }) {
   return (
     <Container title='Articles - IEC - Industrial Engineers Club'>
       <div className='mt-40 md:mt-32 flex flex-col items-center gap-6'>
-        <h1 className='text-6xl font-extrabold uppercase'>
-          Nos <span className='text-iec-orange-2-500'>Articles</span>
+        <h1 className='text-6xl font-black uppercase'>
+          Nos <span className='text-iec-orange-2-500 '>Articles</span>
         </h1>
         <div className='flex items-center gap-4 w-1/2 md:w-1/3 mt-3'>
           <input
@@ -71,7 +71,11 @@ export default function Articles({ posts, cats }) {
           {cats.map((cat, i) => (
             <button
               className={`hover:bg-iec-orange-2-500 transition-all bg-white rounded-xl shadow-lg px-2 py-1 text-iec-blue-2-500 outline-none ${
-                cat === category ? 'bg-iec-orange-2-500' : ''
+                cat === category
+                  ? 'bg-iec-orange-2-500'
+                  : cat === 'Tous' && category === ''
+                  ? 'bg-iec-orange-2-500'
+                  : ''
               }`}
               key={i}
               onClick={() => handleClick(cat)}>

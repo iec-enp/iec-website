@@ -1,7 +1,9 @@
+import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
-import { ChalkboardTeacher, Clock, MapPin, UsersThree } from 'phosphor-react'
+import { Clock, MapPin, UsersThree } from 'phosphor-react'
 import { AiOutlineFieldNumber } from 'react-icons/ai'
+import TrackVisibility from 'react-on-screen'
 
 const EventSection = ({
   name,
@@ -28,7 +30,7 @@ const EventSection = ({
         left ? 'md:flex-row' : 'md:flex-row-reverse'
       }`}>
       <div
-        className={`flex-col flex gap-12 items-center ${
+        className={`flex-col flex gap-12 items-center w-full md:w-3/4 ${
           left ? 'md:items-start' : 'md:items-end'
         }`}>
         <h1 className={`text-5xl text-shadow-light font-bold ${color}`}>
@@ -72,7 +74,7 @@ const EventSection = ({
             <p className='text-xl font-bold text-shadow-light'>{participant}</p>
             <p className='font-medium'>Participants</p>
           </div>
-          
+
           <div className='flex flex-col shadow-lg px-2 pb-4 rounded-lg hover:shadow-xl transition-all flex-1'>
             <div
               className='border-t-2  w-1/2 pt-2'
@@ -90,38 +92,76 @@ const EventSection = ({
         </div>
       </div>
       <div className='relative md:h-[300px] flex flex-col justify-center'>
-        <div className='hidden w-[70px] h-[70px]  md:flex justify-center items-center absolute rounded-full p-1 bg-gray-100 border-2 -top-10 left-1/2'>
+        <motion.div
+          initial={{ y: 180 }}
+          animate={{ y: 0 }}
+          transition={{
+            repeat: Infinity,
+            duration: 2,
+            repeatType: 'reverse',
+            type: 'spring',
+          }}
+          className='hidden w-[70px] h-[70px]  md:flex justify-center items-center absolute rounded-full p-1 bg-gray-100 border-2 -top-10 left-1/2'>
           <Image
             src={logo}
             alt='logo'
             width={50}
             height={50}
           />
-        </div>
-        <div className='hidden w-[90px] h-[90px]  md:flex justify-center items-center absolute rounded-full p-1 bg-gray-100 border-2 top-1/2 -left-12 z-10'>
+        </motion.div>
+        <motion.div className='hidden w-[90px] h-[90px]  md:flex justify-center items-center absolute rounded-full p-1 bg-gray-100 border-2 top-1/2 -left-12 z-10'>
           <Image
             src={logo}
             alt='logo'
             width={70}
             height={70}
           />
-        </div>
-        <div className='hidden w-[50px] h-[50px]  md:flex justify-center items-center absolute rounded-full p-1 bg-gray-100 border-2 -bottom-4 right-12 z-10'>
+        </motion.div>
+        <motion.div
+          initial={{ y: 20, x: 20 }}
+          animate={{ y: 0, x: 0 }}
+          transition={{
+            repeat: Infinity,
+            duration: 2,
+            repeatType: 'reverse',
+            type: 'spring',
+          }}
+          className='hidden w-[50px] h-[50px]  md:flex justify-center items-center absolute rounded-full p-1 bg-gray-100 border-2 -bottom-4 right-12 z-10'>
           <Image
             src={logo}
             alt='logo'
             width={40}
             height={40}
           />
-        </div>
-        <Image
-          alt='bg-photo'
-          src={pics}
-          width={800}
-          height={400}
-          objectFit='cover'
-          className='rounded-3xl border-4 border-red-400'
-        />
+        </motion.div>
+        <TrackVisibility once>
+          {({ isVisible }) =>
+            isVisible && (
+              <motion.div
+                initial={{
+                  scale: 0.5,
+                  opacity: 0,
+                }}
+                animate={{
+                  scale: 1,
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 0.5,
+                  type: 'spring',
+                }}>
+                <Image
+                  alt='bg-photo'
+                  src={pics}
+                  width={800}
+                  height={400}
+                  objectFit='cover'
+                  className='rounded-3xl border-4 border-red-400'
+                />
+              </motion.div>
+            )
+          }
+        </TrackVisibility>
       </div>
     </div>
   )

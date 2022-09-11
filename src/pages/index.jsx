@@ -11,13 +11,15 @@ import Map from '@/components/Utility/map'
 import Rond from '@/components/Utility/rond'
 import Sponsors from '@/components/Utility/Sponsors'
 import Value from '@/components/Utility/value'
+import { getRecentBlogPosts } from '@/utils/get-blog-post'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { BsArrowRight, BsFillCaretRightFill } from 'react-icons/bs'
 import TrackVisibility from 'react-on-screen'
 
-export default function Home() {
+export default function Home({ latestPosts }) {
   const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
 
@@ -160,18 +162,16 @@ export default function Home() {
               </p>
               <div className='w-[7rem] rounded-full mx-auto md:mx-0 bg-iec-orange-2-500 h-1'></div>
 
-              <div className='flex flex-col mt-8 gap-4 '>
+              <div className='flex flex-col mt-8 gap-4'>
                 <About />
               </div>
             </div>
           </div>
         </section>
 
-        <section className='w-full flex flex-col mx-auto pb-20'>
+        <section className='w-full flex flex-col mx-auto pb-20 relative'>
           <div className='absolute w-full h-full md:flex md:items-center lg:items-start justify-center hidden'>
-            <div className='w-[80%] h-[80%]'>
-              <Map theme={theme} />
-            </div>
+            <Map theme={theme} />
           </div>
           <div className='text-5xl text-center my-auto font-bold mt-10'>
             Nos
@@ -224,7 +224,7 @@ export default function Home() {
                       layout='responsive'
                     />
                     <div className='absolute'>
-                      <Rond theme={theme}/>
+                      <Rond theme={theme} />
                     </div>
                   </div>
                 )
@@ -285,7 +285,6 @@ export default function Home() {
                       </span>
                       Télécherger Brochure
                     </button>
-                    
                   </div>
                 )
               }
@@ -305,7 +304,7 @@ export default function Home() {
                       layout='responsive'
                     />
                     <div className='absolute'>
-                      <Rond theme={theme}/>
+                      <Rond theme={theme} />
                     </div>
                   </div>
                 )
@@ -382,34 +381,28 @@ export default function Home() {
             <h1 className='text-5xl  mt-28 font-bold'>
               Nos <span className='text-iec-orange-2-500'>Articles</span>
             </h1>
-
-            <p className='text-iec-gray-800 w-1/2 text-center mx-auto'>
-              If you are going to use a passage of Lorem Ipsum, you need to be
-              sure there isn&apos;t anything embarrassing hidden in the middle
-              of text
-            </p>
           </div>
           <div className='w-full grid md:grid-cols-3  grid-cols-1 sm:grid-cols-2 px-32 sm:px-10 gap-8  mt-12 pb-14'>
-            <ArtricleCard
-              image='/images/covid2.jpg'
-              title="L'impact Du Covid"
-            />
-            <ArtricleCard
-              image='/images/supply.jpg'
-              title='Supply Chain'
-            />
-            <ArtricleCard
-              image='/images/industrie4.jpg'
-              title='Industrie 4.0'
-            />
+            {latestPosts.map(post => (
+              <ArtricleCard
+                key={post.slug}
+                image={post.backdrop_path}
+                title={post.title}
+                href={post.slug}
+                description={post.description}
+                date={post.date}
+              />
+            ))}
           </div>
           <div className='w-full flex justify-center '>
-            <button className=' bg-white mb-12  font-bold  py-2 px-4 rounded-xl flex items-center gap-3 hover:text-white hover:bg-iec-orange-2-500 text-iec-orange-2-500 '>
-              Voir tout Les Articles
-              <span>
-                <BsArrowRight />
-              </span>
-            </button>
+            <Link href='/articles'>
+              <a className=' bg-white mb-12  font-bold  py-2 px-4 rounded-xl flex items-center gap-3 hover:text-white hover:bg-iec-orange-2-500 text-iec-orange-2-500 '>
+                Voir tout Les Articles
+                <span>
+                  <BsArrowRight />
+                </span>
+              </a>
+            </Link>
           </div>
         </section>
 
@@ -461,4 +454,14 @@ export default function Home() {
       </Container>
     </>
   )
+}
+
+export const getStaticProps = async () => {
+  const latestPosts = await getRecentBlogPosts(3)
+
+  return {
+    props: {
+      latestPosts,
+    },
+  }
 }

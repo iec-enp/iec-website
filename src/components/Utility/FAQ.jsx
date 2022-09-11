@@ -1,19 +1,18 @@
-import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion'
 import { useState } from 'react'
-
-import { BsCaretRightFill } from 'react-icons/bs'
 
 function FAQ() {
   const [items, setItems] = useState([
     {
       id: 1,
-      title: 'Pourquoi IEC est uniquement ouvert aux étudiants du Génie Industriel ?',
+      title:
+        'Pourquoi IEC est uniquement ouvert aux étudiants du Génie Industriel ?',
       content:
         "La majorité des activités organisées par le club sont ouvertes au grand public, l'organisation des activités est faite par les membres du club, étudiants de la spécialité",
     },
     {
       id: 2,
-      title: "Quelle est la différence entre IEC et les autres clubs de l'école ?",
+      title:
+        "Quelle est la différence entre IEC et les autres clubs de l'école ?",
       content:
         "La différence entre IEC et les autres clubs de l'école réside en premier lieu, dans le fait que IEC est un club qui regroupe uniquement les étudiants du Génie Industriel de l'école avec ses deux sous spécialités. En deuxième lieu, les projets et différents événements organisés par le club répondent aux besoins de la formation de la spécialité",
     },
@@ -25,23 +24,22 @@ function FAQ() {
     },
   ])
 
-  function Collapse ({isOpen, content}) {
- 
-      const childHeightRaw = content.clientHeight;
-      const childHeight = `${childHeightRaw / 16}rem`;
+  function Collapse({ isOpen, content }) {
+    const childHeightRaw = content.clientHeight
+    const childHeight = `${childHeightRaw / 16}rem`
 
-    return(
-    
-        <div className="collapse" style={{
-            maxHeight: isOpen ? childHeight : 0,
-            transition : "0.4s max-height" ,
-            overflow :"hidden"
-          }}>
-            <div ><Content content={content} /></div>
-            
-          
+    return (
+      <div
+        className='collapse'
+        style={{
+          maxHeight: isOpen ? childHeight : 0,
+          transition: '0.4s max-height',
+          overflow: 'hidden',
+        }}>
+        <div>
+          <Content content={content} />
         </div>
-      
+      </div>
     )
   }
 
@@ -57,10 +55,14 @@ function FAQ() {
           layout
           className='flex py-5 px-6 items-center justify-between font-bold bg-white rounded-lg  text-iec-blue-2-500'>
           {title}
-          <div className='w-5 h-5 text-white flex justify-center items-center rounded-full bg-iec-orange-2-500'>+</div>
+          <div className='w-5 h-5 text-white flex justify-center items-center rounded-full bg-iec-orange-2-500'>
+            +
+          </div>
         </div>
-        <Collapse isOpen={trigger[index].status} content={content}>
-        <section className="sample-content">
+        <Collapse
+          isOpen={trigger[index].status}
+          content={content}>
+          <section className='sample-content'>
             <h1>content</h1>
             <p>content</p>
           </section>
@@ -70,13 +72,7 @@ function FAQ() {
   }
 
   function Content({ content }) {
-    return (
-      <div
-        className='w-full px-6 text-center py-3'
-       >
-        {content}
-      </div>
-    )
+    return <div className='w-full px-6 text-center py-3'>{content}</div>
   }
 
   const [trigger, setTrigger] = useState([
@@ -93,27 +89,25 @@ function FAQ() {
       }
     }
     setTrigger(tab)
-    console.log(trigger)
   }
 
   return (
     <>
-     
-        <ul
-          className='flex w-3/5  justify-center my-12 flex-col  gap-3'
-          layout
-          initial={{ borderRadius: 25 }}>
-          {items.map((item, i) => (
-            <Item
-              key={i}
-              index={i}
-              title={item.title}
-              content={item.content}
-              funct={() => clickHandler(i)}
-              trigger={trigger}
-            />
-          ))}
-        </ul>
+      <ul
+        className='flex w-3/5  justify-center my-12 flex-col  gap-3'
+        layout
+        initial={{ borderRadius: 25 }}>
+        {items.map((item, i) => (
+          <Item
+            key={i}
+            index={i}
+            title={item.title}
+            content={item.content}
+            funct={() => clickHandler(i)}
+            trigger={trigger}
+          />
+        ))}
+      </ul>
     </>
   )
 }
