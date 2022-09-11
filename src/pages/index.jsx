@@ -382,8 +382,8 @@ export default function Home({ latestPosts }) {
               Nos <span className='text-iec-orange-2-500'>Articles</span>
             </h1>
             <p className='text-iec-gray-800 w-1/2 text-center mx-auto dark:text-white'>
-              Des articles qui traitent différents sujets d'actualité dans le
-              monde industriel, technologique et économique. Ces derniers,
+              Des articles qui traitent différents sujets d&apos;actualité dans
+              le monde industriel, technologique et économique. Ces derniers,
               visent la vulgarisation des aspects du génie industriel avec ses
               deux options : Management Industriel et Data Sciences &
               Intelligence Artificielle.
@@ -433,11 +433,11 @@ export default function Home({ latestPosts }) {
               </h1>
               <p className='text-iec-gray-800 w-1/2 text-center mx-auto dark:text-white'>
                 Des entreprises dans différents secteurs ont été intéressées par
-                l'ensemble des événements faits. Façonnées par les concepts de
-                ces derniers : Un logiciel de simulation d'entreprise développé
-                en interne, des problématiques données par des boîtes de conseil
-                multinationales et des speeches donnés par des gens de haut
-                niveau.
+                l&apos;ensemble des événements faits. Façonnées par les concepts
+                de ces derniers : Un logiciel de simulation d&apos;entreprise
+                développé en interne, des problématiques données par des boîtes
+                de conseil multinationales et des speeches donnés par des gens
+                de haut niveau.
               </p>
             </div>
             <Sponsors />
