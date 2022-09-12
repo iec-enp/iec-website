@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
           <div className='flex items-center gap-2'>
             <FacebookLogo />
-            <ExternalLink href='https://www.facebook.com/IEC.ENPhttps://github.com/leerob'>
+            <ExternalLink href='https://www.facebook.com/IEC.ENP'>
               Facebook
             </ExternalLink>
           </div>

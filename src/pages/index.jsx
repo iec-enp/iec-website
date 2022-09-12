@@ -18,10 +18,21 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { BsArrowRight, BsFillCaretRightFill } from 'react-icons/bs'
 import TrackVisibility from 'react-on-screen'
+import {SiInstagram, SiFacebook,SiLinkedin, SiYoutube} from 'react-icons/si'
+import {FaFacebookSquare, FaLinkedin, FaYoutubeSquare,FaInstagram} from 'react-icons/fa'
+import { saveAs } from "file-saver";
+
 
 export default function Home({ latestPosts }) {
   const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
+
+  const saveFile = () => {
+    saveAs(
+      "/pdf/brochuree.pdf",
+      "example.pdf"
+    );
+  };
 
   useEffect(() => {
     setMounted(true)
@@ -61,9 +72,12 @@ export default function Home({ latestPosts }) {
                       <h2 className=' animate__animated animate__fadeInLeft text-3xl my-10 text-gray-700 dark:text-white'>
                         Industrial Engineers Club
                       </h2>
-                      <button className=' animate__animated animate__fadeInLeft bg-iec-orange-2-500 hidden md:inline text-[1rem] mx-auto px-7 py-2 rounded-full mt-4'>
-                        Contacter
-                      </button>
+                      <div className='flex flex-row items-center gap-4 justify-center md:justify-start py-5 md:py-0'>
+                        <a href="https://www.instagram.com/iec.enp/"><FaInstagram className='text-xl'/></a>
+                        <a href="https://www.facebook.com/IEC.ENP"><FaFacebookSquare className='text-xl'/></a>
+                        <a href="https://www.linkedin.com/company/industrial-engineers-club-iec/mycompany/"><FaLinkedin className='text-xl'/></a>
+                        <a href="https://www.youtube.com/channel/UCFJj3c8sxopxbiuR9rNu-2g"><FaYoutubeSquare className='text-xl'/></a>
+                      </div>
                     </>
                   )
                 }
@@ -134,7 +148,7 @@ export default function Home({ latestPosts }) {
         </section>
 
         <section className='w-full mb-24 md:h-[25rem] lg:h-[400px] sm:h-[60rem] h-[60rem]'>
-          <div className='flex md:flex-row flex-col w-full mt-28 mb-14 mx-auto px-8 gap-7'>
+          <div className='flex md:flex-row flex-col w-11/12 mt-28 mb-14 mx-auto px-8 gap-9'>
             <TrackVisibility
               once
               className='md:w-[45%]  w-[80%] h-max mx-auto flex justify-center items-center relative  '>
@@ -204,7 +218,7 @@ export default function Home({ latestPosts }) {
           </div>
         </section> */}
         <section>
-          <h1 className='md:animate__animated md:animate__bounce text-center lg:mt-10 text-5xl mx-auto font-bold '>
+          <h1 className='animate__animated animate__bounce text-center lg:mt-10 text-5xl mx-auto font-bold '>
             Nos <span className='text-iec-orange-2-500'>Spécialitées</span>
           </h1>
 
@@ -214,7 +228,7 @@ export default function Home({ latestPosts }) {
               className='w-[45%] md:w-[25%] h-max mx-auto md:mx-0'>
               {({ isVisible }) =>
                 isVisible && (
-                  <div className='image-spec md:animate__animated md:animate__fadeInLeft'>
+                  <div className='image-spec animate__animated animate__fadeInLeft'>
                     <Image
                       className=' rounded-tl-[50px]'
                       src='/images/data-science.webp'
@@ -235,7 +249,7 @@ export default function Home({ latestPosts }) {
               className='flex flex-col md:w-1/2 w-full px-12  md:px-0 mt-20 md:mt-0 text-center md:text-left'>
               {({ isVisible }) =>
                 isVisible && (
-                  <div className='md:animate__animated md:animate__fadeInRight '>
+                  <div className='animate__animated animate__fadeInRight '>
                     <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
                       Data Science & Intelligence Artificielle
                     </h1>
@@ -249,7 +263,7 @@ export default function Home({ latestPosts }) {
                       telles que la programmation informatique, les
                       mathématiques ou les statistiques
                     </p>
-                    <button className='flex hover:text-white hover:bg-iec-orange-2-500 items-center mx-auto md:mx-0 gap-2 text-iec-orange-2-500 bg-white w-max px-3 py-2 rounded-lg'>
+                    <button onClick={saveFile} className='flex hover:text-white hover:bg-iec-orange-2-500 items-center mx-auto md:mx-0 gap-2 text-iec-orange-2-500 bg-white w-max px-3 py-2 rounded-lg'>
                       <span>
                         <BsFillCaretRightFill />
                       </span>
@@ -266,7 +280,7 @@ export default function Home({ latestPosts }) {
               className='flex flex-col md:w-1/2  w-full px-12  md:px-0 mt-20 text-center md:text-left'>
               {({ isVisible }) =>
                 isVisible && (
-                  <div className='md:animate__animated md:animate__fadeInLeft'>
+                  <div className='animate__animated animate__fadeInLeft'>
                     <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
                       Le Génie Industriel
                     </h1>
@@ -279,7 +293,7 @@ export default function Home({ latestPosts }) {
                       d&apos;information nécessaire dans le management des
                       entreprises
                     </p>
-                    <button className='flex items-center hover:text-white hover:bg-iec-orange-2-500 mx-auto md:mx-0 gap-2 text-iec-orange-2-500 bg-white w-max px-3 py-2 rounded-lg'>
+                    <button onClick={saveFile} className='flex items-center hover:text-white hover:bg-iec-orange-2-500 mx-auto md:mx-0 gap-2 text-iec-orange-2-500 bg-white w-max px-3 py-2 rounded-lg'>
                       <span>
                         <BsFillCaretRightFill />
                       </span>
@@ -294,7 +308,7 @@ export default function Home({ latestPosts }) {
               className='w-[45%] md:w-[25%]  h-max mx-auto md:mx-0'>
               {({ isVisible }) =>
                 isVisible && (
-                  <div className='image-spec z-100 md:animate__animated md:animate__fadeInRight'>
+                  <div className='image-spec z-100 animate__animated animate__fadeInRight'>
                     <Image
                       className='rounded-tl-[50px]'
                       src='/images/GI.webp'
@@ -321,7 +335,7 @@ export default function Home({ latestPosts }) {
               <Alumni />
             </div>
             <div className='w-full flex justify-center lg:w-1/2 mx-auto my-auto'>
-              <div className='grid grid-cols-1  sm:grid-cols-2 text-center md:text-left gap-x-20 gap-y-7 w-max mx-auto sm:mx-0 my-auto'>
+              <div className='grid grid-cols-2 text-center md:text-left mb-9 md:mb-0 gap-x-20 gap-y-7 w-max mx-auto sm:mx-0 my-auto'>
                 <div className='flex w-full flex-col  ml-auto gap-3'>
                   <h1 className='text-[2.5rem] font-bold'>
                     <Counter
@@ -381,13 +395,6 @@ export default function Home({ latestPosts }) {
             <h1 className='text-5xl  mt-28 font-bold'>
               Nos <span className='text-iec-orange-2-500'>Articles</span>
             </h1>
-            <p className='text-iec-gray-800 w-1/2 text-center mx-auto dark:text-white'>
-              Des articles qui traitent différents sujets d&apos;actualité dans
-              le monde industriel, technologique et économique. Ces derniers,
-              visent la vulgarisation des aspects du génie industriel avec ses
-              deux options : Management Industriel et Data Sciences &
-              Intelligence Artificielle.
-            </p>
           </div>
           <div className='w-full grid md:grid-cols-3  grid-cols-1 sm:grid-cols-2 px-32 sm:px-10 gap-8  mt-12 pb-14'>
             {latestPosts.map(post => (
@@ -432,12 +439,9 @@ export default function Home({ latestPosts }) {
                 <span className='text-iec-orange-2-500'>fait Confiance</span>
               </h1>
               <p className='text-iec-gray-800 w-1/2 text-center mx-auto dark:text-white'>
-                Des entreprises dans différents secteurs ont été intéressées par
-                l&apos;ensemble des événements faits. Façonnées par les concepts
-                de ces derniers : Un logiciel de simulation d&apos;entreprise
-                développé en interne, des problématiques données par des boîtes
-                de conseil multinationales et des speeches donnés par des gens
-                de haut niveau.
+                If you are going to use a passage of Lorem Ipsum, you need to be
+                sure there isn&apos;t anything embarrassing hidden in the middle
+                of text
               </p>
             </div>
             <Sponsors />
@@ -450,13 +454,13 @@ export default function Home({ latestPosts }) {
           </div>
         </section>
 
-        <section className=' mt-14 w-full md:h-[600px] h-[420px]'>
+        <section className=' mt-14 w-full md:h-[500px] h-auto'>
           <div className='flex flex-col justify-center w-full items-center '>
             <div className='text-5xl text-center  font-bold mt-24'>
               Frequently Asked
               <span className='text-iec-orange-2-500'> Questions</span>
             </div>
-            <div className='w-full flex justify-center mb-10'>
+            <div className='w-full flex justify-center '>
               <FAQ />
             </div>
           </div>
