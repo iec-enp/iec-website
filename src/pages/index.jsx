@@ -12,27 +12,27 @@ import Rond from '@/components/Utility/rond'
 import Sponsors from '@/components/Utility/Sponsors'
 import Value from '@/components/Utility/value'
 import { getRecentBlogPosts } from '@/utils/get-blog-post'
+import { saveAs } from 'file-saver'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { BsArrowRight, BsFillCaretRightFill } from 'react-icons/bs'
+import {
+  FaFacebookSquare,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutubeSquare,
+} from 'react-icons/fa'
 import TrackVisibility from 'react-on-screen'
-import {SiInstagram, SiFacebook,SiLinkedin, SiYoutube} from 'react-icons/si'
-import {FaFacebookSquare, FaLinkedin, FaYoutubeSquare,FaInstagram} from 'react-icons/fa'
-import { saveAs } from "file-saver";
-
 
 export default function Home({ latestPosts }) {
   const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
 
   const saveFile = () => {
-    saveAs(
-      "/pdf/brochuree.pdf",
-      "example.pdf"
-    );
-  };
+    saveAs('/pdf/brochuree.pdf', 'example.pdf')
+  }
 
   useEffect(() => {
     setMounted(true)
@@ -73,10 +73,18 @@ export default function Home({ latestPosts }) {
                         Industrial Engineers Club
                       </h2>
                       <div className='flex flex-row items-center gap-4 justify-center md:justify-start py-5 md:py-0'>
-                        <a href="https://www.instagram.com/iec.enp/"><FaInstagram className='text-xl'/></a>
-                        <a href="https://www.facebook.com/IEC.ENP"><FaFacebookSquare className='text-xl'/></a>
-                        <a href="https://www.linkedin.com/company/industrial-engineers-club-iec/mycompany/"><FaLinkedin className='text-xl'/></a>
-                        <a href="https://www.youtube.com/channel/UCFJj3c8sxopxbiuR9rNu-2g"><FaYoutubeSquare className='text-xl'/></a>
+                        <a href='https://www.instagram.com/iec.enp/'>
+                          <FaInstagram className='text-xl' />
+                        </a>
+                        <a href='https://www.facebook.com/IEC.ENP'>
+                          <FaFacebookSquare className='text-xl' />
+                        </a>
+                        <a href='https://www.linkedin.com/company/industrial-engineers-club-iec/mycompany/'>
+                          <FaLinkedin className='text-xl' />
+                        </a>
+                        <a href='https://www.youtube.com/channel/UCFJj3c8sxopxbiuR9rNu-2g'>
+                          <FaYoutubeSquare className='text-xl' />
+                        </a>
                       </div>
                     </>
                   )
@@ -149,22 +157,16 @@ export default function Home({ latestPosts }) {
 
         <section className='w-full mb-24 md:h-[25rem] lg:h-[400px] sm:h-[60rem] h-[60rem]'>
           <div className='flex md:flex-row flex-col w-11/12 mt-28 mb-14 mx-auto px-8 gap-9'>
-            <TrackVisibility
-              once
-              className='md:w-[45%]  w-[80%] h-max mx-auto flex justify-center items-center relative  '>
-              {({ isVisible }) =>
-                isVisible && (
-                  <div
-                    className='animate__animated animate__fadeInLeft image-about '
-                    style={{
-                      animationDelay: '0.1s',
-                      animationDuration: '1.5s',
-                    }}>
-                    <AboutImage />
-                  </div>
-                )
-              }
-            </TrackVisibility>
+            <div className='md:w-[45%]  w-[80%] h-max mx-auto flex justify-center items-center relative  '>
+              <div
+                className=' image-about '
+                style={{
+                  animationDelay: '0.1s',
+                  animationDuration: '1.5s',
+                }}>
+                <AboutImage />
+              </div>
+            </div>
 
             <div className='w-1/2 mx-auto text-center md:text-left'>
               <h1 className='md:text-left text-5xl  font-bold text-center mt-5 md:mt-0 leading-[32px]'>
@@ -228,7 +230,7 @@ export default function Home({ latestPosts }) {
               className='w-[45%] md:w-[25%] h-max mx-auto md:mx-0'>
               {({ isVisible }) =>
                 isVisible && (
-                  <div className='image-spec animate__animated animate__fadeInLeft'>
+                  <div className='image-spec FadeInLeft'>
                     <Image
                       className=' rounded-tl-[50px]'
                       src='/images/data-science.webp'
@@ -237,7 +239,7 @@ export default function Home({ latestPosts }) {
                       height={250}
                       layout='responsive'
                     />
-                    <div className='absolute'>
+                    <div className='absolute '>
                       <Rond theme={theme} />
                     </div>
                   </div>
@@ -249,27 +251,34 @@ export default function Home({ latestPosts }) {
               className='flex flex-col md:w-1/2 w-full px-12  md:px-0 mt-20 md:mt-0 text-center md:text-left'>
               {({ isVisible }) =>
                 isVisible && (
-                  <div className='animate__animated animate__fadeInRight '>
-                    <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
-                      Data Science & Intelligence Artificielle
-                    </h1>
-                    <p className='text-iec-gray-800 dark:text-white text-xl py-6'>
-                      {' '}
-                      La DSIA est une spécialité de l&apos;ENP qui a été ouverte
-                      en 2020. Elle englobe deux domaines de pointe : la science
-                      des données,et l&apos;intelligence artificielle ayant pour
-                      but la création de valeur à partir de l&apos;exploration
-                      et l&apos;analyse de données brutes grâce à des techniques
-                      telles que la programmation informatique, les
-                      mathématiques ou les statistiques
-                    </p>
-                    <button onClick={saveFile} className='flex hover:text-white hover:bg-iec-orange-2-500 items-center mx-auto md:mx-0 gap-2 text-iec-orange-2-500 bg-white w-max px-3 py-2 rounded-lg'>
-                      <span>
-                        <BsFillCaretRightFill />
-                      </span>
-                      Télécherger Brochure
-                    </button>
-                  </div>
+                  <>
+                    <div className='specialityText'>
+                      <div className=''>
+                        <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
+                          Data Science & Intelligence Artificielle
+                        </h1>
+                        <p className='text-iec-gray-800 dark:text-white text-xl py-6'>
+                          {' '}
+                          La DSIA est une spécialité de l&apos;ENP qui a été
+                          ouverte en 2020. Elle englobe deux domaines de pointe
+                          : la science des données,et l&apos;intelligence
+                          artificielle ayant pour but la création de valeur à
+                          partir de l&apos;exploration et l&apos;analyse de
+                          données brutes grâce à des techniques telles que la
+                          programmation informatique, les mathématiques ou les
+                          statistiques
+                        </p>
+                        <button
+                          onClick={saveFile}
+                          className='flex hover:text-white hover:bg-iec-orange-2-500 items-center mx-auto md:mx-0 gap-2 text-iec-blue-2-500 bg-white w-max px-3 py-2 rounded-lg shadow-md'>
+                          <span>
+                            <BsFillCaretRightFill />
+                          </span>
+                          Télécherger Brochure
+                        </button>
+                      </div>
+                    </div>
+                  </>
                 )
               }
             </TrackVisibility>
@@ -280,7 +289,7 @@ export default function Home({ latestPosts }) {
               className='flex flex-col md:w-1/2  w-full px-12  md:px-0 mt-20 text-center md:text-left'>
               {({ isVisible }) =>
                 isVisible && (
-                  <div className='animate__animated animate__fadeInLeft'>
+                  <div className='specialityText'>
                     <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
                       Le Génie Industriel
                     </h1>
@@ -293,7 +302,9 @@ export default function Home({ latestPosts }) {
                       d&apos;information nécessaire dans le management des
                       entreprises
                     </p>
-                    <button onClick={saveFile} className='flex items-center hover:text-white hover:bg-iec-orange-2-500 mx-auto md:mx-0 gap-2 text-iec-orange-2-500 bg-white w-max px-3 py-2 rounded-lg'>
+                    <button
+                      onClick={saveFile}
+                      className='flex items-center hover:text-white hover:bg-iec-orange-2-500 mx-auto md:mx-0 gap-2 text-iec-blue-2-500 bg-white w-max px-3 py-2 rounded-lg shadow-md'>
                       <span>
                         <BsFillCaretRightFill />
                       </span>
@@ -308,7 +319,7 @@ export default function Home({ latestPosts }) {
               className='w-[45%] md:w-[25%]  h-max mx-auto md:mx-0'>
               {({ isVisible }) =>
                 isVisible && (
-                  <div className='image-spec z-100 animate__animated animate__fadeInRight'>
+                  <div className='image-spec z-100 FadeInRight'>
                     <Image
                       className='rounded-tl-[50px]'
                       src='/images/GI.webp'
@@ -330,8 +341,8 @@ export default function Home({ latestPosts }) {
           <div className='text-5xl text-center mt-28 font-bold'>
             IEC <span className='text-iec-orange-2-500'>En Chiffres</span>
           </div>
-          <div className='flex gap-[13rem] mt-16'>
-            <div className='w-1/2 hidden lg:inline'>
+          <div className='flex gap-[8rem] mt-16'>
+            <div className='w-1/2 hidden lg:inline lg:ml-3'>
               <Alumni />
             </div>
             <div className='w-full flex justify-center lg:w-1/2 mx-auto my-auto'>
@@ -353,7 +364,7 @@ export default function Home({ latestPosts }) {
                     +
                     <Counter
                       id='counter2'
-                      end={420}
+                      end={410}
                       speed={10}
                       step={5}
                     />
@@ -410,7 +421,7 @@ export default function Home({ latestPosts }) {
           </div>
           <div className='w-full flex justify-center '>
             <Link href='/articles'>
-              <a className=' bg-white mb-12  font-bold  py-2 px-4 rounded-xl flex items-center gap-3 hover:text-white hover:bg-iec-orange-2-500 text-iec-orange-2-500 '>
+              <a className=' bg-white mb-12  font-bold  py-2 px-4 rounded-xl flex items-center gap-3 hover:text-white hover:bg-iec-orange-2-500 shadow-md text-iec-blue-2-500 '>
                 Voir tout Les Articles
                 <span>
                   <BsArrowRight />
@@ -439,9 +450,8 @@ export default function Home({ latestPosts }) {
                 <span className='text-iec-orange-2-500'>fait Confiance</span>
               </h1>
               <p className='text-iec-gray-800 w-1/2 text-center mx-auto dark:text-white'>
-                If you are going to use a passage of Lorem Ipsum, you need to be
-                sure there isn&apos;t anything embarrassing hidden in the middle
-                of text
+                Des entreprises dans différents secteurs ont été intéressées par
+                l&apos;ensemble des événements organisées par notre club
               </p>
             </div>
             <Sponsors />
@@ -454,13 +464,13 @@ export default function Home({ latestPosts }) {
           </div>
         </section>
 
-        <section className=' mt-14 w-full md:h-[500px] h-auto'>
+        <section className=' mt-14 w-full md:h-[630px] h-auto'>
           <div className='flex flex-col justify-center w-full items-center '>
-            <div className='text-5xl text-center  font-bold mt-24'>
+            <div className='text-5xl text-center  font-bold mt-16'>
               Frequently Asked
               <span className='text-iec-orange-2-500'> Questions</span>
             </div>
-            <div className='w-full flex justify-center '>
+            <div className='w-full flex justify-center mt-4'>
               <FAQ />
             </div>
           </div>

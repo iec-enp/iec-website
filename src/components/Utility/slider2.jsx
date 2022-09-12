@@ -24,7 +24,6 @@ function Slider2({Slides, current, theme}) {
             <p className="my-6 leading-7 ">
               {slide.content}
             </p>
-            <button className=" bg-iec-orange-2-500 rounded-3xl px-6 py-3 text-black  font-bold ">Découvrir plus</button>
             </div>
           )
         })}

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import {AiFillPlusCircle} from 'react-icons/ai'
 
 function FAQ() {
   const [items, setItems] = useState([
@@ -18,9 +19,21 @@ function FAQ() {
     },
     {
       id: 3,
-      title: 'History Lorem ipsum dolor sit amet consectetur adipisicing ?',
+      title: 'Les événements faits par IEC, sont-ils pour les étudiants de l’ENP seulement ?',
       content:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis neque reiciendis molestiae ullam voluptatum, velit, accusantium nemo perferendis ab minima maiores quos et doloribus necessitatibus! Sapiente esse obcaecati aliquid ab',
+        'Non, ils sont ouverts au grand public',
+    },
+    {
+      id: 4,
+      title: 'En quelle année IEC a été créé ?',
+      content:
+        'IEC a été fondé le 7 mars 2020',
+    },
+    {
+      id: 5,
+      title: "Quels sont les buts d'IEC ?",
+      content:
+        'Vulgariser les concepts du génie industriel à travers plusieurs événements et  activités',
     },
   ])
 
@@ -55,8 +68,8 @@ function FAQ() {
           layout
           className='flex py-5 px-6 items-center justify-between font-bold bg-white rounded-lg  text-iec-blue-2-500'>
           {title}
-          <div className='w-5 h-5 text-white flex justify-center items-center rounded-full bg-iec-orange-2-500'>
-            +
+          <div className='w-5 h-5 text-iec-orange-2-500 flex justify-center items-center rounded-full '>
+          <AiFillPlusCircle />
           </div>
         </div>
         <Collapse
@@ -76,6 +89,8 @@ function FAQ() {
   }
 
   const [trigger, setTrigger] = useState([
+    { status: false },
+    { status: false },
     { status: false },
     { status: false },
     { status: false },

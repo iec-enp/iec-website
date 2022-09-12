@@ -33,7 +33,7 @@ function Value({theme}) {
   const Item = ({ value }) => {
     return (
       <>
-        <div className='flex flex-col '>
+        <div className='flex flex-col ' >
           <div className='w-14 h-14 mx-auto img-icon relative '>
             <Image
               src={theme == 'dark' ? value.imageWhite :value.image}

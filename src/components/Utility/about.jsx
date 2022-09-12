@@ -9,7 +9,7 @@ function About() {
       id: 1,
       title: 'Our History',
       content:
-        'History Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis neque reiciendis molestiae ullam voluptatum, velit, accusantium nemo perferendis ab minima maiores quos et doloribus necessitatibus! Sapiente esse obcaecati aliquid ab',
+        "Sortir de sa zone de confort et arrêter de chercher des excuses, tels ont étaient les principaux moteurs de la création du club IEC en 2020. Pendant presque deux ans, IEC  continue son challenge et tout cela en étant constamment actif dans la réalisation et l’organisation de plusieurs événements, projets et activités à destination des étudiants du génie industriel mais également à toute personne souhaitant apporté une plus value à son parcours académique et professionnel",
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ function About() {
         initial={{ borderRadius: 10 }}>
         <motion.div
           layout
-          className='w-full  flex py-5 px-6 items-center justify-between font-bold rounded-lg bg-iec-orange-2-500 bg-opacity-[15%] dark:bg-white text-iec-orange-2-500'>
+          className='w-full  flex py-5 px-6 items-center justify-between font-bold rounded-lg bg-iec-orange-2-500 bg-opacity-[15%] dark:bg-white dark:text-iec-blue-2-500 '>
           {title}
           <BsCaretRightFill
             className={`transition-all ${

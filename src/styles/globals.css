@@ -693,3 +693,60 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
+
+@media (min-width:768px) {
+  .specialityText{
+    animation: fadeIn;
+    -webkit-animation: fadeIn 3s;
+    -moz-animation: fadeIn 3s;
+    -o-animation: fadeIn 3s;
+    -ms-animation: fadeIn 3s;
+    animation-duration: 3s;
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .FadeInLeft{
+    animation: fadeInLeft;
+    -webkit-animation: fadeInLeft 1s;
+    -moz-animation: fadeInLeft 1s;
+    -o-animation: fadeInLeft 1s;
+    -ms-animation: fadeInLeft 1s;
+    animation-duration: 1s;
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+  } 
+  
+  .FadeInRight{
+    animation: fadeInRight;
+    -webkit-animation: fadeInRight 1s;
+    -moz-animation: fadeInRight 1s;
+    -o-animation: fadeInRight 1s;
+    -ms-animation: fadeInRight 1s;
+    animation-duration: 1s;
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+       opacity: 0;
+       transform: translateX(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+  } 
+}
+

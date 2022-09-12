@@ -20,7 +20,7 @@ function ArtricleCard({ title, image, href, description, date }) {
             alt='image1'
             layout='fill'
             objectFit='cover'
-            className='rounded-lg object-bottom group-hover:object-top transition-all duration-1000 ease-in-out'
+            className='rounded-t-lg object-bottom group-hover:object-top transition-all duration-1000 ease-in-out'
           />
           {/* <Image
             className='rounded-lg object-bottom group-hover:object-top transition-all duration-1000 ease-in-out'
@@ -33,22 +33,27 @@ function ArtricleCard({ title, image, href, description, date }) {
           /> */}
         </div>
 
-        <div className='mx-6 my-6 flex flex-col gap-1'>
-          <div className='flex gap-3 items-center text-xs font-semibold text-iec-orange-2-500'>
-            <AiOutlineClockCircle size={20} />
-            <h1 className='text-md'> {date}</h1>
+        <div className='mx-6 my-6 flex flex-col gap-1 '>
+          <div className='md:h-[170px] sm:h-[130px]'>
+            <div className='flex gap-3 items-center text-xs font-semibold text-iec-orange-2-500'>
+              <AiOutlineClockCircle size={20} />
+              <h1 className='text-md'> {date}</h1>
+            </div>
+            <h1 className='font-bold my-2 text-iec-blue-2-500 text-lg'>
+              {title}
+            </h1>
+            <p className='text-iec-gray-800 text-base line-clamp-3'>
+              {description}
+            </p>
           </div>
-          <h1 className='font-bold my-2 text-iec-blue-2-500 text-lg'>
-            {title}
-          </h1>
-          <p className='text-iec-gray-800 text-base line-clamp-3'>
-            {description}
-          </p>
-          <Link href={`/articles/${href}`}>
-            <a className='w-fit bg-iec-orange-2-500 text-xs font-bold px-4 py-2 mt-4 rounded-full hover:bg-white hover:text-iec-orange-2-500'>
-              Read More
-            </a>
-          </Link>
+
+          <div className='flex justify-start items-center'>
+            <Link href={`/articles/${href}`}>
+              <a className='w-fit inline-block shadow-md bg-iec-orange-2-500 text-xs font-bold px-4 py-2 mt-4 rounded-full hover:bg-white hover:text-iec-orange-2-500'>
+                Read More
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </>

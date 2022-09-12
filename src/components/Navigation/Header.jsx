@@ -40,7 +40,7 @@ const Header = () => {
         Toggler ? 'bg-white  dark:text-iec-blue-2-500' : ' bg-transparent'
       }`}>
       <Link href='/'>
-        <a>
+        <a className='md:w-auto w-20'>
           <Image
             src={`/brand/logos/IEC_${
               resolvedTheme == 'light' ? 'BLACK' : Toggler ? 'BLACK' : 'WHITE'
@@ -53,7 +53,7 @@ const Header = () => {
         </a>
       </Link>
 
-      <div className='flex gap-24   text-opacity-80 text-sm  md:text-xl font-normal'>
+      <div className='flex md:gap-24 gap-8   text-opacity-80 text-sm  md:text-xl font-normal'>
         <NavLink
           href='/'
           text='Home'
