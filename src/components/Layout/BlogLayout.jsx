@@ -6,7 +6,7 @@ export default function BlogLayout({ children, frontMatter }) {
     <Container
       title={`${frontMatter.title} – Industrial Engineers Club`}
       description={frontMatter.description}
-      image={`https://iec-website.vercel.app${frontMatter.backdrop_path}`}
+      image={`https://iecenp.com${frontMatter.backdrop_path}`}
       date={new Date(frontMatter.date).toISOString()}
       type='article'>
       <article className='mt-44 md:mt-36 flex flex-col justify-center items-start max-w-4xl px-12 w-full mx-auto gap-4'>

@@ -1,17 +1,15 @@
 import Container from '@/components/Layout/Container'
-import DashedCurve from '@/components/Utility/dashedCurve'
 import EventSection from '@/components/Utility/EventSection'
 
 export default function Events() {
   return (
     <Container title='Evenements - IEC - Industrial Engineers Club'>
       <div className='flex flex-col items-center gap-16 mt-36'>
-     
         <div className='flex flex-col items-center gap-8 relative md:mb-7 '>
           <h1 className='text-5xl font-black  dark:text-shadow-dark'>
             NOS <span className='text-iec-orange-2-500'>EVENEMENTS</span>
           </h1>
-          
+
           <p className='text-center w-4/5 md:w-2/3 font-medium'>
             Chez IEC, nous organisons divers événements de haute qualité, à
             travers lesquels nous visons à répondre au mieux aux besoins de
@@ -37,7 +35,7 @@ export default function Events() {
           name='TEDxENP'
           description="TEDxENP est un événement Tedx organisé par un groupe d'étudiants de l'Ecole Nationale Polytechnique. Etudiant·es et professionnel·le·s se retrouvent afin d'échanger sur l'avenir et l'évolution du monde dans ses différentes composantes en évoquant les différents vecteurs du changement et leurs impacts sur la société."
           date='30 Juin 2022'
-          place='Alger'
+          place='Palais de la culture Moufdi Zakaria - Alger'
           pics='/images/pictures/img0.webp'
           edition='1'
           participant='400'
@@ -66,7 +64,7 @@ export default function Events() {
           description="Algeria Data Cup: est un hackathon de data science où les participants sont invités à résoudre un problème de Business réel, en développant un modèle d'apprentissage automatique le plus performant possible sur les données fournies. La 1ère édition s'est déroulée sur la plateforme Zindi.com."
           date='16-18 Décembre 2021'
           place='En ligne sur la plateforme ZINDI '
-          pics='/images/pictures/img4.webp'
+          pics='/images/pictures/adc.webp'
           edition='1'
           participant='100'
           left={false}
@@ -80,7 +78,7 @@ export default function Events() {
           description="Le Jour GI est un événement qui se déroule chacun année, pour but de promouvoir la spécialité du Génie Industriel sous ses deux options aux étudiants lauréats du concours national d'accès au grande écoles d'ingénieurs"
           date='Début Septembre'
           place=' En ligne sur les pages réseaux de IEC'
-          pics='/images/pictures/img4.webp'
+          pics='/images/pictures/gi.webp'
           edition='2'
           color={['color-ji-dark', 'color-ji']}
           iconColor={['#f3ae2f', '#D88F0A']}
