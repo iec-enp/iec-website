@@ -25,7 +25,7 @@ const Footer = () => {
         <div className='flex flex-col space-y-4'>
           <Link href='/'>
             <a className='hover:text-opacity-100 hover:underline transition'>
-              Home
+              Acceuil
             </a>
           </Link>
           <Link href='/articles'>
@@ -35,7 +35,7 @@ const Footer = () => {
           </Link>
           <Link href='/events'>
             <a className='hover:text-opacity-100 hover:underline transition'>
-              Events
+            Évènement
             </a>
           </Link>
         </div>
@@ -75,7 +75,7 @@ const Footer = () => {
           </div>
           <Link href='/contact'>
             <a className='px-4 py-1 border-[1px] border-transparent bg-iec-orange-2-500 rounded-lg text-center text-black hover:bg-transparent dark:hover:text-white transition-all dark:hover:border-white hover:border-iec-orange-2-500'>
-              Contact Us
+              Nous Contacter
             </a>
           </Link>
         </div>

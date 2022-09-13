@@ -148,13 +148,13 @@ export default function Articles({ posts, cats }) {
         {!loaded && (
           <button
             onClick={loadMore}
-            className='mt-3 flex items-center gap-4 dark:border-white border-2 py-2 px-4 border-iec-blue-2-500 hover:bg-iec-blue-2-500 hover:text-white dark:hover:bg-white dark:hover:text-iec-blue-2-500'>
+            className='mt-3 flex items-center rounded-lg gap-4 dark:border-white border-2 py-2 px-4 border-iec-blue-2-500 hover:bg-iec-blue-2-500 hover:text-white dark:hover:bg-white dark:hover:text-iec-blue-2-500'>
             {loading && (
               <div
                 style={{
                   borderTopColor: 'transparent',
                 }}
-                className='w-6 h-6 border-2 border-iec-orange-2-500 border-solid rounded-full animate-spin'></div>
+                className='w-6 h-6 border-2 border-iec-orange-2-500 border-solid  animate-spin'></div>
             )}
             Charger Plus d&apos;article
           </button>

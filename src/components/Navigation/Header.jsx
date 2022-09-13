@@ -56,7 +56,7 @@ const Header = () => {
       <div className='flex md:gap-24 gap-8   text-opacity-80 text-sm  md:text-xl font-normal'>
         <NavLink
           href='/'
-          text='Home'
+          text='Acceuil'
           active={router.asPath === '/'}
         />
         <NavLink
@@ -66,13 +66,13 @@ const Header = () => {
         />
         <NavLink
           href='/events'
-          text='Events'
+          text='Évènements'
           active={router.asPath === '/events'}
         />
       </div>
       <div className='hidden md:block'>
         <Cta
-          text='Contact'
+          text='Nous Contacter'
           href='/contact'
         />
       </div>

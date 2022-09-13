@@ -54,10 +54,11 @@ function Events({ theme }) {
   }
 
   return (
-    <div className='relative'>
+    <div className='relative '>
       <h1 className='text-center text-5xl mx-auto font-bold  '>
-        Nos <span className='text-iec-orange-2-500'>Evènements</span>
+        Nos <span className='text-iec-orange-2-500'>Évènements</span>
       </h1>
+      
       {/* <h1 className='mt-24 stroke-text text-center text-5xl mx-auto font-bold  '>
           Our <span className=''>Events</span>
         </h1> */}

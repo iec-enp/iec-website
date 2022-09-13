@@ -46,7 +46,7 @@ function Testimonial() {
 
   return (
     <>
-    <div className="styling-example">
+    <div >
     <Carousel  itemsToShow={2}  pagination={true} breakPoints={breakPoints}>
         <Card
           FullName='Peter Packer'

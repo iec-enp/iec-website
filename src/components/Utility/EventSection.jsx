@@ -20,10 +20,7 @@ const EventSection = ({
   iconColor,
 }) => {
   const { resolvedTheme } = useTheme()
-  if (resolvedTheme === 'dark') {
-    iconColor = '#ffffff'
-    color = '#ffffff'
-  }
+
   return (
     <div
       className={`flex flex-col items-center w-4/5 gap-8 ${
@@ -33,7 +30,7 @@ const EventSection = ({
         className={`flex-col flex gap-12 items-center w-full md:w-3/4 ${
           left ? 'md:items-start' : 'md:items-end'
         }`}>
-        <h1 className={`text-5xl text-shadow-light font-bold ${color}`}>
+        <h1 className={`text-5xl  text-shadow-light font-bold ${resolvedTheme === 'dark' ? color[0] : color[1]}`}>
           {name}
         </h1>
         <p className='w-full md:w-4/5 text-center md:text-left'>
@@ -42,34 +39,34 @@ const EventSection = ({
         <div
           className='p-4 rounded-xl w-3/4 md:w-fit flex flex-col gap-4'
           style={{
-            border: `1px solid ${iconColor}70`,
+            border: `1px solid ${`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}70`,
           }}>
           <div className='flex items-center'>
             <Clock
               size={24}
-              color={iconColor}
+              color={`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}
             />
             <p className='ml-2'>{date}</p>
           </div>
           <div className='flex items-center'>
             <MapPin
-              color={iconColor}
+              color={`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}
               size={24}
             />
             <p className='ml-2'>{place}</p>
           </div>
         </div>
-        <div className='flex items-center gap-4 w-full md:w-3/4 justify-between'>
+        <div className='flex items-center gap-4 w-full md:w-3/4 md:justify-start justify-center'>
           {participant && (
-            <div className='flex flex-col shadow-lg px-2 pb-4 rounded-lg hover:shadow-xl transition-all flex-1'>
+            <div className='flex w-1/2 flex-col shadow-lg px-2 pb-4 rounded-lg hover:shadow-xl transition-all '>
               <div
                 className='border-t-2  w-1/2 pt-2'
                 style={{
-                  borderColor: `${iconColor}`,
+                  borderColor: `${`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}`,
                 }}>
                 <UsersThree
                   size={24}
-                  color={iconColor}
+                  color={`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}
                 />
               </div>
               <>
@@ -81,15 +78,15 @@ const EventSection = ({
             </div>
           )}
 
-          <div className='flex flex-col shadow-lg px-2 pb-4 rounded-lg hover:shadow-xl transition-all flex-1'>
+          <div className='flex w-1/2 flex-col shadow-lg px-2 pb-4 rounded-lg hover:shadow-xl transition-all '>
             <div
               className='border-t-2  w-1/2 pt-2'
               style={{
-                borderColor: `${iconColor}`,
+                borderColor: `${`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}`,
               }}>
               <AiOutlineFieldNumber
                 size={24}
-                color={iconColor}
+                color={`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}
               />
             </div>
             <p className='text-xl font-bold text-shadow-light'>{edition}</p>
@@ -162,7 +159,7 @@ const EventSection = ({
                   width={800}
                   height={400}
                   objectFit='cover'
-                  className='rounded-3xl border-4 border-red-400'
+                  className='rounded-3xl border-4 border-red-400 '
                 />
               </motion.div>
             )

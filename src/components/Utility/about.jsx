@@ -51,7 +51,7 @@ function About() {
   function Content({ content }) {
     return (
       <motion.div
-        className='w-full px-6 text-center py-3'
+        className='w-full text-sm px-6 text-center py-3'
         layout
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

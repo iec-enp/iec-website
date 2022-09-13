@@ -1,19 +1,22 @@
 import Container from '@/components/Layout/Container'
+import DashedCurve from '@/components/Utility/dashedCurve'
 import EventSection from '@/components/Utility/EventSection'
 
 export default function Events() {
   return (
     <Container title='Evenements - IEC - Industrial Engineers Club'>
       <div className='flex flex-col items-center gap-16 mt-36'>
-        <div className='flex flex-col items-center gap-8'>
+     
+        <div className='flex flex-col items-center gap-8 relative md:mb-7 '>
           <h1 className='text-5xl font-black  dark:text-shadow-dark'>
             NOS <span className='text-iec-orange-2-500'>EVENEMENTS</span>
           </h1>
-          <p className='text-center w-4/5 md:w-1/2 font-medium'>
-            At IEC, we organize various and high-quality TECH events, through
-            which we aim to best fit our community needs and to provide a
-            skillful and complete acquirement of knowledge for all the
-            technology enthusiasts!
+          
+          <p className='text-center w-4/5 md:w-2/3 font-medium'>
+            Chez IEC, nous organisons divers événements de haute qualité, à
+            travers lesquels nous visons à répondre au mieux aux besoins de
+            notre communauté et à fournir une acquisition habile et complète des
+            connaissances pour tous les passionnés du Génie Industriel !
           </p>
         </div>
         <EventSection
@@ -26,8 +29,8 @@ export default function Events() {
           workshop='20'
           participant='50'
           logo='/brand/logos/bg-logo.png'
-          color='text-[#0B3434]'
-          iconColor='#0B3434'
+          color={['color-bg-dark', 'color-bg']}
+          iconColor={['#b2d06b', '#0B3434']}
         />
         <hr className='w-3/4 border-1 border-iec-blue-3-200 dark:border-iec-gray-900 mb-8' />
         <EventSection
@@ -40,8 +43,8 @@ export default function Events() {
           participant='400'
           left={false}
           logo='/brand/logos/tedx-logo.svg'
-          color='text-[#FF2C07]'
-          iconColor='#FF2C07'
+          color={['color-ted-dark', 'color-ted']}
+          iconColor={['#ff6b51', '#FF2C07']}
         />
         <hr className='w-3/4 border-1 border-iec-blue-3-200 dark:border-iec-gray-900 mb-8' />
         <EventSection
@@ -53,8 +56,8 @@ export default function Events() {
           pics='/images/pictures/img4.webp'
           edition='2'
           participant='48'
-          color='text-[#421B38]'
-          iconColor='#421B38'
+          color={['color-icc-dark', 'color-icc']}
+          iconColor={['#da8ee4', '#421B38']}
         />
         <hr className='w-3/4 border-1 border-iec-blue-3-200 dark:border-iec-gray-900 mb-8' />
         <EventSection
@@ -65,9 +68,10 @@ export default function Events() {
           place='En ligne sur la plateforme ZINDI '
           pics='/images/pictures/img4.webp'
           edition='1'
+          participant='100'
           left={false}
-          color='text-[#4A8AFC]'
-          iconColor='#4A8AFC'
+          color={['color-adc-dark', 'color-adc']}
+          iconColor={['#7eaafa', '#4A8AFC']}
         />
         <hr className='w-3/4 border-1 border-iec-blue-3-200 dark:border-iec-gray-900 mb-8' />
         <EventSection
@@ -78,8 +82,8 @@ export default function Events() {
           place=' En ligne sur les pages réseaux de IEC'
           pics='/images/pictures/img4.webp'
           edition='2'
-          color='text-[#D88F0A]'
-          iconColor='#D88F0A'
+          color={['color-ji-dark', 'color-ji']}
+          iconColor={['#f3ae2f', '#D88F0A']}
         />
       </div>
     </Container>

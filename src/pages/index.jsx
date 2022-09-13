@@ -2,14 +2,15 @@ import Container from '@/components/Layout/Container'
 import About from '@/components/Utility/about'
 import AboutImage from '@/components/Utility/AboutImage'
 import Alumni from '@/components/Utility/alumni'
-import ArtricleCard from '@/components/Utility/article-card'
 import Counter from '@/components/Utility/counter'
 import DashedCurve from '@/components/Utility/dashedCurve'
 import Events from '@/components/Utility/events'
 import FAQ from '@/components/Utility/FAQ'
 import Map from '@/components/Utility/map'
+import NosArticles from '@/components/Utility/NosArticles'
 import Rond from '@/components/Utility/rond'
 import Sponsors from '@/components/Utility/Sponsors'
+import Testimonial from '@/components/Utility/testimonial'
 import Value from '@/components/Utility/value'
 import { getRecentBlogPosts } from '@/utils/get-blog-post'
 import { saveAs } from 'file-saver'
@@ -46,16 +47,14 @@ export default function Home({ latestPosts }) {
     <>
       <Container title='Acceuil - IEC - Industrial Engineers Club'>
         <section className='w-full relative px-10 mb-20'>
-          <div className='absolute top-[2vw] left-[26%] w-[50vw]'>
-            <DashedCurve theme={theme} />
-          </div>
+          
           <div className='md:mt-32 mt-40 z-100 relative md:flex md:flex-row flex-col justify-center'>
             <div className='md:w-3/5 w-full mx-auto text-center md:text-start'>
               <TrackVisibility once>
                 {({ isVisible }) =>
                   isVisible && (
                     <>
-                      <h1 className='animate__animated animate__fadeInDown md:text-8xl text-6xl  font-bold leading-[7rem] items-center justify-center'>
+                      <h1 className='animate__animated animate__fadeInDown md:text-8xl text-6xl md:mt-10 font-bold leading-[7rem] items-center justify-center'>
                         More Than{' '}
                         <span className='text-iec-orange-2-500 '>a </span>
                         <span className='text-iec-orange-2-500'> Club</span>
@@ -155,7 +154,7 @@ export default function Home({ latestPosts }) {
           </div>
         </section>
 
-        <section className='w-full mb-24 md:h-[25rem] lg:h-[400px] sm:h-[60rem] h-[60rem]'>
+        <section className='w-full md:mb-24 md:h-[25rem] lg:h-[400px] sm:h-[60rem] h-[60rem]'>
           <div className='flex md:flex-row flex-col w-11/12 mt-28 mb-14 mx-auto px-8 gap-9'>
             <div className='md:w-[45%]  w-[80%] h-max mx-auto flex justify-center items-center relative  '>
               <div
@@ -168,7 +167,7 @@ export default function Home({ latestPosts }) {
               </div>
             </div>
 
-            <div className='w-1/2 mx-auto text-center md:text-left'>
+            <div className='md:w-1/2 w-4/5 mx-auto text-center md:text-left'>
               <h1 className='md:text-left text-5xl  font-bold text-center mt-5 md:mt-0 leading-[32px]'>
                 À Propos de <span className='text-iec-orange-2-500'>Nous</span>
               </h1>
@@ -178,7 +177,7 @@ export default function Home({ latestPosts }) {
               </p>
               <div className='w-[7rem] rounded-full mx-auto md:mx-0 bg-iec-orange-2-500 h-1'></div>
 
-              <div className='flex flex-col mt-8 gap-4'>
+              <div className='flex flex-col mt-8 gap-4 '>
                 <About />
               </div>
             </div>
@@ -189,7 +188,7 @@ export default function Home({ latestPosts }) {
           <div className='absolute w-full h-full md:flex md:items-center lg:items-start justify-center hidden'>
             <Map theme={theme} />
           </div>
-          <div className='text-5xl text-center my-auto font-bold mt-10'>
+          <div className='text-5xl text-center my-auto font-bold md:mt-10'>
             Nos
             <span className='text-iec-orange-2-500'> Valeurs</span>
           </div>
@@ -239,7 +238,7 @@ export default function Home({ latestPosts }) {
                       height={250}
                       layout='responsive'
                     />
-                    <div className='absolute '>
+                    <div className='absolute hidden md:inline'>
                       <Rond theme={theme} />
                     </div>
                   </div>
@@ -328,7 +327,7 @@ export default function Home({ latestPosts }) {
                       height={250}
                       layout='responsive'
                     />
-                    <div className='absolute'>
+                    <div className='absolute hidden md:inline'>
                       <Rond theme={theme} />
                     </div>
                   </div>
@@ -341,9 +340,9 @@ export default function Home({ latestPosts }) {
           <div className='text-5xl text-center mt-28 font-bold'>
             IEC <span className='text-iec-orange-2-500'>En Chiffres</span>
           </div>
-          <div className='flex gap-[8rem] mt-16'>
+          <div className='flex gap-[6rem] mt-16'>
             <div className='w-1/2 hidden lg:inline lg:ml-3'>
-              <Alumni />
+              <Alumni theme={theme} />
             </div>
             <div className='w-full flex justify-center lg:w-1/2 mx-auto my-auto'>
               <div className='grid grid-cols-2 text-center md:text-left mb-9 md:mb-0 gap-x-20 gap-y-7 w-max mx-auto sm:mx-0 my-auto'>
@@ -356,7 +355,7 @@ export default function Home({ latestPosts }) {
                       step={1}
                     />
                   </h1>
-                  <h1 className='text-3xl  text-iec-gray-800'>Members</h1>
+                  <h1 className='text-2xl  text-iec-gray-800'>Membres</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
                 <div className='flex  w-full flex-col  gap-3'>
@@ -369,7 +368,7 @@ export default function Home({ latestPosts }) {
                       step={5}
                     />
                   </h1>
-                  <h1 className='text-3xl text-iec-gray-800 '>Alumnis</h1>
+                  <h1 className='text-2xl text-iec-gray-800 '>Alumnis</h1>
                   <h1 className='w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
 
@@ -382,7 +381,7 @@ export default function Home({ latestPosts }) {
                       step={20}
                     />
                   </h1>
-                  <h1 className='text-3xl text-iec-gray-800 '>Creation</h1>
+                  <h1 className='text-2xl text-iec-gray-800 '>Création</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
                 <div className='flex w-full flex-col  gap-3'>
@@ -394,7 +393,7 @@ export default function Home({ latestPosts }) {
                       step={1}
                     />
                   </h1>
-                  <h1 className='text-3xl text-iec-gray-800'>Events</h1>
+                  <h1 className='text-2xl text-iec-gray-800'>Évènement</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
               </div>
@@ -403,25 +402,16 @@ export default function Home({ latestPosts }) {
         </section>
         <section className='bg-iec-orange-2-500 bg-opacity-10 mt-14 w-full'>
           <div className='flex flex-col gap-5 text-center'>
-            <h1 className='text-5xl  mt-28 font-bold'>
+            <h1 className='text-5xl  mt-24 font-bold'>
               Nos <span className='text-iec-orange-2-500'>Articles</span>
             </h1>
           </div>
-          <div className='w-full grid md:grid-cols-3  grid-cols-1 sm:grid-cols-2 px-32 sm:px-10 gap-8  mt-12 pb-14'>
-            {latestPosts.map(post => (
-              <ArtricleCard
-                key={post.slug}
-                image={post.backdrop_path}
-                title={post.title}
-                href={post.slug}
-                description={post.description}
-                date={post.date}
-              />
-            ))}
+          <div className='w-[100%] md:mt-9'>
+            <NosArticles latestPosts={latestPosts} />
           </div>
           <div className='w-full flex justify-center '>
             <Link href='/articles'>
-              <a className=' bg-white mb-12  font-bold  py-2 px-4 rounded-xl flex items-center gap-3 hover:text-white hover:bg-iec-orange-2-500 shadow-md text-iec-blue-2-500 '>
+              <a className=' bg-white mb-12 mt-5  font-bold  py-2 px-4 rounded-xl flex items-center gap-3 hover:text-white hover:bg-iec-orange-2-500 shadow-md text-iec-blue-2-500 '>
                 Voir tout Les Articles
                 <span>
                   <BsArrowRight />
@@ -444,12 +434,12 @@ export default function Home({ latestPosts }) {
 
         <section className='w-full '>
           <div className='w-full flex flex-col my-16'>
-            <div className='flex flex-col gap-5 text-center mb-5'>
+            <div className='flex flex-col  gap-5 text-center mb-5'>
               <h1 className='text-5xl   font-bold flex-wrap'>
                 Ceux Qui Nous Ont Déja{' '}
-                <span className='text-iec-orange-2-500'>fait Confiance</span>
+                <span className='text-iec-orange-2-500'>Fait Confiance</span>
               </h1>
-              <p className='text-iec-gray-800 w-1/2 text-center mx-auto dark:text-white'>
+              <p className='text-iec-gray-800 md:w-1/2 w-2/3 text-center mx-auto dark:text-white'>
                 Des entreprises dans différents secteurs ont été intéressées par
                 l&apos;ensemble des événements organisées par notre club
               </p>
@@ -459,7 +449,7 @@ export default function Home({ latestPosts }) {
         </section>
 
         <section className='w-full  bg-iec-orange-2-500 bg-opacity-10 flex'>
-          <div className='w-full my-12'>
+          <div className='w-full my-14'>
             <Events theme={theme} />
           </div>
         </section>
@@ -467,7 +457,7 @@ export default function Home({ latestPosts }) {
         <section className=' mt-14 w-full md:h-[630px] h-auto'>
           <div className='flex flex-col justify-center w-full items-center '>
             <div className='text-5xl text-center  font-bold mt-16'>
-              Frequently Asked
+              Foire Aux
               <span className='text-iec-orange-2-500'> Questions</span>
             </div>
             <div className='w-full flex justify-center mt-4'>
@@ -481,7 +471,7 @@ export default function Home({ latestPosts }) {
 }
 
 export const getStaticProps = async () => {
-  const latestPosts = await getRecentBlogPosts(3)
+  const latestPosts = await getRecentBlogPosts(4)
 
   return {
     props: {

@@ -654,7 +654,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .color-icc-dark {
-  background: -webkit-linear-gradient(#d93aee, rgb(65, 39, 209));
+  background: -webkit-linear-gradient(#da8ee4, rgb(52, 132, 252));
   -webkit-background-clip: text;
   background-clip: text;
 

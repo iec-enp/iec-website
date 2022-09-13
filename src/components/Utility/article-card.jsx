@@ -6,7 +6,8 @@ import { BsLink45Deg } from 'react-icons/bs'
 function ArtricleCard({ title, image, href, description, date }) {
   return (
     <>
-      <div className='shadow-2xl rounded-2xl group card hover:-translate-y-4 bg-white w-full'>
+    <div className='px-8 md:py-10 py-12 sm:bg-'>
+    <div className='shadow-xl rounded-2xl group card hover:-translate-y-4  w-full'>
         <div className='relative w-full h-60'>
           <Link href={`/articles/${href}`}>
             <a className='absolute link flex rounded-t-2xl z-10 h-full w-full justify-center items-center group-hover:bg-black group-hover:bg-opacity-50 text-iec-orange-2-500 text-2xl '>
@@ -33,7 +34,7 @@ function ArtricleCard({ title, image, href, description, date }) {
           /> */}
         </div>
 
-        <div className='mx-6 my-6 flex flex-col gap-1 '>
+        <div className='px-6 py-6 flex flex-col gap-1 bg-white rounded-b-2xl'>
           <div className='md:h-[170px] sm:h-[130px]'>
             <div className='flex gap-3 items-center text-xs font-semibold text-iec-orange-2-500'>
               <AiOutlineClockCircle size={20} />
@@ -56,6 +57,8 @@ function ArtricleCard({ title, image, href, description, date }) {
           </div>
         </div>
       </div>
+    </div>
+      
     </>
   )
 }
