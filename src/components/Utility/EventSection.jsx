@@ -19,7 +19,6 @@ const EventSection = ({
   iconColor,
 }) => {
   const { resolvedTheme } = useTheme()
-  console.log(resolvedTheme)
 
   return (
     <div
@@ -108,7 +107,7 @@ const EventSection = ({
           </div>
         </div>
       </div>
-      <div className='relative  flex flex-col justify-center'>
+      <div className='relative  flex flex-col justify-center w-3/5'>
         <motion.div
           initial={{ y: 180 }}
           animate={{ y: 0 }}
