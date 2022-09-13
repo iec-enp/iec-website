@@ -174,7 +174,7 @@ a {
 .sliderrr .slide-track {
   animation: 40s scroll linear infinite;
   display: flex;
-  width: calc(11rem * 18);
+  width: calc(11rem * 21);
 }
 
 @keyframes scroll {
@@ -182,7 +182,7 @@ a {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-11rem * 6));
+    transform: translateX(calc(-11rem * 7));
   }
 }
 .sliderrr .slidex {

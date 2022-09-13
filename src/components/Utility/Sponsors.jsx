@@ -25,6 +25,15 @@ function Sponsors() {
                 layout='intrinsic'
               />
             </div>
+            <div className='slidex bg-white flex lg:h-[90px] h-[65px] md:h-[75px] my-auto p-4 md:p-0'>
+              <Image
+                src='/images/logo/dzhoster.webp'
+                height='100'
+                width='250'
+                alt=''
+                layout='intrinsic'
+              />
+            </div>
 
             <div className='slidex bg-white flex lg:h-[90px] h-[65px] md:h-[75px] my-auto p-4 md:p-0'>
               <Image
@@ -81,6 +90,15 @@ function Sponsors() {
                 layout='intrinsic'
               />
             </div>
+            <div className='slidex bg-white flex lg:h-[90px] h-[65px] md:h-[75px] my-auto p-4 md:p-0'>
+              <Image
+                src='/images/logo/dzhoster.webp'
+                height='100'
+                width='250'
+                alt=''
+                layout='intrinsic'
+              />
+            </div>
 
             <div className='slidex bg-white flex lg:h-[90px] h-[65px] md:h-[75px] my-auto p-4 md:p-0'>
               <Image
@@ -131,6 +149,15 @@ function Sponsors() {
             <div className='slidex bg-white flex lg:h-[90px] h-[65px] md:h-[75px] my-auto p-4 md:p-0'>
               <Image
                 src='/images/logo/ooredoo.webp'
+                height='100'
+                width='250'
+                alt=''
+                layout='intrinsic'
+              />
+            </div>
+            <div className='slidex bg-white flex lg:h-[90px] h-[65px] md:h-[75px] my-auto p-4 md:p-0'>
+              <Image
+                src='/images/logo/dzhoster.webp'
                 height='100'
                 width='250'
                 alt=''
