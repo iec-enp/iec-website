@@ -9,7 +9,7 @@ export default function Container(props) {
     description: `IEC is an academic club of the National Polytechnic School, which aims to strengthen the culture of Industrial Engineering in companies, to encourage the talents, creativity and personal development of its members. It allows students to build a solid professional project by helping them achieve their goals through the organization of various events.`,
     type: 'website',
     image:
-      'https://iec-website.vercel.app/_next/image?url=%2Fimages%2Fpictures%2Fimg2.jpg&w=1080&q=75',
+      'https://iecenp.com/_next/image?url=%2Fimages%2Fpictures%2Fog.webp&w=1080&q=75',
     ...customMeta,
   }
 

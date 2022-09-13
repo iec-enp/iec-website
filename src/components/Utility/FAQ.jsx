@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {AiFillPlusCircle} from 'react-icons/ai'
+import { AiFillPlusCircle } from 'react-icons/ai'
 
 function FAQ() {
   const [items, setItems] = useState([
@@ -19,15 +19,14 @@ function FAQ() {
     },
     {
       id: 3,
-      title: 'Les événements faits par IEC, sont-ils pour les étudiants de l’ENP seulement ?',
-      content:
-        'Non, ils sont ouverts au grand public',
+      title:
+        'Les événements faits par IEC, sont-ils pour les étudiants de l’ENP seulement ?',
+      content: 'Non, ils sont ouverts au grand public',
     },
     {
       id: 4,
       title: 'En quelle année IEC a été créé ?',
-      content:
-        'IEC a été fondé le 7 mars 2020',
+      content: 'IEC a été fondé le 7 mars 2020',
     },
     {
       id: 5,
@@ -61,7 +60,6 @@ function FAQ() {
       <li
         className='w-[100%]'
         style={{ animationDelay: '0.1s', animationDuration: '1.5s' }}
-        layout
         onClick={funct}
         initial={{ borderRadius: 10 }}>
         <div
@@ -69,7 +67,7 @@ function FAQ() {
           className='flex py-5 px-6 items-center justify-between font-bold bg-white rounded-lg  text-iec-blue-2-500'>
           {title}
           <div className='w-5 h-5 text-iec-orange-2-500 flex justify-center items-center rounded-full '>
-          <AiFillPlusCircle />
+            <AiFillPlusCircle />
           </div>
         </div>
         <Collapse

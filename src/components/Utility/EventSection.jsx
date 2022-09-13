@@ -14,87 +14,101 @@ const EventSection = ({
   pics,
   participant,
   edition,
-  workshop,
   left = true,
   color,
   iconColor,
 }) => {
   const { resolvedTheme } = useTheme()
+  console.log(resolvedTheme)
 
   return (
     <div
-      className={`flex flex-col items-center w-4/5 gap-8 ${
+      className={`flex flex-col items-center w-4/5 gap-8 md:gap-16 justify-between ${
         left ? 'md:flex-row' : 'md:flex-row-reverse'
       }`}>
-      <div
-        className={`flex-col flex gap-12 items-center w-full md:w-3/4 ${
-          left ? 'md:items-start' : 'md:items-end'
-        }`}>
-        <h1 className={`text-5xl  text-shadow-light font-bold ${resolvedTheme === 'dark' ? color[0] : color[1]}`}>
-          {name}
-        </h1>
-        <p className='w-full md:w-4/5 text-center md:text-left'>
-          {description}
-        </p>
-        <div
-          className='p-4 rounded-xl w-3/4 md:w-fit flex flex-col gap-4'
-          style={{
-            border: `1px solid ${`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}70`,
-          }}>
-          <div className='flex items-center'>
-            <Clock
-              size={24}
-              color={`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}
-            />
-            <p className='ml-2'>{date}</p>
+      <div className={`md:w-3/4 ${left ? 'items-start' : 'items-end'}`}>
+        <div className={`flex-col flex gap-12 items-center md:items-start`}>
+          <h1
+            className={`text-5xl  text-shadow-light font-bold ${
+              resolvedTheme === 'dark' ? color[0] : color[1]
+            }`}>
+            {name}
+          </h1>
+          <p className='w-full text-center md:text-left'>{description}</p>
+          <div
+            className='p-4 rounded-xl w-3/4 md:w-fit flex flex-col gap-4'
+            style={{
+              border: `1px solid ${`${
+                resolvedTheme === 'dark' ? iconColor[0] : iconColor[1]
+              }`}70`,
+            }}>
+            <div className='flex items-center'>
+              <Clock
+                size={24}
+                color={`${
+                  resolvedTheme === 'dark' ? iconColor[0] : iconColor[1]
+                }`}
+              />
+              <p className='ml-2'>{date}</p>
+            </div>
+            <div className='flex items-center'>
+              <MapPin
+                color={`${
+                  resolvedTheme === 'dark' ? iconColor[0] : iconColor[1]
+                }`}
+                size={24}
+              />
+              <p className='ml-2'>{place}</p>
+            </div>
           </div>
-          <div className='flex items-center'>
-            <MapPin
-              color={`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}
-              size={24}
-            />
-            <p className='ml-2'>{place}</p>
-          </div>
-        </div>
-        <div className='flex items-center gap-4 w-full md:w-3/4 md:justify-start justify-center'>
-          {participant && (
+          <div className='flex items-center gap-4 w-full md:w-3/4 md:justify-start justify-center'>
+            {participant && (
+              <div className='flex w-1/2 flex-col shadow-lg px-2 pb-4 rounded-lg hover:shadow-xl transition-all '>
+                <div
+                  className='border-t-2  w-1/2 pt-2'
+                  style={{
+                    borderColor: `${`${
+                      resolvedTheme === 'dark' ? iconColor[0] : iconColor[1]
+                    }`}`,
+                  }}>
+                  <UsersThree
+                    size={24}
+                    color={`${
+                      resolvedTheme === 'dark' ? iconColor[0] : iconColor[1]
+                    }`}
+                  />
+                </div>
+                <>
+                  <p className='text-xl font-bold text-shadow-light'>
+                    {participant}
+                  </p>
+                  <p className='font-medium'>Participants</p>
+                </>
+              </div>
+            )}
+
             <div className='flex w-1/2 flex-col shadow-lg px-2 pb-4 rounded-lg hover:shadow-xl transition-all '>
               <div
                 className='border-t-2  w-1/2 pt-2'
                 style={{
-                  borderColor: `${`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}`,
+                  borderColor: `${`${
+                    resolvedTheme === 'dark' ? iconColor[0] : iconColor[1]
+                  }`}`,
                 }}>
-                <UsersThree
+                <AiOutlineFieldNumber
                   size={24}
-                  color={`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}
+                  color={`${
+                    resolvedTheme === 'dark' ? iconColor[0] : iconColor[1]
+                  }`}
                 />
               </div>
-              <>
-                <p className='text-xl font-bold text-shadow-light'>
-                  {participant}
-                </p>
-                <p className='font-medium'>Participants</p>
-              </>
+              <p className='text-xl font-bold text-shadow-light'>{edition}</p>
+              <p className='font-medium'>Edition(s)</p>
             </div>
-          )}
-
-          <div className='flex w-1/2 flex-col shadow-lg px-2 pb-4 rounded-lg hover:shadow-xl transition-all '>
-            <div
-              className='border-t-2  w-1/2 pt-2'
-              style={{
-                borderColor: `${`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}`,
-              }}>
-              <AiOutlineFieldNumber
-                size={24}
-                color={`${resolvedTheme ==="dark" ? iconColor[0] : iconColor[1]}`}
-              />
-            </div>
-            <p className='text-xl font-bold text-shadow-light'>{edition}</p>
-            <p className='font-medium'>Edition</p>
           </div>
         </div>
       </div>
-      <div className='relative md:h-[300px] flex flex-col justify-center'>
+      <div className='relative  flex flex-col justify-center'>
         <motion.div
           initial={{ y: 180 }}
           animate={{ y: 0 }}

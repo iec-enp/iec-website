@@ -139,7 +139,7 @@ export default function Articles({ posts, cats }) {
               ))
             ) : (
               <div className='col-span-2'>
-                <p className='text-center text-2xl font-extrabold'>
+                <p className='text-center text-2xl font-extrabold dark:text-white'>
                   Aucun article ne correspond à votre recherche
                 </p>
               </div>
