@@ -36,14 +36,14 @@ const Header = () => {
   return (
     <nav
       style={Toggler ? { boxShadow: '0 1rem 3rem rgb(0 0 0 / 18%)' } : {}}
-      className={`flex items-center  z-[1000] w-4/5 mt-2 rounded-2xl px-4 py-1 justify-between fixed top-0 ${
+      className={`flex items-center  z-[1000] w-11/12 md:w-10/12 mt-2 rounded-2xl px-4 py-1 justify-between fixed top-0 ${
         Toggler ? 'bg-white  dark:text-iec-blue-2-500' : ' bg-transparent'
       }`}>
       <Link href='/'>
         <a className='md:w-auto w-20'>
           <Image
             src={`/brand/logos/IEC_${
-              resolvedTheme == 'light' ? 'BLACK' : Toggler ? 'BLACK' : 'WHITE'
+              resolvedTheme == 'light' ? 'BLEU' : Toggler ? 'BLEU' : 'WHITE'
             }.webp`}
             alt='IEC logo'
             width={60}
@@ -53,7 +53,7 @@ const Header = () => {
         </a>
       </Link>
 
-      <div className='flex md:gap-24 gap-8   text-opacity-80 text-sm  md:text-xl font-normal'>
+      <div className='flex md:gap-20 gap-8   text-opacity-80 text-sm  md:text-xl font-normal'>
         <NavLink
           href='/'
           text='Acceuil'

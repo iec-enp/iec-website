@@ -3,14 +3,12 @@ import About from '@/components/Utility/about'
 import AboutImage from '@/components/Utility/AboutImage'
 import Alumni from '@/components/Utility/alumni'
 import Counter from '@/components/Utility/counter'
-import DashedCurve from '@/components/Utility/dashedCurve'
 import Events from '@/components/Utility/events'
 import FAQ from '@/components/Utility/FAQ'
 import Map from '@/components/Utility/map'
 import NosArticles from '@/components/Utility/NosArticles'
 import Rond from '@/components/Utility/rond'
 import Sponsors from '@/components/Utility/Sponsors'
-import Testimonial from '@/components/Utility/testimonial'
 import Value from '@/components/Utility/value'
 import { getRecentBlogPosts } from '@/utils/get-blog-post'
 import { saveAs } from 'file-saver'
@@ -47,7 +45,6 @@ export default function Home({ latestPosts }) {
     <>
       <Container title='Acceuil - IEC - Industrial Engineers Club'>
         <section className='w-full relative px-10 mb-20'>
-          
           <div className='md:mt-32 mt-40 z-100 relative md:flex md:flex-row flex-col justify-center'>
             <div className='md:w-3/5 w-full mx-auto text-center md:text-start'>
               <TrackVisibility once>
@@ -71,18 +68,25 @@ export default function Home({ latestPosts }) {
                       <h2 className=' animate__animated animate__fadeInLeft text-3xl my-10 text-gray-700 dark:text-white'>
                         Industrial Engineers Club
                       </h2>
-                      <div className='flex flex-row items-center gap-4 justify-center md:justify-start py-5 md:py-0'>
+                      <div className=' md:hidden w-full mx-auto text-center mt-12'>
+                        <Link href='/contact'>
+                          <a className='bg-iec-orange-2-500 hover:bg-white border-2 border-yelo  text-3xl mx-auto  px-10 py-3 rounded-full '>
+                            Nous Contacter
+                          </a>
+                        </Link>
+                      </div>
+                      <div className='flex flex-row items-center gap-4 justify-center mt-7 md:mt-0 md:justify-start py-5 md:py-0'>
                         <a href='https://www.instagram.com/iec.enp/'>
-                          <FaInstagram className='text-xl' />
+                          <FaInstagram className='md:text-xl text-3xl' />
                         </a>
                         <a href='https://www.facebook.com/IEC.ENP'>
-                          <FaFacebookSquare className='text-xl' />
+                          <FaFacebookSquare className='md:text-xl text-3xl' />
                         </a>
                         <a href='https://www.linkedin.com/company/industrial-engineers-club-iec/mycompany/'>
-                          <FaLinkedin className='text-xl' />
+                          <FaLinkedin className='md:text-xl text-3xl' />
                         </a>
                         <a href='https://www.youtube.com/channel/UCFJj3c8sxopxbiuR9rNu-2g'>
-                          <FaYoutubeSquare className='text-xl' />
+                          <FaYoutubeSquare className='md:text-xl text-3xl' />
                         </a>
                       </div>
                     </>
@@ -145,11 +149,6 @@ export default function Home({ latestPosts }) {
                   )
                 }
               </TrackVisibility>
-            </div>
-            <div className=' md:hidden w-full mx-auto text-center mt-12'>
-              <button className='bg-iec-orange-2-500  text-3xl mx-auto  px-10 py-3 rounded-full '>
-                Contacter
-              </button>
             </div>
           </div>
         </section>
@@ -251,8 +250,7 @@ export default function Home({ latestPosts }) {
               {({ isVisible }) =>
                 isVisible && (
                   <>
-                    <div className='specialityText'>
-                      <div className=''>
+                    <div className='specialityText w-full'>
                         <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
                           Data Science & Intelligence Artificielle
                         </h1>
@@ -275,7 +273,6 @@ export default function Home({ latestPosts }) {
                           </span>
                           Télécherger Brochure
                         </button>
-                      </div>
                     </div>
                   </>
                 )
@@ -288,9 +285,9 @@ export default function Home({ latestPosts }) {
               className='flex flex-col md:w-1/2  w-full px-12  md:px-0 mt-20 text-center md:text-left'>
               {({ isVisible }) =>
                 isVisible && (
-                  <div className='specialityText'>
+                  <div className='specialityText w-full'>
                     <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
-                      Le Génie Industriel
+                      Management Industriel
                     </h1>
                     <p className='text-iec-gray-800 dark:text-white text-xl py-6'>
                       {' '}
