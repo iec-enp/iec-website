@@ -166,7 +166,7 @@ export default function Home({ latestPosts }) {
               </div>
             </div>
 
-            <div className='md:w-1/2 w-4/5 mx-auto text-center md:text-left'>
+            <div className='md:w-1/2 w-11/12 mx-auto text-center md:text-left'>
               <h1 className='md:text-left text-5xl  font-bold text-center mt-5 md:mt-0 leading-[32px]'>
                 À Propos de <span className='text-iec-orange-2-500'>Nous</span>
               </h1>

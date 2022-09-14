@@ -53,7 +53,7 @@ const Header = () => {
         </a>
       </Link>
 
-      <div className='flex md:gap-20 gap-8   text-opacity-80 text-sm  md:text-xl font-normal'>
+      <div className='flex md:gap-10  gap-8   text-opacity-80 text-sm  md:text-xl font-normal'>
         <NavLink
           href='/'
           text='Acceuil'
