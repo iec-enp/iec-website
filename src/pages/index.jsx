@@ -52,9 +52,8 @@ export default function Home({ latestPosts }) {
                   isVisible && (
                     <>
                       <h1 className='animate__animated animate__fadeInDown md:text-8xl text-6xl md:mt-10 font-bold leading-[7rem] items-center justify-center'>
-                        More Than{' '}
-                        <span className='text-iec-orange-2-500 '>a </span>
-                        <span className='text-iec-orange-2-500'> Club</span>
+                        Plus qu&aposun{' '}
+                        <span className='text-iec-orange-2-500'>Club</span>
                       </h1>
                     </>
                   )
@@ -168,11 +167,11 @@ export default function Home({ latestPosts }) {
 
             <div className='md:w-1/2 w-11/12 mx-auto text-center md:text-left'>
               <h1 className='md:text-left text-5xl  font-bold text-center mt-5 md:mt-0 leading-[32px]'>
-                À Propos de <span className='text-iec-orange-2-500'>Nous</span>
+                À propos de <span className='text-iec-orange-2-500'>nous</span>
               </h1>
               <p className='py-3'>
-                Plus qu&apos;un club Le &quot;Industrial Engineers Club&quot;
-                est un club du Génie Industriel{' '}
+                Plus qu&apos;un club. &quot;Industrial Engineers Club&quot;
+                est un club du Génie Industriel.{' '}
               </p>
               <div className='w-[7rem] rounded-full mx-auto md:mx-0 bg-iec-orange-2-500 h-1'></div>
 
@@ -189,7 +188,7 @@ export default function Home({ latestPosts }) {
           </div>
           <div className='text-5xl text-center my-auto font-bold md:mt-10'>
             Nos
-            <span className='text-iec-orange-2-500'> Valeurs</span>
+            <span className='text-iec-orange-2-500'> valeurs</span>
           </div>
           <div className='flex justify-center mt-24'>
             <Value theme={theme} />
@@ -219,7 +218,7 @@ export default function Home({ latestPosts }) {
         </section> */}
         <section>
           <h1 className='animate__animated animate__bounce text-center lg:mt-10 text-5xl mx-auto font-bold '>
-            Nos <span className='text-iec-orange-2-500'>Spécialitées</span>
+            Nos <span className='text-iec-orange-2-500'>spécialités</span>
           </h1>
 
           <div className='flex md:flex-row flex-col items-center  mx-auto justify-center mt-24 md:justify-around'>
@@ -258,12 +257,12 @@ export default function Home({ latestPosts }) {
                           {' '}
                           La DSIA est une spécialité de l&apos;ENP qui a été
                           ouverte en 2020. Elle englobe deux domaines de pointe
-                          : la science des données,et l&apos;intelligence
+                          : la science des données, et l&apos;intelligence
                           artificielle ayant pour but la création de valeur à
                           partir de l&apos;exploration et l&apos;analyse de
                           données brutes grâce à des techniques telles que la
                           programmation informatique, les mathématiques ou les
-                          statistiques
+                          statistiques.
                         </p>
                         <button
                           onClick={saveFile}
@@ -271,7 +270,7 @@ export default function Home({ latestPosts }) {
                           <span>
                             <BsFillCaretRightFill />
                           </span>
-                          Télécherger Brochure
+                          Télécharger la brochure
                         </button>
                     </div>
                   </>
@@ -296,7 +295,7 @@ export default function Home({ latestPosts }) {
                       humaines. Ce qui permet à l&apos;ingénieur en MI
                       d&apos;être polyvalent, doté d&apos;un flux
                       d&apos;information nécessaire dans le management des
-                      entreprises
+                      entreprises.
                     </p>
                     <button
                       onClick={saveFile}
@@ -304,7 +303,7 @@ export default function Home({ latestPosts }) {
                       <span>
                         <BsFillCaretRightFill />
                       </span>
-                      Télécherger Brochure
+                      Télécharger la brochure
                     </button>
                   </div>
                 )
@@ -335,7 +334,7 @@ export default function Home({ latestPosts }) {
         </section>
         <section className='w-full relative  '>
           <div className='text-5xl text-center mt-28 font-bold'>
-            IEC <span className='text-iec-orange-2-500'>En Chiffres</span>
+            IEC <span className='text-iec-orange-2-500'>en chiffres</span>
           </div>
           <div className='flex gap-[6rem] mt-16'>
             <div className='w-1/2 hidden lg:inline lg:ml-3'>
@@ -378,7 +377,7 @@ export default function Home({ latestPosts }) {
                       step={20}
                     />
                   </h1>
-                  <h1 className='text-2xl text-iec-gray-800 '>Création</h1>
+                  <h1 className='text-2xl text-iec-gray-800 '>Année de création</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
                 <div className='flex w-full flex-col  gap-3'>
@@ -390,7 +389,7 @@ export default function Home({ latestPosts }) {
                       step={1}
                     />
                   </h1>
-                  <h1 className='text-2xl text-iec-gray-800'>Évènement</h1>
+                  <h1 className='text-2xl text-iec-gray-800'>Évènements</h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
               </div>
@@ -400,7 +399,7 @@ export default function Home({ latestPosts }) {
         <section className='bg-iec-orange-2-500 bg-opacity-10 mt-14 w-full'>
           <div className='flex flex-col gap-5 text-center'>
             <h1 className='text-5xl  mt-24 font-bold'>
-              Nos <span className='text-iec-orange-2-500'>Articles</span>
+              Nos <span className='text-iec-orange-2-500'>articles</span>
             </h1>
           </div>
           <div className='w-[100%] md:mt-9'>
@@ -409,7 +408,7 @@ export default function Home({ latestPosts }) {
           <div className='w-full flex justify-center '>
             <Link href='/articles'>
               <a className=' bg-white mb-12 mt-5  font-bold  py-2 px-4 rounded-xl flex items-center gap-3 hover:text-white hover:bg-iec-orange-2-500 shadow-md text-iec-blue-2-500 '>
-                Voir tout Les Articles
+                Voir tous nos articles
                 <span>
                   <BsArrowRight />
                 </span>
@@ -433,12 +432,12 @@ export default function Home({ latestPosts }) {
           <div className='w-full flex flex-col my-16'>
             <div className='flex flex-col  gap-5 text-center mb-5'>
               <h1 className='text-5xl   font-bold flex-wrap'>
-                Ceux Qui Nous Ont Déja{' '}
-                <span className='text-iec-orange-2-500'>Fait Confiance</span>
+                Ceux qui nous ont déjà{' '}
+                <span className='text-iec-orange-2-500'>fait confiance</span>
               </h1>
               <p className='text-iec-gray-800 md:w-1/2 w-2/3 text-center mx-auto dark:text-white'>
                 Des entreprises dans différents secteurs ont été intéressées par
-                l&apos;ensemble des événements organisées par notre club
+                l&apos;ensemble des évènements organisées par notre club
               </p>
             </div>
             <Sponsors />
@@ -454,8 +453,8 @@ export default function Home({ latestPosts }) {
         <section className=' mt-14 w-full md:h-[630px] h-auto'>
           <div className='flex flex-col justify-center w-full items-center '>
             <div className='text-5xl text-center  font-bold mt-16'>
-              Foire Aux
-              <span className='text-iec-orange-2-500'> Questions</span>
+              Foire aux
+              <span className='text-iec-orange-2-500'> questions</span>
             </div>
             <div className='w-full flex justify-center mt-4'>
               <FAQ />

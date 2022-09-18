@@ -7,7 +7,7 @@ function Value({theme}) {
       image: '/images/trophy.svg',
       imageWhite: '/images/trophy_white.svg',
       title: 'Engagement',
-      text: "Se dévouer à un partage mutuelle et propice en y mettant du sien pour la cause IEC et le développement de la communauté GI",
+      text: "Se dévouer à un partage mutuel et propice en y mettant du sien pour la cause IEC et le développement de la communauté GI",
     },
     {
       image: '/images/thumb.svg',
@@ -19,14 +19,14 @@ function Value({theme}) {
       image: '/images/innovation.svg',
       imageWhite: '/images/innovation_white.svg',
       title: 'Innovation',
-      text: "Nous nous n'arrêtons jamais d'apprendre et d’améliorer notre façon de faire avec une vision durable",
+      text: "Nous n'arrêtons jamais d'apprendre et d’améliorer notre façon de faire avec une vision durable",
     },
   
     {
       image: '/images/people.svg',
       imageWhite: '/images/people_white.svg',
       title: 'Appartenance',
-      text: 'Nous croyons en l’importance de l’appartenance au groupe, en travaillant dans un milieux de respect mutuel, de confiance, et de transparence',
+      text: 'Nous croyons en l’importance de l’appartenance au groupe, en travaillant dans un milieu de respect mutuel, de confiance, et de transparence',
     },
   ]
 
@@ -36,7 +36,7 @@ function Value({theme}) {
         <div className='flex flex-col ' >
           <div className='w-14 h-14 mx-auto img-icon relative '>
             <Image
-              src={theme == 'dark' ? value.imageWhite :value.image}
+              src={theme == 'dark' ? value.imageWhite : value.image}
               alt='image1'
               width={20}
               height={20}

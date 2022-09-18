@@ -12,7 +12,7 @@ function NosArticles({latestPosts}) {
 
     return (
         
-            <Carousel   pagination={false} breakPoints={breakPoints}  >
+            <Carousel pagination={false} breakPoints={breakPoints}  >
             {latestPosts.map(post => (
               <ArtricleCard
                 key={post.slug}

@@ -51,7 +51,7 @@ function ArtricleCard({ title, image, href, description, date }) {
           <div className='flex justify-start items-center'>
             <Link href={`/articles/${href}`}>
               <a className='w-fit inline-block shadow-md bg-iec-orange-2-500 text-xs font-bold px-4 py-2 mt-4 rounded-full hover:bg-white hover:text-iec-orange-2-500'>
-                Read More
+                Lire la suite
               </a>
             </Link>
           </div>
