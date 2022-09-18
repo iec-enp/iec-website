@@ -52,7 +52,7 @@ export default function Home({ latestPosts }) {
                   isVisible && (
                     <>
                       <h1 className='animate__animated animate__fadeInDown md:text-8xl text-6xl md:mt-10 font-bold leading-[7rem] items-center justify-center'>
-                        Plus qu&aposun{' '}
+                        Plus qu&apos;un{' '}
                         <span className='text-iec-orange-2-500'>Club</span>
                       </h1>
                     </>
