@@ -9,7 +9,7 @@ function About() {
       id: 1,
       title: 'Our History',
       content:
-        "Sortir de sa zone de confort et arrêter de chercher des excuses, tels ont étaient les principaux moteurs de la création du club IEC en 2020. Pendant presque deux ans, IEC  continue son challenge et tout cela en étant constamment actif dans la réalisation et l’organisation de plusieurs événements, projets et activités à destination des étudiants du génie industriel mais également à toute personne souhaitant apporté une plus value à son parcours académique et professionnel",
+        'Sortir de sa zone de confort et arrêter de chercher des excuses, tels ont étaient les principaux moteurs de la création du club IEC en 2020. Pendant presque deux ans, IEC  continue son challenge et tout cela en étant constamment actif dans la réalisation et l’organisation de plusieurs événements, projets et activités à destination des étudiants du génie industriel mais également à toute personne souhaitant apporté une plus value à son parcours académique et professionnel',
     },
     {
       id: 2,
@@ -81,7 +81,7 @@ function About() {
     <>
       <AnimateSharedLayout>
         <motion.ul
-          className='flex  flex-col  gap-3'
+          className='flex  flex-col  gap-3 '
           layout
           initial={{ borderRadius: 25 }}>
           {items.map((item, i) => (

@@ -152,7 +152,7 @@ export default function Home({ latestPosts }) {
             </div>
           </div>
         </section>
-
+   
         <section className='w-full md:mb-24 md:h-[25rem] lg:h-[400px] sm:h-[60rem] h-[60rem]'>
           <div className='flex md:flex-row flex-col w-11/12 mt-28 mb-14 mx-auto px-8 gap-9'>
             <div className='md:w-[45%]  w-[80%] h-max mx-auto flex justify-center items-center relative  '>
