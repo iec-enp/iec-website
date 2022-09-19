@@ -156,7 +156,7 @@ export default function Articles({ posts, cats }) {
                 }}
                 className='w-6 h-6 border-2 border-iec-orange-2-500 border-solid  animate-spin'></div>
             )}
-            Charger Plus d&apos;article
+            Charger plus d&apos;articles
           </button>
         )}
       </div>

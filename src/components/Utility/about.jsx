@@ -7,21 +7,21 @@ function About() {
   const [items, setItems] = useState([
     {
       id: 1,
-      title: 'Our History',
+      title: 'Notre histoire',
       content:
-        'Sortir de sa zone de confort et arrêter de chercher des excuses, tels ont étaient les principaux moteurs de la création du club IEC en 2020. Pendant presque deux ans, IEC  continue son challenge et tout cela en étant constamment actif dans la réalisation et l’organisation de plusieurs événements, projets et activités à destination des étudiants du génie industriel mais également à toute personne souhaitant apporté une plus value à son parcours académique et professionnel',
+        "Sortir de sa zone de confort et arrêter de chercher des excuses, tels ont été les principaux moteurs de la création du club IEC en 2020. Pendant presque deux ans, IEC  continue son challenge et tout celà en étant constamment actif dans la réalisation et l’organisation de plusieurs événements, projets et activités à destination des étudiants du génie industriel mais également à toute personne souhaitant apporter une plus value à son parcours académique et professionnel",
     },
     {
       id: 2,
-      title: 'Our Vision',
+      title: 'Notre vision',
       content:
         'Devenir un label en terme d’organisation et une référence dans la communauté estudiantine ',
     },
     {
       id: 3,
-      title: 'Our Mission',
+      title: 'Notre mission',
       content:
-        'Promouvoir le Génie Industriel en Algérie, renforcer la formation et le réseau professionnel, et développer  la communauté internationale des étudiants et anciens diplômés du  GI',
+        'Promouvoir le Génie Industriel en Algérie, renforcer la formation et le réseau professionnel, et développer la communauté internationale des étudiants et anciens diplômés du GI',
     },
   ])
 
