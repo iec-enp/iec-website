@@ -81,7 +81,7 @@ function About() {
     <>
       <AnimateSharedLayout>
         <motion.ul
-          className='flex  flex-col  gap-3'
+          className='flex  flex-col  gap-3 '
           layout
           initial={{ borderRadius: 25 }}>
           {items.map((item, i) => (
