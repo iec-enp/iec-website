@@ -29,12 +29,23 @@ export default function Home({ latestPosts }) {
   const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
 
+
+  const propos = () =>{
+    var el = document.getElementById('propos');
+    var headerOffset = 100 ;
+    var elementPosition = el.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({top : offsetPosition, behavior:"smooth"})
+  }
+
   const saveFile = () => {
     saveAs('/pdf/brochuree.pdf', 'example.pdf')
   }
 
   useEffect(() => {
     setMounted(true)
+  
   }, [])
 
   if (!mounted) {
@@ -44,36 +55,35 @@ export default function Home({ latestPosts }) {
   return (
     <>
       <Container title='Acceuil - IEC - Industrial Engineers Club'>
-        <section className='w-full relative px-10 mb-20'>
+        
+        <section className='w-full relative px-20 mb-20'>
           <div className='md:mt-32 mt-40 z-100 relative md:flex md:flex-row flex-col justify-center'>
-            <div className='md:w-3/5 w-full mx-auto text-center md:text-start'>
+            <div className='md:w-1/2 w-full mx-auto text-center md:text-start'>
               <TrackVisibility once>
                 {({ isVisible }) =>
                   isVisible && (
                     <>
-                      <h1 className='animate__animated animate__fadeInDown md:text-8xl text-6xl md:mt-10 font-bold leading-[7rem] items-center justify-center'>
-                        Plus qu&apos;un{' '}
-                        <span className='text-iec-orange-2-500'>Club</span>
-                      </h1>
+                      <div className='animate__animated animate__fadeInDown md:text-[4.5rem] inline-block  text-6xl md:mt-4 font-bold leading-[6.5rem] items-center justify-center'>
+                      Industrial <br/> Engineers {' '}
+                      <span className='text-iec-orange-2-500  px-1'>Club</span>
+                 
+                      
+                      </div>
                     </>
                   )
                 }
               </TrackVisibility>
+
+
 
               <TrackVisibility once>
                 {({ isVisible }) =>
                   isVisible && (
                     <>
                       <h2 className=' animate__animated animate__fadeInLeft text-3xl my-10 text-gray-700 dark:text-white'>
-                        Industrial Engineers Club
+                        Commited To Excellence
                       </h2>
-                      <div className=' md:hidden w-full mx-auto text-center mt-12'>
-                        <Link href='/contact'>
-                          <a className='bg-iec-orange-2-500 hover:bg-white border-2 border-yelo  text-3xl mx-auto  px-10 py-3 rounded-full '>
-                            Nous Contacter
-                          </a>
-                        </Link>
-                      </div>
+                      
                       <div className='flex flex-row items-center gap-4 justify-center mt-7 md:mt-0 md:justify-start py-5 md:py-0'>
                         <a href='https://www.instagram.com/iec.enp/'>
                           <FaInstagram className='md:text-xl text-3xl' />
@@ -88,12 +98,16 @@ export default function Home({ latestPosts }) {
                           <FaYoutubeSquare className='md:text-xl text-3xl' />
                         </a>
                       </div>
+                      <div className='flex gap-5 mt-8 font-semibold text-2xl md:text-xl justify-center md:justify-start'>
+                        <button onClick={()=>propos()} className=' bg-iec-orange-2-500 rounded-full md:px-8 px-6 py-2 hover:bg-iec-blue-1-500 hover:text-white dark:hover:bg-white dark:text-iec-blue-1-500'>Savoir Plus</button>
+                        <button className='border-[2px] md:hidden border-iec-orange-2-500 hover:bg-iec-orange-2-500 hover:text-white  rounded-full px-6 py-2'>Nous Contacter</button>
+                      </div>
                     </>
                   )
                 }
               </TrackVisibility>
             </div>
-            <div className='md:w-2/5 w-[80%] mx-auto md:mt-0 mt-10'>
+            <div className='md:w-2/5 w-[80%] mx-auto md:mt-0 mt-16'>
               <TrackVisibility once>
                 {({ isVisible }) =>
                   isVisible && (
@@ -151,7 +165,8 @@ export default function Home({ latestPosts }) {
             </div>
           </div>
         </section>
-   
+        
+
         <section className='w-full md:mb-24 md:h-[25rem] lg:h-[400px] sm:h-[60rem] h-[60rem]'>
           <div className='flex md:flex-row flex-col w-11/12 mt-28 mb-14 mx-auto px-8 gap-9'>
             <div className='md:w-[45%]  w-[80%] h-max mx-auto flex justify-center items-center relative  '>
@@ -166,12 +181,12 @@ export default function Home({ latestPosts }) {
             </div>
 
             <div className='md:w-1/2 w-11/12 mx-auto text-center md:text-left'>
-              <h1 className='md:text-left text-5xl  font-bold text-center mt-5 md:mt-0 leading-[32px]'>
+              <h1 id='propos' className='md:text-left text-5xl  font-bold text-center mt-5 md:mt-0 leading-[32px]'>
                 À propos de <span className='text-iec-orange-2-500'>nous</span>
               </h1>
               <p className='py-3'>
-                Plus qu&apos;un club. &quot;Industrial Engineers Club&quot;
-                est un club du Génie Industriel.{' '}
+                Plus qu&apos;un club. &quot;Industrial Engineers Club&quot; est
+                un club du Génie Industriel.{' '}
               </p>
               <div className='w-[7rem] rounded-full mx-auto md:mx-0 bg-iec-orange-2-500 h-1'></div>
 
@@ -250,28 +265,28 @@ export default function Home({ latestPosts }) {
                 isVisible && (
                   <>
                     <div className='specialityText w-full'>
-                        <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
-                          Data Science & Intelligence Artificielle
-                        </h1>
-                        <p className='text-iec-gray-800 dark:text-white text-xl py-6'>
-                          {' '}
-                          La DSIA est une spécialité de l&apos;ENP qui a été
-                          ouverte en 2020. Elle englobe deux domaines de pointe
-                          : la science des données, et l&apos;intelligence
-                          artificielle ayant pour but la création de valeur à
-                          partir de l&apos;exploration et l&apos;analyse de
-                          données brutes grâce à des techniques telles que la
-                          programmation informatique, les mathématiques ou les
-                          statistiques.
-                        </p>
-                        <button
-                          onClick={saveFile}
-                          className='flex hover:text-white hover:bg-iec-orange-2-500 items-center mx-auto md:mx-0 gap-2 text-iec-blue-2-500 bg-white w-max px-3 py-2 rounded-lg shadow-md'>
-                          <span>
-                            <BsFillCaretRightFill />
-                          </span>
-                          Télécharger la brochure
-                        </button>
+                      <h1 className='text-4xl font-bold text-iec-blue-2-500 dark:text-white'>
+                        Data Science & Intelligence Artificielle
+                      </h1>
+                      <p className='text-iec-gray-800 dark:text-white text-xl py-6'>
+                        {' '}
+                        La DSIA est une spécialité de l&apos;ENP qui a été
+                        ouverte en 2020. Elle englobe deux domaines de pointe :
+                        la science des données, et l&apos;intelligence
+                        artificielle ayant pour but la création de valeur à
+                        partir de l&apos;exploration et l&apos;analyse de
+                        données brutes grâce à des techniques telles que la
+                        programmation informatique, les mathématiques ou les
+                        statistiques.
+                      </p>
+                      <button
+                        onClick={saveFile}
+                        className='flex hover:text-white hover:bg-iec-orange-2-500 items-center mx-auto md:mx-0 gap-2 text-iec-blue-2-500 bg-white w-max px-3 py-2 rounded-lg shadow-md'>
+                        <span>
+                          <BsFillCaretRightFill />
+                        </span>
+                        Télécharger la brochure
+                      </button>
                     </div>
                   </>
                 )
@@ -377,7 +392,9 @@ export default function Home({ latestPosts }) {
                       step={20}
                     />
                   </h1>
-                  <h1 className='text-2xl text-iec-gray-800 '>Année de création</h1>
+                  <h1 className='text-2xl text-iec-gray-800 '>
+                    Année de création
+                  </h1>
                   <h1 className=' w-full h-[8px] bg-iec-orange-2-500 rounded-full' />
                 </div>
                 <div className='flex w-full flex-col  gap-3'>

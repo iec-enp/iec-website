@@ -1261,10 +1261,10 @@
   "resolved" "https://registry.npmjs.org/csstype/-/csstype-3.1.0.tgz"
   "version" "3.1.0"
 
-"daisyui@^2.27.0":
-  "integrity" "sha512-AhFGhTore1Kdnae+5RGc2PGESSXOjAQDHJfvryP+KY41gxMcNErtuaGZG+nOmvOzNKgxViSDSaOn/VZq6H8kxA=="
-  "resolved" "https://registry.npmjs.org/daisyui/-/daisyui-2.27.0.tgz"
-  "version" "2.27.0"
+"daisyui@^2.28.0":
+  "integrity" "sha512-UmqFNPu8U8IE9sKzLvbvk80oogZE9jTYj8SskiSbnrwm8YPK8B+cKYLHHR8Usdh1j9hhUGVc8Sjt15p328gV9g=="
+  "resolved" "https://registry.npmjs.org/daisyui/-/daisyui-2.28.0.tgz"
+  "version" "2.28.0"
   dependencies:
     "color" "^4.2"
     "css-selector-tokenizer" "^0.8.0"
