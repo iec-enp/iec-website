@@ -2,6 +2,9 @@ import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import { Clock, MapPin, UsersThree } from 'phosphor-react'
+import { useEffect } from 'react'
+import { useMemo } from 'react'
+import { useState } from 'react'
 import { AiOutlineFieldNumber } from 'react-icons/ai'
 import TrackVisibility from 'react-on-screen'
 
@@ -18,7 +21,34 @@ const EventSection = ({
   color,
   iconColor,
 }) => {
-  const { resolvedTheme } = useTheme()
+  const { resolvedTheme } = useTheme();
+
+  const angles = useMemo(() => {
+    return ['6', '12', '24'];
+  }, []);
+
+  const rot_signs = useMemo(() => {
+    return ['', '-'];
+  }, [])
+
+  // const angles = ['6', '12', '24'];
+  // const rot_signs = ['', '-'];
+
+  const [rand_angle, setRandAngle] = useState();
+  const [rand_angle_2, setRandAngle2] = useState();
+  const [rand_rot_sign, setRandRotSign] = useState();
+  
+  useEffect(() => {
+    setRandAngle(angles[Math.floor(Math.random() * angles.length)]);
+  }, [angles]);
+
+  useEffect(() => {
+    setRandRotSign(rot_signs[Math.floor(Math.random() * rot_signs.length)]);
+  }, [rot_signs]);
+
+  useEffect(() => {
+    setRandAngle2(angles[Math.floor(Math.random() * angles.length)]);
+  }, [angles]);
 
   return (
     <div
@@ -101,13 +131,12 @@ const EventSection = ({
                   }`}
                 />
               </div>
-              <p className='text-xl font-bold text-shadow-light'>{edition}</p>
-              <p className='font-medium'>Edition(s)</p>
+              <p className='text-xl font-bold text-shadow-light'>{edition} Édition{edition > 1 ? 's' : ''}</p>
             </div>
           </div>
         </div>
       </div>
-      <div className='relative  flex flex-col justify-center w-3/5'>
+      <div className='relative flex flex-col justify-center w-3/5'>
         <motion.div
           initial={{ y: 180 }}
           animate={{ y: 0 }}
@@ -150,34 +179,74 @@ const EventSection = ({
             height={40}
           />
         </motion.div>
-        <TrackVisibility once>
-          {({ isVisible }) =>
-            isVisible && (
-              <motion.div
-                initial={{
-                  scale: 0.5,
-                  opacity: 0,
-                }}
-                animate={{
-                  scale: 1,
-                  opacity: 1,
-                }}
-                transition={{
-                  duration: 0.5,
-                  type: 'spring',
-                }}>
-                <Image
-                  alt='bg-photo'
-                  src={pics}
-                  width={800}
-                  height={400}
-                  objectFit='cover'
-                  className='rounded-3xl border-4 border-red-400 '
-                />
-              </motion.div>
-            )
-          }
-        </TrackVisibility>
+
+        <div className="flex">
+          <TrackVisibility once
+            style={{transform: 'rotate(' + rand_rot_sign + rand_angle + 'deg)'}}
+            >
+            {({ isVisible }) =>
+              isVisible && (
+                <motion.div
+                  initial={{
+                    scale: 0.5,
+                    opacity: 0,
+                  }}
+                  animate={{
+                    scale: 1,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    type: 'spring',
+                  }}
+                  >
+                  <Image
+                    alt='bg-photo'
+                    priority
+                    src={pics[0]}
+                    width={200}
+                    height={200}
+                    objectFit='cover'
+                    className={'rounded-3xl border-4 border-red-400'}
+                  />
+                </motion.div>
+              )
+            }
+          </TrackVisibility>
+
+          <TrackVisibility once
+            style={{transform: 'rotate(' + (rand_rot_sign === '' ? '-' : '') + rand_angle_2 + 'deg)'}}
+            >
+            {({ isVisible }) =>
+              isVisible && (
+                <motion.div
+                  initial={{
+                    scale: 0.5,
+                    opacity: 0,
+                  }}
+                  animate={{
+                    scale: 1,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    type: 'spring',
+                  }}
+                  >
+                  <Image
+                    alt='bg-photo'
+                    priority
+                    src={pics[0]}
+                    width={200}
+                    height={200}
+                    objectFit='cover'
+                    className={'rounded-3xl border-4 border-red-400'}
+                  />
+                </motion.div>
+              )
+            }
+          </TrackVisibility>
+        </div>
       </div>
     </div>
   )
