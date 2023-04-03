@@ -13,6 +13,9 @@ export default function BlogLayout({ children, frontMatter }) {
         <h1 className='font-bold text-3xl md:text-5xl mb-4 text-center text-black dark:text-white'>
           {frontMatter.title}
         </h1>
+        <h2 className='text-md font-light opacity-80'>
+            Auteur: {frontMatter.author}
+        </h2>
         <div className='flex flex-col justify-between items-start  w-full mt-2 gap-2'>
           <h1>Catégorie</h1>
           <div className='flex items-center justify-between w-full'>

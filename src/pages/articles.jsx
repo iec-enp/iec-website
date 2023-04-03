@@ -101,7 +101,7 @@ export default function Articles({ posts, cats }) {
                 <p className='iec-orange-2-500'>{posts[0].readingTime}</p>
                 <p className='opacity-80 font-light'>{posts[0].date}</p>
               </div>
-              <h1 className='font-bold text-lg'>{posts[0].title}</h1>
+              <h1 className='font-bold text-lg'>{posts[0].title} <span className='text-sm font-light opacity-80'>{posts[0].author != "" ? "- " + posts[0].author : ""}</span></h1>
               <p className='text-sm line-clamp-4'>{posts[0].description}</p>
               <div className='flex justify-between items-center'>
                 <p className='opacity-80 font-light'>{posts[0].category}</p>

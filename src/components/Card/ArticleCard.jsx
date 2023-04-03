@@ -10,6 +10,7 @@ const ArticleCard = ({
   date,
   readingTime,
   category,
+  author,
 }) => {
   return (
     <motion.div
@@ -40,7 +41,7 @@ const ArticleCard = ({
         <p className='iec-orange-2-500'>{readingTime}</p>
         <p className='opacity-80 font-light'>{date}</p>
       </div>
-      <h1 className='font-bold text-lg px-4'>{title}</h1>
+      <h1 className='font-bold text-lg px-4'>{title} <span className='text-sm font-light opacity-80'>{author != "" ? "- " + author : ""}</span></h1>
       <p className='text-sm line-clamp-3 px-4'>{description}</p>
       <div className='mt-auto flex justify-between px-4'>
         <p className='opacity-80 font-light'>{category}</p>

@@ -12,7 +12,7 @@ export const getBlogPosts = () => {
     const slug = filename.replace('.mdx', '')
     const fileContents = fs.readFileSync(filePath, 'utf8')
     const {
-      data: { title, description, date, backdrop_path, category },
+      data: { title, description, date, backdrop_path, category, author },
       content,
     } = matter(fileContents)
     result.push({
@@ -24,6 +24,7 @@ export const getBlogPosts = () => {
       content,
       readingTime: readingTime(content).text,
       category,
+      author,
     })
   })
   return result.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
