@@ -61,7 +61,7 @@ export default function Events() {
         <EventSection
           logo='/images/events/ADC_logo.svg'
           name='Algeria Data CUP'
-          description="Algeria Data Cup est un hackathon de data science où les participants sont invités à résoudre un problème de Business réel, en développant un modèle d'apprentissage automatique le plus performant possible sur les données fournies. La 1ère édition s'est déroulée sur la plateforme Zindi.com."
+          description="Algeria Data Cup est un hackathon de data science où les participants sont invités à résoudre un problème de Business réel, en développant un modèle d'apprentissage automatique le plus performant possible sur les données fournies. La 1ère édition s'est déroulée sur la plateforme Zindi.com, tandis que la deuxième édition s'est déroulée en présentiel sur 40 heures continues."
           date='17-19 Juin 2023'
           place='HIS - Higher Institute of Sciences, Borj El Kiffan '
           pics={['/images/pictures/adc.webp']}
